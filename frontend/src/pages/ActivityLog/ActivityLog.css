@@ -1,0 +1,818 @@
+
+/* ================================
+   ACTIVITY LOG - DARK NAVY DESIGN
+================================ */
+
+.activity-log-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #080d16;
+  color: #f5f7ff;
+  font-family: inherit;
+}
+
+.activity-log-page *,
+.activity-log-page *::before,
+.activity-log-page *::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.activity-log-header {
+  margin-bottom: 24px;
+}
+
+.activity-log-header h1 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.activity-log-header p {
+  margin: 0;
+  color: #aebfd7;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Filters - two column layout */
+
+.activity-log-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 10px 12px;
+  margin-bottom: 12px;
+  align-items: stretch;
+}
+
+/* Search */
+
+.activity-log-search {
+  grid-column: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 14px;
+  border: 1px solid #193957;
+  border-radius: 14px;
+  background: #0c192a;
+  color: #c8d8ef;
+}
+
+.activity-log-search svg {
+  flex-shrink: 0;
+}
+
+.activity-log-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+}
+
+.activity-log-search input::placeholder {
+  color: #a8bad2;
+}
+
+/* Select controls */
+
+.activity-log-filters select {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 12px;
+  border: 1px solid #193957;
+  border-radius: 14px;
+  outline: none;
+  background: #0c192a;
+  color: #f4f7ff;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.activity-log-filters select:focus {
+  border-color: #3989ed;
+}
+
+.activity-log-filters select option {
+  background: #0c192a;
+  color: #fff;
+}
+
+/* Date filters */
+
+.activity-log-date {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 12px;
+  border: 1px solid #193957;
+  border-radius: 14px;
+  background: #0c192a;
+  color: #d5e4fa;
+}
+
+.activity-log-date svg {
+  flex-shrink: 0;
+}
+
+.activity-log-date input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #f4f7ff;
+  font-family: inherit;
+  font-size: 13px;
+  color-scheme: dark;
+}
+
+.activity-log-date input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(1);
+}
+
+/* Refresh button */
+
+.activity-log-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 20px;
+}
+
+.activity-log-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid #193957;
+  border-radius: 14px;
+  background: #0c192a;
+  color: #edf5ff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.activity-log-toolbar button:hover {
+  background: #142a43;
+  border-color: #315d86;
+}
+
+/* Activity cards */
+
+.activity-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.activity-log-card {
+  width: 100%;
+  min-width: 0;
+  padding: 20px 18px;
+  border: 1px solid #173653;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0c1a2b 0%, #091523 100%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.activity-log-card:hover {
+  border-color: #285071;
+  background: linear-gradient(135deg, #102139 0%, #0b192a 100%);
+}
+
+.activity-log-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.activity-log-card-labels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Action badges */
+
+.activity-action-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 32px;
+  padding: 6px 14px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: #e9eef7;
+  color: #52647c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.activity-action-badge.create {
+  border-color: #63f0c0;
+  background: #c9ffeb;
+  color: #078154;
+}
+
+.activity-action-badge.update {
+  border-color: #82b9ff;
+  background: #dcecff;
+  color: #0759bc;
+}
+
+.activity-action-badge.delete {
+  border-color: #ff929d;
+  background: #ffe5e8;
+  color: #c6283c;
+}
+
+.activity-action-badge.cancel {
+  background: #fff0d8;
+  color: #9c5700;
+}
+
+.activity-action-badge.complete {
+  background: #d9ffeb;
+  color: #087c4d;
+}
+
+.activity-action-badge.start,
+.activity-action-badge.restore {
+  background: #e9e2ff;
+  color: #6541ad;
+}
+
+.activity-action-badge.login {
+  background: #dff5ff;
+  color: #086b95;
+}
+
+.activity-action-badge.logout {
+  background: #ffe5e5;
+  color: #b52d37;
+}
+
+.activity-action-badge.other {
+  background: #e9edf4;
+  color: #526178;
+}
+
+/* Category and time */
+
+.activity-log-category {
+  min-width: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.activity-log-time {
+  flex-shrink: 0;
+  color: #c5d7ef;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+/* Description */
+
+.activity-log-description {
+  margin: 0 0 14px;
+  color: #edf4ff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+/* User */
+
+.activity-log-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b9cce6;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.activity-log-user svg {
+  flex-shrink: 0;
+}
+
+/* Error messages */
+
+.activity-log-error,
+.activity-log-user-error {
+  margin-bottom: 14px;
+  padding: 13px 15px;
+  border: 1px solid #74313e;
+  border-radius: 12px;
+  background: #29151d;
+  color: #ffc2cc;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.activity-log-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.activity-log-error button {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid #74313e;
+  border-radius: 8px;
+  background: #542532;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Loading and empty state */
+
+.activity-log-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 200px;
+  padding: 24px;
+  color: #c3d5ed;
+  text-align: center;
+}
+
+.activity-log-state h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 17px;
+}
+
+.activity-log-state p {
+  margin: 0;
+  color: #aebfd7;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.activity-log-spin {
+  animation: activity-log-rotate 1s linear infinite;
+}
+
+@keyframes activity-log-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.activity-log-count {
+  margin: 16px 0 0;
+  color: #9db2cd;
+  font-size: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .activity-log-page {
+    padding: 20px 16px;
+  }
+
+  .activity-log-header h1 {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .activity-log-page {
+    padding: 16px 12px 24px;
+  }
+
+  .activity-log-header {
+    margin-bottom: 20px;
+  }
+
+  .activity-log-header h1 {
+    font-size: 25px;
+  }
+
+  .activity-log-header p {
+    font-size: 13px;
+  }
+
+  .activity-log-filters {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 9px;
+    margin-bottom: 10px;
+  }
+
+  .activity-log-search {
+    grid-column: 1 / -1;
+    min-height: 48px;
+  }
+
+  .activity-log-filters select,
+  .activity-log-date {
+    min-height: 46px;
+    padding: 0 9px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+
+  .activity-log-filters select {
+    padding-right: 5px;
+  }
+
+  .activity-log-date {
+    gap: 6px;
+  }
+
+  .activity-log-date svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .activity-log-date input {
+    font-size: 11px;
+  }
+
+  .activity-log-toolbar {
+    margin-bottom: 16px;
+  }
+
+  .activity-log-toolbar button {
+    min-height: 44px;
+    padding: 0 14px;
+    border-radius: 11px;
+    font-size: 13px;
+  }
+
+  .activity-log-list {
+    gap: 10px;
+  }
+
+  .activity-log-card {
+    padding: 16px 13px;
+    border-radius: 15px;
+  }
+
+  .activity-log-card-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 10px;
+  }
+
+  .activity-log-card-labels {
+    gap: 8px;
+  }
+
+  .activity-action-badge {
+    min-height: 28px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .activity-log-category {
+    font-size: 15px;
+  }
+
+  .activity-log-time {
+    width: 100%;
+    flex-basis: 100%;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .activity-log-description {
+    margin-bottom: 11px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .activity-log-user {
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 350px) {
+  .activity-log-page {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .activity-log-filters {
+    gap: 7px;
+  }
+
+  .activity-log-search {
+    padding: 0 9px;
+  }
+
+  .activity-log-filters select {
+    font-size: 11px;
+  }
+
+  .activity-log-card {
+    padding: 13px 10px;
+  }
+
+  .activity-log-category {
+    font-size: 14px;
+  }
+}
+
+
+.activity-log-header p {
+  text-align: left;
+}
+
+
+@media (max-width: 600px) {
+  .activity-log-card-top {
+    position: relative;
+  }
+
+  .activity-log-time {
+    width: auto;
+    flex-basis: auto;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .activity-log-card-top {
+    justify-content: flex-start;
+  }
+
+  .activity-log-card-labels {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .activity-log-description {
+    text-align: left;
+  }
+
+  .activity-log-user {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+.activity-log-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.activity-log-page h1 {
+  max-width: 100%;
+  font-size: 24px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+  margin-left: 0;
+}
+
+.activity-log-page > * {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   ACTIVITY LOG — LIGHT MODE
+   Add at the bottom of ActivityLog.css
+========================================== */
+
+.app.theme-light .activity-log-page {
+  background: #f1f5f9 !important;
+  color: #172033 !important;
+}
+
+/* Page heading */
+.app.theme-light .activity-log-header h1 {
+  color: #172033 !important;
+}
+
+.app.theme-light .activity-log-header p {
+  color: #64748b !important;
+}
+
+/* Search box */
+.app.theme-light .activity-log-search {
+  background: #ffffff !important;
+  color: #64748b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .activity-log-search input {
+  background: transparent !important;
+  color: #172033 !important;
+}
+
+.app.theme-light .activity-log-search input::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+/* Action, Type and User dropdowns */
+.app.theme-light .activity-log-filters select {
+  background-color: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #cbd5e1 !important;
+  color-scheme: light !important;
+}
+
+.app.theme-light .activity-log-filters select option {
+  background: #ffffff !important;
+  color: #172033 !important;
+}
+
+/* Date filters */
+.app.theme-light .activity-log-date {
+  background: #ffffff !important;
+  color: #64748b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .activity-log-date input {
+  background: transparent !important;
+  color: #172033 !important;
+  color-scheme: light !important;
+}
+
+.app.theme-light .activity-log-date input::-webkit-calendar-picker-indicator {
+  filter: none !important;
+  opacity: 0.8;
+}
+
+/* Refresh button, if present */
+.app.theme-light .activity-log-toolbar button {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Activity cards */
+.app.theme-light .activity-log-card {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #172033 !important;
+  border: 1px solid #dbe4ef !important;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05) !important;
+}
+
+.app.theme-light .activity-log-card:hover {
+  background: #f8fafc !important;
+  background-image: none !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Activity type/title */
+.app.theme-light .activity-log-category {
+  color: #172033 !important;
+}
+
+/* Date and time */
+.app.theme-light .activity-log-time {
+  color: #64748b !important;
+}
+
+/* Activity description */
+.app.theme-light .activity-log-description {
+  color: #334155 !important;
+}
+
+/* User name and phone */
+.app.theme-light .activity-log-user {
+  color: #475569 !important;
+}
+
+/* Keep action badges distinct */
+.app.theme-light .activity-action-badge.create {
+  background: #d1fae5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+
+.app.theme-light .activity-action-badge.update {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+
+.app.theme-light .activity-action-badge.delete {
+  background: #ffe4e6 !important;
+  color: #be123c !important;
+  border-color: #fecdd3 !important;
+}
+
+.app.theme-light .activity-action-badge.cancel {
+  background: #ffedd5 !important;
+  color: #9a3412 !important;
+}
+
+.app.theme-light .activity-action-badge.complete {
+  background: #d1fae5 !important;
+  color: #047857 !important;
+}
+
+.app.theme-light .activity-action-badge.start,
+.app.theme-light .activity-action-badge.restore {
+  background: #ede9fe !important;
+  color: #6d28d9 !important;
+}
+
+.app.theme-light .activity-action-badge.login {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+
+.app.theme-light .activity-action-badge.logout {
+  background: #ffe4e6 !important;
+  color: #be123c !important;
+}
+
+/* Loading and empty states */
+.app.theme-light .activity-log-state {
+  color: #64748b !important;
+}
+
+.app.theme-light .activity-log-state h3 {
+  color: #172033 !important;
+}
+
+.app.theme-light .activity-log-state p {
+  color: #64748b !important;
+}
+
+/* Error states */
+.app.theme-light .activity-log-error,
+.app.theme-light .activity-log-user-error {
+  background: #fff1f2 !important;
+  color: #be123c !important;
+  border-color: #fecdd3 !important;
+}
+
+.app.theme-light .activity-log-error button {
+  background: #ffffff !important;
+  color: #be123c !important;
+  border-color: #fecdd3 !important;
+}

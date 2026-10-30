@@ -1,0 +1,4855 @@
+/* =====================================================
+   BILLS PAGE
+   ===================================================== */
+
+.bills-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+  color: #f8fafc;
+}
+
+/* HEADER */
+
+.bills-header {
+  margin-bottom: 24px;
+}
+
+.bills-title-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bills-title-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.bills-title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.bills-title-section p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* STATUS CARDS */
+
+.bill-status-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.bill-status-card {
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 17px 18px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+  color: #cbd5e1;
+}
+
+.bill-status-card:hover {
+  border-color: #334155;
+  transform: translateY(-1px);
+}
+
+.bill-status-card span {
+  display: block;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 7px;
+}
+
+.bill-status-card strong {
+  display: block;
+  font-size: 23px;
+  color: #f8fafc;
+}
+
+.bill-status-card.active {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.09);
+}
+
+.bill-status-card.unpaid.active {
+  border-color: #f59e0b;
+}
+
+.bill-status-card.partial.active {
+  border-color: #3b82f6;
+}
+
+.bill-status-card.paid.active {
+  border-color: #10b981;
+}
+
+.bill-status-card.cancelled.active {
+  border-color: #ef4444;
+}
+
+/* SEARCH */
+
+.bills-search-row {
+  margin-bottom: 14px;
+}
+
+.bills-search-box {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  color: #64748b;
+}
+
+.bills-search-box:focus-within {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.bills-search-box input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+.bills-search-box input::placeholder {
+  color: #64748b;
+}
+
+/* FILTER BUTTONS */
+
+.bill-filter-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.bill-filter-buttons button {
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  color: #94a3b8;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.bill-filter-buttons button:hover {
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+.bill-filter-buttons button.active {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: #fff;
+}
+
+/* SUMMARY */
+
+.bill-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.bill-summary-card {
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+}
+
+.bill-summary-card span {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.bill-summary-card strong {
+  font-size: 21px;
+  color: #f8fafc;
+}
+
+.bill-summary-card.paid-summary strong {
+  color: #34d399;
+}
+
+.bill-summary-card.outstanding-summary strong {
+  color: #fbbf24;
+}
+
+/* BILL LIST */
+
+.bills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* BILL CARD */
+
+.bill-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 20px;
+  transition: 0.2s ease;
+}
+
+.bill-card:hover {
+  border-color: #334155;
+  transform: translateY(-2px);
+}
+
+/* TOP */
+
+.bill-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.bill-number {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.bill-card-top h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+/* STATUS BADGE */
+
+.bill-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.bill-status-badge.paid {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.bill-status-badge.unpaid {
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.bill-status-badge.partially-paid {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.bill-status-badge.cancelled {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+/* DETAILS */
+
+.bill-card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 16px 0;
+}
+
+.bill-card-details span,
+.bill-card-amounts span {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.bill-card-details strong {
+  display: block;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* AMOUNTS */
+
+.bill-card-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #090f1a;
+  border: 1px solid #172033;
+}
+
+.bill-card-amounts strong {
+  font-size: 15px;
+  color: #f8fafc;
+}
+
+.bill-card-amounts .bill-paid {
+  color: #34d399;
+}
+
+.bill-card-amounts .bill-balance-due {
+  color: #fbbf24;
+}
+
+.bill-card-amounts .bill-balance-clear {
+  color: #34d399;
+}
+
+/* BOTTOM */
+
+.bill-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.bill-card-bottom > span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.bill-view-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #334155;
+  background: #111827;
+  color: #cbd5e1;
+  padding: 8px 13px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.bill-view-button:hover {
+  color: #fff;
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* LOADING / ERROR */
+
+.bills-message {
+  padding: 40px 20px;
+  text-align: center;
+  color: #94a3b8;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+}
+
+.bills-message.error {
+  color: #f87171;
+}
+
+.bills-message button {
+  margin-top: 12px;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 16px;
+  background: #7c3aed;
+  color: #fff;
+  cursor: pointer;
+}
+
+.bills-empty {
+  grid-column: 1 / -1;
+  padding: 50px 20px;
+  text-align: center;
+  color: #64748b;
+  border: 1px dashed #334155;
+  border-radius: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .bill-status-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .bills-page {
+    padding: 18px;
+  }
+
+  .bill-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bill-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bill-card-details {
+    grid-template-columns: 1fr;
+  }
+
+  .bill-card-amounts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .bills-page {
+    padding: 14px;
+  }
+
+  .bills-title-section h1 {
+    font-size: 23px;
+  }
+
+  .bill-status-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .bill-status-card {
+    padding: 13px;
+  }
+
+  .bill-status-card strong {
+    font-size: 19px;
+  }
+
+  .bill-filter-buttons {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .bill-filter-buttons button {
+    white-space: nowrap;
+  }
+
+  .bill-card {
+    padding: 15px;
+  }
+}
+
+/* =====================================================
+   BILL DETAILS MODAL
+   ===================================================== */
+
+.bill-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(6px);
+}
+
+.bill-modal {
+  width: 100%;
+  max-width: 520px;
+
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 16px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.55);
+
+  animation: billModalShow 0.18s ease-out;
+}
+
+@keyframes billModalShow {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* HEADER */
+
+.bill-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.bill-modal-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #8b5cf6;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.bill-modal-header h2 {
+  margin: 0;
+
+  color: #f8fafc;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.bill-modal-close {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  background: #111827;
+  color: #94a3b8;
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.bill-modal-close:hover {
+  color: #fff;
+  border-color: #6366f1;
+  background: #1e293b;
+}
+
+/* STATUS */
+
+.bill-modal-status {
+  padding: 16px 0;
+}
+
+/* DETAILS */
+
+.bill-modal-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  padding: 16px;
+
+  background: #090f1a;
+  border: 1px solid #172033;
+  border-radius: 12px;
+}
+
+.bill-modal-details span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #64748b;
+  font-size: 11px;
+}
+
+.bill-modal-details strong {
+  display: block;
+
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* AMOUNTS */
+
+.bill-modal-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin-top: 14px;
+
+  padding: 16px;
+
+  background: #090f1a;
+  border: 1px solid #172033;
+  border-radius: 12px;
+}
+
+.bill-modal-amounts span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #64748b;
+  font-size: 11px;
+}
+
+.bill-modal-amounts strong {
+  color: #f8fafc;
+  font-size: 15px;
+}
+
+.bill-modal-amounts .modal-paid {
+  color: #34d399;
+}
+
+.bill-modal-amounts .modal-due {
+  color: #fbbf24;
+}
+
+.bill-modal-amounts .modal-clear {
+  color: #34d399;
+}
+
+/* FOOTER */
+
+.bill-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 20px;
+}
+
+.bill-modal-close-button {
+  border: 1px solid #334155;
+
+  background: #111827;
+  color: #cbd5e1;
+
+  padding: 9px 18px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.bill-modal-close-button:hover {
+  color: #fff;
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .bill-modal {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .bill-modal-details {
+    grid-template-columns: 1fr;
+  }
+
+  .bill-modal-amounts {
+    grid-template-columns: 1fr;
+  }
+
+  .bill-modal-header h2 {
+    font-size: 19px;
+  }
+}
+
+/* =========================
+   BILL MODAL RENTAL ITEMS
+   ========================= */
+
+.bill-modal-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.bill-modal-items {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bill-modal-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bill-modal-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+}
+
+.bill-modal-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bill-modal-item-info.right {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.bill-modal-item-info strong {
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+.bill-modal-item-info span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.bill-modal-no-items {
+  padding: 14px;
+  text-align: center;
+  color: #64748b;
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .bill-modal-item {
+    flex-direction: column;
+  }
+
+  .bill-modal-item-info.right {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+
+/* =====================================================
+   BILLS MOBILE - REFERENCE STYLE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .bills-page {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 12px 30px;
+  }
+
+  /* HEADER */
+
+  .bills-header {
+    margin-bottom: 16px;
+  }
+
+  .bills-title-section {
+    gap: 0;
+  }
+
+  .bills-title-icon {
+    display: none;
+  }
+
+  .bills-title-section h1 {
+    font-size: 27px;
+    font-weight: 800;
+  }
+
+  .bills-title-section p {
+    margin-top: 4px;
+    font-size: 13px;
+  }
+
+  /* STATUS CARDS */
+
+  .bill-status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .bill-status-card {
+    min-height: 82px;
+    box-sizing: border-box;
+    padding: 13px;
+    border-radius: 14px;
+
+    background: linear-gradient(
+      145deg,
+      #143b98,
+      #1b4db5
+    );
+
+    border: 1px solid #2d68dc;
+  }
+
+  .bill-status-card span {
+    font-size: 11px;
+    color: #dce7fb;
+    margin-bottom: 6px;
+  }
+
+  .bill-status-card strong {
+    font-size: 22px;
+    color: #ffffff;
+  }
+
+  /* ACTIVE ALL */
+
+  .bill-status-card.active {
+    border-color: #31efaa;
+    box-shadow:
+      0 0 0 1px rgba(49, 239, 170, 0.18);
+    background: linear-gradient(
+      145deg,
+      #143f9e,
+      #1c51bd
+    );
+  }
+
+  /* COUNT COLORS */
+
+  .bill-status-card.unpaid strong {
+    color: #ff586b;
+  }
+
+  .bill-status-card.partial strong {
+    color: #ffbf32;
+  }
+
+  .bill-status-card.paid strong {
+    color: #35f3a0;
+  }
+
+  .bill-status-card.cancelled strong {
+    color: #35f3a0;
+  }
+
+  /* SEARCH */
+
+  .bills-search-row {
+    margin-bottom: 10px;
+  }
+
+  .bills-search-box {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+
+    border: 1px solid #2a61ca;
+    border-radius: 11px;
+
+    background: #123777;
+  }
+
+  .bills-search-box input {
+    font-size: 12px;
+  }
+
+  /* FILTERS */
+
+  .bill-filter-buttons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    padding-bottom: 4px;
+    margin-bottom: 14px;
+
+    scrollbar-width: none;
+  }
+
+  .bill-filter-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bill-filter-buttons button {
+    flex: 0 0 auto;
+
+    padding: 8px 12px;
+
+    border-radius: 999px;
+    font-size: 11px;
+    white-space: nowrap;
+
+    background: #101b2b;
+    border: 1px solid #2a3c58;
+    color: #b4c4dc;
+  }
+
+  .bill-filter-buttons button.active {
+    background: #49df82;
+    border-color: #49df82;
+    color: #04120a;
+  }
+
+  /* HIDE SUMMARY ON MOBILE */
+
+  .bill-summary-grid {
+    display: none;
+  }
+
+  /* BILL LIST */
+
+  .bills-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* BILL CARD */
+
+  .bill-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+      145deg,
+      #123e9e,
+      #1b4fb9
+    );
+
+    border: 1px solid #2d6bdf;
+  }
+
+  .bill-card:hover {
+    transform: none;
+  }
+
+  /* FIRST/SELECTED CARD GREEN BORDER */
+
+  .bill-card:first-child {
+    border-color: #35efaa;
+    box-shadow:
+      0 0 0 1px rgba(53, 239, 170, 0.18);
+  }
+
+  /* TOP */
+
+  .bill-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .bill-number {
+    margin-bottom: 4px;
+
+    color: #19e8d0;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .bill-card-top h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    line-height: 1.15;
+    font-weight: 800;
+  }
+
+  /* STATUS */
+
+  .bill-status-badge {
+    flex-shrink: 0;
+
+    min-height: 28px;
+    padding: 0 10px;
+
+    border-radius: 999px;
+
+    font-size: 9px;
+    font-weight: 800;
+  }
+
+  .bill-status-badge.unpaid {
+    color: #ffffff;
+    background: #f43f5e;
+  }
+
+  .bill-status-badge.paid {
+    color: #04140d;
+    background: #20df91;
+  }
+
+  .bill-status-badge.partially-paid {
+    color: #ffffff;
+    background: #f59e0b;
+  }
+
+  .bill-status-badge.cancelled {
+    color: #ffffff;
+    background: #ef4444;
+  }
+
+  /* DETAILS */
+
+  .bill-card-details {
+    display: none;
+  }
+
+  /* AMOUNTS */
+
+  .bill-card-amounts {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 0;
+    margin-top: 18px;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .bill-card-amounts > div {
+    min-width: 0;
+  }
+
+  .bill-card-amounts span {
+    display: inline;
+    margin: 0 4px 0 0;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .bill-card-amounts strong {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .bill-card-amounts .bill-paid {
+    color: #35ef9f;
+  }
+
+  .bill-card-amounts .bill-balance-due {
+    color: #ff5267;
+  }
+
+  .bill-card-amounts .bill-balance-clear {
+    color: #35ef9f;
+  }
+
+  /* HIDE PAID AMOUNT IN CARD */
+
+  .bill-card-amounts > div:nth-child(2) {
+    display: none;
+  }
+
+  /* TOTAL + BALANCE */
+
+  .bill-card-amounts > div:nth-child(1),
+  .bill-card-amounts > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  /* BOTTOM */
+
+  .bill-card-bottom {
+    display: none;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .bills-page {
+    padding: 13px 10px 25px;
+  }
+
+  .bills-title-section h1 {
+    font-size: 26px;
+  }
+
+  .bill-status-grid {
+    gap: 9px;
+  }
+
+  .bill-status-card {
+    min-height: 80px;
+    padding: 12px;
+  }
+
+  .bill-status-card strong {
+    font-size: 21px;
+  }
+
+  .bill-card {
+    padding: 13px 14px;
+    border-radius: 15px;
+  }
+
+  .bill-card-top h2 {
+    font-size: 16px;
+  }
+
+  .bill-number {
+    font-size: 9px;
+  }
+
+  .bill-status-badge {
+    min-height: 27px;
+    font-size: 9px;
+  }
+
+  .bill-card-amounts {
+    margin-top: 16px;
+  }
+
+  .bill-card-amounts span {
+    font-size: 12px;
+  }
+
+  .bill-card-amounts strong {
+    font-size: 13px;
+  }
+}
+
+
+/* =====================================================
+   BILL DETAILS PAGE
+===================================================== */
+
+.bill-details-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  color: #f8fafc;
+}
+
+/* BACK */
+
+.bill-details-back {
+  border: 0;
+  background: transparent;
+  color: #9fb4d3;
+  padding: 5px 0;
+  margin-bottom: 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bill-details-back:hover {
+  color: #ffffff;
+}
+
+/* HEADER */
+
+.bill-details-header {
+  margin-bottom: 12px;
+}
+
+.bill-details-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bill-details-title-row h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+/* ACTIONS */
+
+.bill-details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.bill-details-actions button {
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.bill-cancel-btn,
+.bill-print-btn,
+.bill-whatsapp-btn {
+  background: transparent;
+  color: #3ef0a3;
+  border: 1px solid #3ef0a3;
+}
+
+.bill-delete-btn {
+  background: #ff3f56;
+  border: 1px solid #ff3f56;
+  color: #ffffff;
+}
+
+.bill-collect-btn,
+.bill-collect-large {
+  background: #12d991;
+  border: 1px solid #12d991;
+  color: #03140d;
+}
+
+/* MAIN CARD */
+
+.bill-details-card {
+  background: linear-gradient(
+    145deg,
+    #123f9c,
+    #1c50b8
+  );
+
+  border: 1px solid #2c68d8;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+/* SUMMARY */
+
+.bill-summary-main {
+  padding: 0;
+}
+
+.bill-summary-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px;
+}
+
+.bill-summary-top span,
+.bill-summary-row > span,
+.bill-summary-row div > span {
+  display: block;
+  color: #c8d8ef;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.bill-summary-top h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.bill-summary-top p {
+  margin: 5px 0 0;
+  color: #21e5c9;
+  font-size: 11px;
+}
+
+.bill-balance-box {
+  text-align: right;
+}
+
+.bill-balance-box strong {
+  display: block;
+  color: #ff5268;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.bill-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 18px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.bill-summary-row strong {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.bill-discount-edit {
+  border: 0;
+  background: transparent;
+  color: #55f0bd;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.bill-collect-large {
+  width: calc(100% - 28px);
+  min-height: 42px;
+  margin: 0 14px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* SECTION HEADER */
+
+.bill-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 18px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.bill-section-header h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+/* BILL ITEMS */
+
+.bill-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+  padding: 15px 18px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.bill-item-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bill-item-row strong {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.bill-item-row span {
+  color: #dce7f7;
+  font-size: 11px;
+}
+
+.bill-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 18px;
+
+  background: #09101a;
+}
+
+.bill-total-row span,
+.bill-total-row strong {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.bill-total-row.grand-total {
+  border-top: 1px solid #1b2b3e;
+}
+
+.bill-no-items {
+  padding: 18px;
+  text-align: center;
+  color: #d0dced;
+}
+
+/* PAYMENTS */
+
+.bill-payments-empty {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 20px;
+
+  color: #eef5ff;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .bill-details-page {
+    padding: 12px 10px 30px;
+  }
+
+  .bill-details-back {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .bill-details-title-row {
+    gap: 8px;
+  }
+
+  .bill-details-title-row h1 {
+    font-size: 22px;
+  }
+
+  .bill-details-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .bill-details-actions button {
+    min-width: 0;
+    padding: 0 5px;
+    font-size: 9px;
+  }
+
+  .bill-details-actions .bill-whatsapp-btn,
+  .bill-details-actions .bill-collect-btn {
+    grid-column: span 1;
+  }
+
+  .bill-summary-top {
+    padding: 15px;
+  }
+
+  .bill-summary-top h2 {
+    font-size: 17px;
+  }
+
+  .bill-balance-box strong {
+    font-size: 20px;
+  }
+
+  .bill-section-header {
+    padding: 14px 15px;
+  }
+
+  .bill-section-header h2 {
+    font-size: 16px;
+  }
+
+  .bill-item-row {
+    padding: 13px 15px;
+  }
+
+  .bill-item-row strong {
+    font-size: 14px;
+  }
+
+  .bill-total-row {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .bill-details-actions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bill-details-actions button {
+    min-height: 34px;
+    font-size: 8px;
+  }
+
+  .bill-details-card {
+    border-radius: 14px;
+  }
+
+  .bill-summary-top {
+    padding: 14px;
+  }
+
+  .bill-balance-box strong {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Back to Bills - left side */
+  .bill-details-back {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  /* Print - border venda */
+  .bill-print-btn {
+    border: none !important;
+    background: transparent !important;
+    color: #35efaa !important;
+  }
+
+  .bill-print-btn:hover {
+    border: none !important;
+    background: transparent !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* ACTION BUTTON FONT SIZE */
+
+  .bill-details-actions button {
+    font-size: 11px !important;
+    font-weight: 800;
+  }
+
+  /* PRINT WHITE */
+
+  .bill-print-btn {
+    color: #ffffff !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .bill-details-actions .bill-collect-btn {
+    background: #18e1a0 !important;
+    border: 1px solid #18e1a0 !important;
+    color: #ffffff !important;
+
+    min-height: 42px;
+    border-radius: 9px;
+
+    font-size: 11px !important;
+    font-weight: 800;
+  }
+
+  .bill-details-actions .bill-collect-btn:hover {
+    background: #18e1a0 !important;
+    border-color: #18e1a0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .bill-details-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+  }
+
+  .bill-details-actions button {
+    min-height: 40px;
+    padding: 0 8px;
+    font-size: 11px !important;
+    font-weight: 800;
+  }
+
+  /* First row */
+  .bill-cancel-btn {
+    grid-column: 1;
+  }
+
+  .bill-delete-btn {
+    grid-column: 2;
+  }
+
+  .bill-print-btn {
+    grid-column: 3;
+    border: none !important;
+    background: transparent !important;
+    color: #ffffff !important;
+  }
+
+  /* Second row */
+
+  .bill-whatsapp-btn {
+    grid-column: 1;
+  }
+
+  .bill-details-actions .bill-collect-btn {
+    grid-column: 2 / 4;
+
+    min-width: 0 !important;
+    width: 100%;
+  }
+}
+
+/* =========================================
+   BILL PRINT SETTINGS - FIX BLANK PREVIEW
+========================================= */
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+
+  /* Hide other application content */
+  body * {
+    visibility: hidden !important;
+  }
+
+  /* Show the bill section */
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area * {
+    visibility: visible !important;
+  }
+
+  /* Position bill at the top of the printed page */
+  .bill-details-page.bill-print-area {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 999999 !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+
+    background: #ffffff !important;
+    color: #111827 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    font-family: Arial, sans-serif !important;
+  }
+
+  /* Remove buttons from the printed bill */
+  .bill-details-page.bill-print-area button,
+  .bill-details-page.bill-print-area .no-print {
+    display: none !important;
+  }
+
+  /* Reset text and backgrounds */
+  .bill-details-page.bill-print-area * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area h1,
+  .bill-details-page.bill-print-area h2,
+  .bill-details-page.bill-print-area h3,
+  .bill-details-page.bill-print-area p,
+  .bill-details-page.bill-print-area span,
+  .bill-details-page.bill-print-area strong,
+  .bill-details-page.bill-print-area label,
+  .bill-details-page.bill-print-area div {
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-status-badge {
+    color: #111827 !important;
+    background: #f3f4f6 !important;
+    border: 1px solid #999999 !important;
+  }
+
+  .bill-details-page.bill-print-area table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .bill-details-page.bill-print-area th,
+  .bill-details-page.bill-print-area td {
+    color: #111827 !important;
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    padding: 8px !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-balance-due {
+    color: #dc2626 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-paid {
+    color: #166534 !important;
+  }
+
+  .bill-details-page.bill-print-area * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* =========================================
+   COLLECT PAYMENT MODAL
+========================================= */
+
+.collect-payment-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.collect-payment-modal {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 540px;
+  max-height: 94vh;
+  max-height: 94dvh;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(115, 169, 255, 0.4);
+  border-radius: 17px;
+
+  background: linear-gradient(
+    145deg,
+    #174ca6,
+    #103b80
+  );
+
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.5);
+}
+
+/* HEADER */
+
+.collect-payment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  min-height: 60px;
+  padding: 15px 19px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.collect-payment-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.collect-payment-header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9px;
+
+  background: rgba(7, 22, 47, 0.5);
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+/* SCROLLABLE FORM */
+
+.collect-payment-form {
+  min-height: 0;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+  padding: 18px 20px 20px;
+
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* BILL SUMMARY */
+
+.collect-payment-bill-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  padding: 16px;
+
+  border-radius: 12px;
+  background: #b9d8f0;
+}
+
+.collect-payment-bill-summary > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.collect-payment-bill-summary span {
+  color: #24476a;
+  font-size: 14px;
+}
+
+.collect-payment-bill-summary strong {
+  color: #132c4b;
+  font-size: 16px;
+  font-weight: 850;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* FORM FIELDS */
+
+.collect-payment-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.collect-payment-field label {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.collect-payment-field label span {
+  color: #ff5d71;
+}
+
+.collect-payment-field input,
+.collect-payment-field select,
+.collect-payment-field textarea {
+  box-sizing: border-box;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 49px;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(150, 190, 241, 0.26);
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #103461;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.collect-payment-field input:focus,
+.collect-payment-field select:focus,
+.collect-payment-field textarea:focus {
+  border-color: #28ebbd;
+  box-shadow: 0 0 0 2px rgba(40, 235, 189, 0.12);
+}
+
+.collect-payment-field input::placeholder,
+.collect-payment-field textarea::placeholder {
+  color: #aec7e5;
+  opacity: 1;
+}
+
+.collect-payment-field select option {
+  background: #103461;
+  color: #ffffff;
+}
+
+.collect-payment-field textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.collect-payment-field small {
+  color: #c6dcf8;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* INPUT ICONS */
+
+.collect-payment-input-icon {
+  position: relative;
+  min-width: 0;
+}
+
+.collect-payment-input-icon > svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  z-index: 1;
+
+  width: 18px;
+  height: 18px;
+
+  color: #a9c7e9;
+
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.collect-payment-input-icon input,
+.collect-payment-input-icon select {
+  padding-left: 43px;
+}
+
+/* CALCULATION BOX */
+
+.collect-payment-calculation {
+  display: flex;
+  flex-direction: column;
+
+  padding: 14px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  background: #07141f;
+}
+
+.calculation-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 8px 0;
+}
+
+.calculation-row span {
+  color: #f0f5fc;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.calculation-row strong {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.discount-row span,
+.discount-row strong {
+  color: #ff6475;
+}
+
+.net-payable-row {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid #273b4c;
+}
+
+.net-payable-row span,
+.net-payable-row strong {
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.previous-payment-row strong {
+  color: #6de0b4;
+}
+
+.current-payment-row span,
+.current-payment-row strong {
+  color: #38e3ac;
+}
+
+.balance-after-row {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid #31485a;
+}
+
+.balance-after-row span,
+.balance-after-row strong {
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.balance-after-row strong {
+  color: #35e4a5;
+}
+
+/* ERROR */
+
+.collect-payment-error {
+  padding: 12px 14px;
+
+  border: 1px solid rgba(255, 93, 113, 0.5);
+  border-radius: 9px;
+
+  background: rgba(255, 65, 85, 0.14);
+  color: #ffe1e5;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* FOOTER BUTTONS */
+
+.collect-payment-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: #103b80;
+}
+
+.collect-payment-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 47px;
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.collect-payment-cancel {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #07131f;
+  color: #ffffff;
+}
+
+.collect-payment-submit {
+  max-width: 70%;
+  border: 1px solid #16e0a5;
+
+  background: linear-gradient(
+    120deg,
+    #13e5ad,
+    #13d69f
+  );
+
+  color: #063a2b;
+  overflow-wrap: anywhere;
+}
+
+.collect-payment-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .collect-payment-overlay {
+    padding: 8px;
+  }
+
+  .collect-payment-modal {
+    max-width: 480px;
+    max-height: 94vh;
+    max-height: 94dvh;
+    border-radius: 15px;
+  }
+
+  .collect-payment-header {
+    min-height: 56px;
+    padding: 13px 16px;
+  }
+
+  .collect-payment-header h2 {
+    font-size: 18px;
+  }
+
+  .collect-payment-form {
+    gap: 15px;
+    padding: 15px 16px 18px;
+  }
+
+  .collect-payment-bill-summary {
+    padding: 14px;
+  }
+
+  .collect-payment-field label {
+    font-size: 14px;
+  }
+
+  .collect-payment-field input,
+  .collect-payment-field select,
+  .collect-payment-field textarea {
+    font-size: 15px;
+  }
+
+  .collect-payment-calculation {
+    padding: 12px;
+  }
+
+  .calculation-row {
+    gap: 8px;
+    padding: 7px 0;
+  }
+
+  .calculation-row span,
+  .calculation-row strong {
+    font-size: 13px;
+  }
+
+  .net-payable-row span,
+  .net-payable-row strong,
+  .balance-after-row span,
+  .balance-after-row strong {
+    font-size: 14px;
+  }
+
+  .collect-payment-actions {
+    gap: 9px;
+    padding-top: 12px;
+  }
+
+  .collect-payment-actions button {
+    min-height: 46px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .collect-payment-submit {
+    flex: 1;
+    max-width: none;
+  }
+}
+
+/* =========================================
+   PRINT BILL ONLY
+========================================= */
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .bill-print-area,
+  .bill-print-area * {
+    visibility: visible !important;
+  }
+
+  .bill-print-area {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+
+    background: #ffffff !important;
+    color: #111827 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .no-print,
+  .bill-details-page button,
+  .collect-payment-overlay {
+    display: none !important;
+  }
+
+  .bill-details-page,
+  .bill-details-page * {
+    color: #111827 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .bill-details-page .bill-details-card {
+    background: #ffffff !important;
+    border-color: #d1d5db !important;
+    break-inside: avoid;
+  }
+
+  .bill-details-page .bill-total-row,
+  .bill-details-page .bill-item-row,
+  .bill-details-page .bill-payment-row {
+    border-color: #d1d5db !important;
+  }
+}
+
+/* =========================================
+   COLLECT PAYMENT - LEFT ALIGNMENT
+========================================= */
+
+/* Modal content left alignment */
+.collect-payment-modal,
+.collect-payment-form {
+  text-align: left !important;
+}
+
+/* Field containers */
+.collect-payment-field {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  text-align: left !important;
+}
+
+/* All labels */
+.collect-payment-field label {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+
+  text-align: left !important;
+  align-self: flex-start !important;
+}
+
+/* Input, dropdown and textarea */
+.collect-payment-field input,
+.collect-payment-field select,
+.collect-payment-field textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+
+  text-align: left !important;
+}
+
+/* Current discount and remaining balance */
+.collect-payment-field small {
+  display: block !important;
+  width: 100% !important;
+
+  text-align: left !important;
+  align-self: flex-start !important;
+}
+
+/* Bill summary: labels left, values right */
+.collect-payment-bill-summary > div {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  text-align: left !important;
+}
+
+.collect-payment-bill-summary span {
+  text-align: left !important;
+}
+
+.collect-payment-bill-summary strong {
+  text-align: right !important;
+}
+
+/* Calculation: description left, amount right */
+.collect-payment-calculation .calculation-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+
+.collect-payment-calculation .calculation-row span {
+  flex: 1 !important;
+  text-align: left !important;
+}
+
+.collect-payment-calculation .calculation-row strong {
+  flex-shrink: 0 !important;
+  text-align: right !important;
+}
+
+/* Discount summary */
+.collect-payment-field .collect-payment-input-icon {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+/* Footer buttons */
+.collect-payment-actions {
+  justify-content: flex-end !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .collect-payment-form {
+    text-align: left !important;
+  }
+
+  .collect-payment-field label {
+    text-align: left !important;
+    font-size: 14px;
+  }
+
+  .collect-payment-field small {
+    text-align: left !important;
+  }
+}
+
+/* Fix Collect Payment icon and text spacing */
+
+.bill-collect-large,
+.bill-collect-payment-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  text-align: center !important;
+}
+
+.bill-collect-large svg,
+.bill-collect-payment-button svg {
+  position: static !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+/* =========================================
+   BILL DETAILS - ACTION BUTTONS FIX
+========================================= */
+
+/* 3 buttons first row, 2 buttons second row */
+.bill-details-actions {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+/* All action buttons */
+.bill-details-actions button {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 41px !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+
+  padding: 8px 5px !important;
+  border-radius: 10px !important;
+
+  font-family: inherit !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  line-height: 1.2 !important;
+
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+
+/* Fix icon alignment */
+.bill-details-actions button svg {
+  position: static !important;
+  display: inline-block !important;
+
+  width: 15px !important;
+  height: 15px !important;
+  min-width: 15px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  flex-shrink: 0 !important;
+  transform: none !important;
+}
+
+/* Cancel */
+.bill-details-actions .bill-cancel-btn {
+  background: #07131f !important;
+  border: 1px solid #13e5a5 !important;
+  color: #35efb5 !important;
+}
+
+/* Delete */
+.bill-details-actions .bill-delete-btn {
+  background: #ff354f !important;
+  border: 1px solid #ff354f !important;
+  color: #ffffff !important;
+}
+
+/* Print - remove grey background */
+.bill-details-actions .bill-print-button {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: #ffffff !important;
+}
+
+/* WhatsApp */
+.bill-details-actions .bill-whatsapp-btn {
+  background: #07131f !important;
+  border: 1px solid #13e5a5 !important;
+  color: #35efb5 !important;
+}
+
+/* Collect Payment - span the remaining 2 columns */
+.bill-details-actions .bill-collect-payment-button {
+  grid-column: span 2 !important;
+
+  background: #13d8a0 !important;
+  border: 1px solid #13d8a0 !important;
+  color: #062d22 !important;
+
+  white-space: nowrap !important;
+}
+
+.bill-details-actions .bill-collect-payment-button svg {
+  color: #062d22 !important;
+}
+
+/* Disabled buttons */
+.bill-details-actions button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+  .bill-details-actions {
+    gap: 6px !important;
+  }
+
+  .bill-details-actions button {
+    gap: 4px !important;
+    padding: 7px 3px !important;
+    font-size: 10px !important;
+  }
+
+  .bill-details-actions button svg {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+  }
+}
+
+/* =========================================
+   BILLS - COMPLETE DARK NAVY THEME
+========================================= */
+
+/* Main page */
+.bills-page,
+.bill-details-page {
+  background: #080d16 !important;
+  color: #f4f7ff !important;
+}
+
+/* Header */
+.bills-title-section h1,
+.bill-details-title-row h1 {
+  color: #ffffff !important;
+}
+
+.bills-title-section p {
+  color: #9bb0cb !important;
+}
+
+/* Status cards */
+.bill-status-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border-color: #26384f !important;
+  color: #ffffff !important;
+}
+
+.bill-status-card span {
+  color: #9bb0cb !important;
+}
+
+.bill-status-card strong {
+  color: #19e5b0 !important;
+}
+
+.bill-status-card.active,
+.bill-status-card.unpaid.active,
+.bill-status-card.partial.active,
+.bill-status-card.paid.active,
+.bill-status-card.cancelled.active {
+  background: #10251f !important;
+  border-color: #19dca9 !important;
+}
+
+/* Search */
+.bills-search-box {
+  background: #0d1929 !important;
+  border-color: #26384f !important;
+}
+
+.bills-search-box input {
+  color: #ffffff !important;
+}
+
+.bills-search-box input::placeholder {
+  color: #8297b3 !important;
+}
+
+/* Filter buttons */
+.bill-filter-buttons button {
+  background: #101b2b !important;
+  border-color: #26384f !important;
+  color: #b7c7dd !important;
+}
+
+.bill-filter-buttons button.active {
+  background: #19dca9 !important;
+  border-color: #19dca9 !important;
+  color: #06271d !important;
+}
+
+/* Summary cards */
+.bill-summary-card {
+  background: #0d1929 !important;
+  border-color: #20344d !important;
+}
+
+.bill-summary-card span {
+  color: #9bb0cb !important;
+}
+
+.bill-summary-card strong {
+  color: #ffffff !important;
+}
+
+/* Bill cards - desktop and mobile */
+.bill-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border-color: #20344d !important;
+  box-shadow: none !important;
+}
+
+.bill-card:hover {
+  border-color: #30445e !important;
+}
+
+.bill-card:first-child {
+  border-color: #20344d !important;
+  box-shadow: none !important;
+}
+
+.bill-card-top {
+  border-bottom-color: #26384f !important;
+}
+
+.bill-card-top h2 {
+  color: #ffffff !important;
+}
+
+.bill-number {
+  color: #19e5b0 !important;
+}
+
+/* Bill details */
+.bill-card-details span,
+.bill-card-amounts span,
+.bill-card-bottom > span {
+  color: #9bb0cb !important;
+}
+
+.bill-card-details strong {
+  color: #e5eefc !important;
+}
+
+.bill-card-amounts {
+  background: #091629 !important;
+  border-color: #26384f !important;
+}
+
+.bill-card-amounts strong {
+  color: #ffffff !important;
+}
+
+/* View button */
+.bill-view-button {
+  background: #101e30 !important;
+  border-color: #263c56 !important;
+  color: #d6e3f5 !important;
+}
+
+.bill-view-button:hover {
+  border-color: #19dca9 !important;
+  background: #10251f !important;
+}
+
+/* Bill details main card */
+.bill-details-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border-color: #20344d !important;
+}
+
+.bill-summary-top span,
+.bill-summary-row > span,
+.bill-summary-row div > span {
+  color: #9bb0cb !important;
+}
+
+.bill-summary-top h2,
+.bill-summary-row strong {
+  color: #ffffff !important;
+}
+
+.bill-summary-top p {
+  color: #19e5b0 !important;
+}
+
+.bill-balance-box strong {
+  color: #ff6475 !important;
+}
+
+.bill-summary-row,
+.bill-section-header,
+.bill-item-row {
+  border-color: #26384f !important;
+}
+
+.bill-item-row span {
+  color: #9bb0cb !important;
+}
+
+.bill-total-row {
+  background: #091629 !important;
+}
+
+/* Details buttons */
+.bill-details-back {
+  color: #19e5b0 !important;
+}
+
+.bill-details-actions button {
+  border-radius: 9px;
+}
+
+/* Bill details modal */
+.bill-modal,
+.bill-modal-details,
+.bill-modal-amounts {
+  background: #0d1929 !important;
+  border-color: #26384f !important;
+}
+
+.bill-modal-header {
+  border-bottom-color: #26384f !important;
+}
+
+.bill-modal-header h2,
+.bill-modal-section-title,
+.bill-modal-item-info strong {
+  color: #ffffff !important;
+}
+
+.bill-modal-details span,
+.bill-modal-amounts span,
+.bill-modal-item-info span {
+  color: #9bb0cb !important;
+}
+
+.bill-modal-details strong,
+.bill-modal-amounts strong {
+  color: #ffffff !important;
+}
+
+.bill-modal-item,
+.bill-modal-no-items {
+  background: #101b2b !important;
+  border-color: #26384f !important;
+}
+
+/* Collect Payment modal */
+.collect-payment-modal {
+  background: #0d1929 !important;
+  border-color: #26384f !important;
+}
+
+.collect-payment-header {
+  border-bottom-color: #26384f !important;
+}
+
+.collect-payment-header h2,
+.collect-payment-field label {
+  color: #ffffff !important;
+}
+
+/* Payment summary */
+.collect-payment-bill-summary {
+  background: #101e30 !important;
+  border: 1px solid #26384f !important;
+}
+
+.collect-payment-bill-summary span {
+  color: #9bb0cb !important;
+}
+
+.collect-payment-bill-summary strong {
+  color: #ffffff !important;
+}
+
+/* Payment form inputs */
+.collect-payment-field input,
+.collect-payment-field select,
+.collect-payment-field textarea {
+  background: #091629 !important;
+  border-color: #29415d !important;
+  color: #ffffff !important;
+}
+
+.collect-payment-field input::placeholder,
+.collect-payment-field textarea::placeholder {
+  color: #8297b3 !important;
+}
+
+.collect-payment-field select option {
+  background: #0d1929 !important;
+  color: #ffffff !important;
+}
+
+/* Payment calculation */
+.collect-payment-calculation {
+  background: #091629 !important;
+  border-color: #26384f !important;
+}
+
+.calculation-row span {
+  color: #bdcfe7 !important;
+}
+
+.calculation-row strong {
+  color: #ffffff !important;
+}
+
+.net-payable-row,
+.balance-after-row {
+  border-top-color: #26384f !important;
+}
+
+/* Payment footer */
+.collect-payment-actions {
+  background: #0d1929 !important;
+  border-top-color: #26384f !important;
+}
+
+.collect-payment-cancel {
+  background: #101e30 !important;
+  border-color: #26384f !important;
+  color: #ffffff !important;
+}
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+  .bill-status-card,
+  .bill-status-card.active {
+    background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+    border-color: #26384f !important;
+  }
+
+  .bill-card,
+  .bill-card:first-child {
+    background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+    border-color: #20344d !important;
+    box-shadow: none !important;
+  }
+}
+
+/* =========================================
+   BILLS PAGE — NAVY + TEAL MOBILE POLISH
+========================================= */
+
+.bills-page {
+  background: #080d16;
+  color: #f8fafc;
+}
+
+/* Page heading */
+
+.bills-page h1 {
+  color: #f8fafc;
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+}
+
+.bills-page p {
+  color: #9bb0cb;
+}
+
+/* Summary cards */
+
+.bills-stats,
+.bill-stats {
+  gap: 8px;
+}
+
+.bill-stat-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320);
+  border: 1px solid #26384f;
+  border-radius: 12px;
+}
+
+.bill-stat-card span {
+  color: #a9b9ce;
+  font-size: 10px;
+}
+
+.bill-stat-card strong {
+  color: #19dca9;
+  font-size: 20px;
+}
+
+/* Search */
+
+.bills-search,
+.bill-search {
+  background: #0d1929;
+  border: 1px solid #26384f;
+  border-radius: 9px;
+}
+
+.bills-search input,
+.bill-search input {
+  color: #f8fafc;
+  font-size: 11px;
+}
+
+.bills-search input::placeholder,
+.bill-search input::placeholder {
+  color: #71849e;
+}
+
+/* Filter buttons */
+
+.bills-filters button,
+.bill-filters button {
+  color: #c1d2e9;
+  background: #0d1929;
+  border: 1px solid #26384f;
+  border-radius: 999px;
+}
+
+.bills-filters button.active,
+.bill-filters button.active {
+  color: #06140f;
+  background: #19dca9;
+  border-color: #19dca9;
+}
+
+/* Bill cards */
+
+.bill-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320);
+  border: 1px solid #26384f;
+  border-radius: 13px;
+  transition: border-color 0.2s ease;
+}
+
+.bill-card:hover {
+  border-color: rgba(25, 220, 169, 0.45);
+}
+
+.bill-card h3 {
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+.bill-card .bill-number {
+  color: #19dca9;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.bill-card .bill-amount {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.bill-card .bill-balance {
+  color: #19dca9;
+  font-weight: 700;
+}
+
+/* Status badges */
+
+.bill-status.unpaid {
+  color: #fff;
+  background: #f43f5e;
+}
+
+.bill-status.partial {
+  color: #ffbd66;
+  background: rgba(255, 189, 102, 0.12);
+  border: 1px solid rgba(255, 189, 102, 0.3);
+}
+
+.bill-status.paid {
+  color: #19dca9;
+  background: rgba(25, 220, 169, 0.1);
+  border: 1px solid rgba(25, 220, 169, 0.28);
+}
+
+.bill-status.cancelled {
+  color: #a9b9ce;
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid #26384f;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .bills-page {
+    padding: 14px 12px 24px;
+  }
+
+  .bills-page h1 {
+    font-size: 23px;
+  }
+
+  .bill-card {
+    padding: 12px;
+    margin-bottom: 9px;
+  }
+
+  .bill-card h3 {
+    font-size: 13px;
+  }
+
+  .bill-card .bill-amount,
+  .bill-card .bill-balance {
+    font-size: 11px;
+  }
+}
+
+/* Bills — mobile card readability */
+
+@media (max-width: 700px) {
+  .bill-card {
+    padding: 12px !important;
+    border-radius: 12px !important;
+    margin-bottom: 9px !important;
+    background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+    border: 1px solid #26384f !important;
+  }
+
+  .bill-card h3 {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin-top: 4px !important;
+  }
+
+  .bill-card .bill-number {
+    font-size: 10px !important;
+    color: #19dca9 !important;
+  }
+
+  .bill-card .bill-amount,
+  .bill-card .bill-balance {
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+
+  .bill-status {
+    font-size: 9px !important;
+    padding: 5px 9px !important;
+    border-radius: 999px !important;
+  }
+}
+
+/* =========================================
+   BILL DETAILS — MOBILE POLISH
+========================================= */
+
+@media (max-width: 700px) {
+  .bill-details-page {
+    padding: 12px !important;
+    background: #080d16 !important;
+    color: #f8fafc;
+  }
+
+  /* Bill header */
+
+  .bill-details-page h1 {
+    color: #f8fafc;
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  /* Action buttons */
+
+  .bill-details-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .bill-details-actions button {
+    min-width: 0;
+    min-height: 36px;
+    padding: 7px 6px;
+    border-radius: 9px;
+    font-size: 10px;
+  }
+
+  /* Content cards */
+
+  .bill-details-card,
+  .bill-items-card,
+  .bill-payments-card {
+    background: linear-gradient(145deg, #0d1929, #0a1320);
+    border: 1px solid #26384f;
+    border-radius: 13px;
+    overflow: hidden;
+  }
+
+  .bill-details-card h2,
+  .bill-items-card h2,
+  .bill-payments-card h2 {
+    color: #f8fafc;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Customer and balance */
+
+  .bill-details-page .balance-due {
+    color: #ff7185;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  /* Subtotal and total rows */
+
+  .bill-details-page .bill-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid #26384f;
+  }
+
+  .bill-details-page .bill-total-row:last-child {
+    border-bottom: 0;
+  }
+
+  .bill-details-page .bill-total-row strong {
+    color: #f8fafc;
+  }
+
+  /* Collect Payment */
+
+  .bill-details-page .collect-payment-btn {
+    width: 100%;
+    min-height: 42px;
+    border-radius: 9px;
+    background: #19dca9;
+    color: #06140f;
+    font-weight: 750;
+  }
+
+  /* Payments empty state */
+
+  .bill-details-page .empty-state {
+    color: #9bb0cb;
+    text-align: center;
+    padding: 24px 12px;
+  }
+}
+
+/* Bill Details — mobile action button alignment */
+
+@media (max-width: 700px) {
+  .bill-details-actions {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    align-items: stretch;
+  }
+
+  .bill-details-actions button {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    padding: 7px 4px !important;
+    box-sizing: border-box;
+    font-size: 10px !important;
+    white-space: nowrap;
+  }
+
+  .bill-details-actions button svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .bill-details-page .collect-payment-btn {
+    min-height: 40px !important;
+    border-radius: 9px !important;
+  }
+
+  .bill-details-page .bill-details-card,
+  .bill-details-page .bill-items-card,
+  .bill-details-page .bill-payments-card {
+    margin-bottom: 12px !important;
+  }
+}
+
+/* Bill action buttons — mobile alignment */
+
+@media (max-width: 700px) {
+  .bill-details-actions {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+  }
+
+  .bill-details-actions > button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    min-height: 35px !important;
+    padding: 5px 3px !important;
+    font-size: 9px !important;
+    white-space: nowrap;
+  }
+
+  .bill-details-actions > button svg {
+    width: 12px !important;
+    height: 12px !important;
+    flex-shrink: 0;
+  }
+}
+
+/* BILL DETAILS — EXACT MOBILE BUTTON ALIGNMENT */
+
+@media (max-width: 700px) {
+  .bill-details-page .bill-details-actions {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .bill-details-page .bill-details-actions > button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    padding: 5px 3px !important;
+    box-sizing: border-box !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  .bill-details-page .bill-details-actions > button svg {
+    width: 12px !important;
+    height: 12px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .bill-details-page .bill-details-actions .bill-collect-payment-button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .bill-details-page .bill-details-actions
+  .bill-collect-payment-button {
+    background: #19dca9 !important;
+    color: #06140f !important;
+    border: 1px solid #19dca9 !important;
+    font-weight: 700 !important;
+  }
+
+  .bill-details-page .bill-details-actions
+  .bill-collect-payment-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+.bill-not-found-page {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #07110f;
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.bill-not-found-content h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.bill-not-found-back {
+  border: none;
+  background: transparent;
+  color: #7fffe0;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.bill-not-found-back:hover {
+  color: #00e6b0;
+}
+
+/* BILL NOT FOUND SCREEN */
+.bill-not-found-page {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #f8fafc;
+}
+
+.bill-not-found-page h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.bill-not-found-page .bill-details-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+  padding: 6px 0;
+  border: none;
+  background: transparent;
+  color: #5fffd8;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.bill-not-found-page .bill-details-back:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   BILLS PAGE - LIGHT MODE
+   Night Mode preserve cheyyuka
+========================================= */
+
+body.light-mode .bills-page,
+.light-mode .bills-page {
+  color: #172033;
+}
+
+body.light-mode .bills-title-section h1,
+.light-mode .bills-title-section h1 {
+  color: #172033;
+}
+
+body.light-mode .bills-title-section p,
+.light-mode .bills-title-section p {
+  color: #64748b;
+}
+
+/* Status cards */
+body.light-mode .bill-status-card,
+.light-mode .bill-status-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+body.light-mode .bill-status-card span,
+.light-mode .bill-status-card span {
+  color: #64748b;
+}
+
+body.light-mode .bill-status-card strong,
+.light-mode .bill-status-card strong {
+  color: #0f172a;
+}
+
+body.light-mode .bill-status-card.active,
+.light-mode .bill-status-card.active {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+
+/* Search */
+body.light-mode .bills-search-box,
+.light-mode .bills-search-box {
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  color: #64748b;
+}
+
+body.light-mode .bills-search-box input,
+.light-mode .bills-search-box input {
+  color: #172033;
+}
+
+body.light-mode .bills-search-box input::placeholder,
+.light-mode .bills-search-box input::placeholder {
+  color: #94a3b8;
+}
+
+/* Filter buttons */
+body.light-mode .bill-filter-buttons button,
+.light-mode .bill-filter-buttons button {
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  color: #475569;
+}
+
+body.light-mode .bill-filter-buttons button.active,
+.light-mode .bill-filter-buttons button.active {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+}
+
+/* Summary cards */
+body.light-mode .bill-summary-card,
+.light-mode .bill-summary-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+body.light-mode .bill-summary-card span,
+.light-mode .bill-summary-card span {
+  color: #64748b;
+}
+
+body.light-mode .bill-summary-card strong,
+.light-mode .bill-summary-card strong {
+  color: #172033;
+}
+
+/* Bill cards */
+body.light-mode .bill-card,
+.light-mode .bill-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+body.light-mode .bill-card-top,
+.light-mode .bill-card-top {
+  border-bottom-color: #e2e8f0;
+}
+
+body.light-mode .bill-card-top h2,
+.light-mode .bill-card-top h2 {
+  color: #172033;
+}
+
+body.light-mode .bill-number,
+.light-mode .bill-number {
+  color: #64748b;
+}
+
+body.light-mode .bill-card-details strong,
+.light-mode .bill-card-details strong {
+  color: #334155;
+}
+
+body.light-mode .bill-card-details span,
+body.light-mode .bill-card-amounts span,
+body.light-mode .bill-card-bottom > span,
+.light-mode .bill-card-details span,
+.light-mode .bill-card-amounts span,
+.light-mode .bill-card-bottom > span {
+  color: #64748b;
+}
+
+/* Amounts */
+body.light-mode .bill-card-amounts,
+.light-mode .bill-card-amounts {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+body.light-mode .bill-card-amounts strong,
+.light-mode .bill-card-amounts strong {
+  color: #172033;
+}
+
+/* View button */
+body.light-mode .bill-view-button,
+.light-mode .bill-view-button {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+/* Loading and empty states */
+body.light-mode .bills-message,
+.light-mode .bills-message {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  color: #64748b;
+}
+
+body.light-mode .bills-empty,
+.light-mode .bills-empty {
+  border-color: #cbd5e1;
+  color: #64748b;
+}
+
+/* Bill details modal */
+body.light-mode .bill-modal,
+.light-mode .bill-modal {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+body.light-mode .bill-modal-header,
+.light-mode .bill-modal-header {
+  border-bottom-color: #e2e8f0;
+}
+
+body.light-mode .bill-modal-header h2,
+body.light-mode .bill-modal-section-title,
+.light-mode .bill-modal-header h2,
+.light-mode .bill-modal-section-title {
+  color: #172033;
+}
+
+body.light-mode .bill-modal-close,
+body.light-mode .bill-modal-close-button,
+.light-mode .bill-modal-close,
+.light-mode .bill-modal-close-button {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #334155;
+}
+
+body.light-mode .bill-modal-details,
+body.light-mode .bill-modal-amounts,
+.light-mode .bill-modal-details,
+.light-mode .bill-modal-amounts {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+body.light-mode .bill-modal-details strong,
+body.light-mode .bill-modal-amounts strong,
+.light-mode .bill-modal-details strong,
+.light-mode .bill-modal-amounts strong {
+  color: #172033;
+}
+
+body.light-mode .bill-modal-item,
+body.light-mode .bill-modal-no-items,
+.light-mode .bill-modal-item,
+.light-mode .bill-modal-no-items {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+body.light-mode .bill-modal-item-info strong,
+.light-mode .bill-modal-item-info strong {
+  color: #172033;
+}
+
+body.light-mode .bill-modal-item-info span,
+.light-mode .bill-modal-item-info span {
+  color: #64748b;
+}
+
+/* Mobile-specific hardcoded blue colors */
+@media (max-width: 768px) {
+  body.light-mode .bill-status-card,
+  .light-mode .bill-status-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+  }
+
+  body.light-mode .bill-status-card span,
+  .light-mode .bill-status-card span {
+    color: #64748b;
+  }
+
+  body.light-mode .bill-status-card strong,
+  .light-mode .bill-status-card strong {
+    color: #0f172a;
+  }
+
+  body.light-mode .bill-status-card.unpaid strong,
+  .light-mode .bill-status-card.unpaid strong {
+    color: #e11d48;
+  }
+
+  body.light-mode .bill-status-card.partial strong,
+  .light-mode .bill-status-card.partial strong {
+    color: #b45309;
+  }
+
+  body.light-mode .bill-status-card.paid strong,
+  body.light-mode .bill-status-card.cancelled strong,
+  .light-mode .bill-status-card.paid strong,
+  .light-mode .bill-status-card.cancelled strong {
+    color: #059669;
+  }
+
+  body.light-mode .bills-search-box,
+  .light-mode .bills-search-box {
+    background: #ffffff;
+    border-color: #dbe3ee;
+  }
+
+  body.light-mode .bill-filter-buttons button,
+  .light-mode .bill-filter-buttons button {
+    background: #ffffff;
+    border-color: #dbe3ee;
+    color: #475569;
+  }
+
+  body.light-mode .bill-filter-buttons button.active,
+  .light-mode .bill-filter-buttons button.active {
+    background: #10b981;
+    border-color: #10b981;
+    color: #ffffff;
+  }
+
+  body.light-mode .bill-card,
+  .light-mode .bill-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
+  }
+
+  body.light-mode .bill-card:first-child,
+  .light-mode .bill-card:first-child {
+    border-color: #a7f3d0;
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.08);
+  }
+
+  body.light-mode .bill-number,
+  .light-mode .bill-number {
+    color: #059669;
+  }
+
+  body.light-mode .bill-card-top h2,
+  .light-mode .bill-card-top h2 {
+    color: #172033;
+  }
+
+  body.light-mode .bill-card-amounts span,
+  .light-mode .bill-card-amounts strong,
+  .light-mode .bill-card-amounts .bill-paid,
+  .light-mode .bill-card-amounts .bill-balance-clear,
+  .light-mode .bill-card-amounts .bill-balance-due {
+    color: #172033;
+  }
+
+  body.light-mode .bill-status-badge.unpaid,
+  .light-mode .bill-status-badge.unpaid {
+    background: #f43f5e;
+    color: #ffffff;
+  }
+
+  body.light-mode .bill-status-badge.paid,
+  .light-mode .bill-status-badge.paid {
+    background: #10b981;
+    color: #ffffff;
+  }
+
+  body.light-mode .bill-status-badge.partially-paid,
+  .light-mode .bill-status-badge.partially-paid {
+    background: #f59e0b;
+    color: #ffffff;
+  }
+
+  body.light-mode .bill-status-badge.cancelled,
+  .light-mode .bill-status-badge.cancelled {
+    background: #ef4444;
+    color: #ffffff;
+  }
+}
+
+
+/* BILLS PAGE - ACTUAL LIGHT MODE SELECTOR */
+
+.app.theme-light .bills-page {
+  background: #f1f5f9;
+  color: #17283c;
+}
+
+.app.theme-light .bills-title-section h1 {
+  color: #17283c;
+}
+
+.app.theme-light .bill-status-card,
+.app.theme-light .bill-card {
+  background: #ffffff !important;
+  border: 1px solid #d8e1eb !important;
+  color: #17283c;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.app.theme-light .bill-status-card span,
+.app.theme-light .bill-card-details span {
+  color: #64748b;
+}
+
+.app.theme-light .bill-status-card strong,
+.app.theme-light .bill-card-top h2 {
+  color: #17283c;
+}
+
+.app.theme-light .bills-search-box {
+  background: #ffffff !important;
+  border-color: #d8e1eb;
+}
+
+.app.theme-light .bills-search-box input {
+  background: transparent;
+  color: #17283c;
+}
+
+.app.theme-light .bill-filter-buttons button {
+  background: #ffffff;
+  color: #475569;
+  border-color: #d8e1eb;
+}
+
+.app.theme-light .bill-filter-buttons button.active {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+.app.theme-light .bill-number {
+  color: #059669;
+}
+
+.app.theme-light .bill-card-amounts {
+  background: #f8fafc !important;
+  border-color: #e2e8f0;
+}
+
+.app.theme-light .bill-card-amounts span,
+.app.theme-light .bill-card-amounts strong {
+  color: #17283c;
+}
+
+
+
+/* FIX: Bills page mobile Light Mode */
+
+.app.theme-light .bill-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #d8e1eb !important;
+}
+
+.app.theme-light .bill-card h2,
+.app.theme-light .bill-card h3,
+.app.theme-light .bill-card .customer-name,
+.app.theme-light .bill-card .bill-customer-name {
+  color: #17283c !important;
+}
+
+.app.theme-light .bill-card-amounts,
+.app.theme-light .bill-card-bottom {
+  background: #f8fafc !important;
+  color: #17283c !important;
+}
+
+.app.theme-light .bill-card-amounts span,
+.app.theme-light .bill-card-amounts strong,
+.app.theme-light .bill-card-bottom span,
+.app.theme-light .bill-card-bottom strong {
+  color: #334155 !important;
+}
+
+.app.theme-light .bill-card p {
+  color: #475569;
+}
+
+@media (max-width: 600px) {
+  .app.theme-light .bill-card {
+    padding: 14px !important;
+    border-radius: 12px;
+  }
+}
+
+
+
+/* ==========================================
+   BILLS PAGE - LIGHT MODE FINAL OVERRIDES
+   Night Mode untouched
+========================================== */
+
+.app.theme-light .bills-page {
+  color: #172033;
+}
+
+/* Page heading */
+.app.theme-light .bills-title-section h1 {
+  color: #172033;
+}
+
+.app.theme-light .bills-title-section p {
+  color: #64748b;
+}
+
+/* Summary / status cards */
+.app.theme-light .bill-status-card {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid #dbe3ed !important;
+  color: #334155;
+  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.04);
+}
+
+.app.theme-light .bill-status-card span {
+  color: #64748b !important;
+}
+
+.app.theme-light .bill-status-card strong {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-status-card.active {
+  background: #ecfdf5 !important;
+  border-color: #10b981 !important;
+}
+
+/* Search bar */
+.app.theme-light .bills-search-box {
+  background: #ffffff !important;
+  border-color: #dbe3ed !important;
+  color: #64748b;
+}
+
+.app.theme-light .bills-search-box input {
+  color: #172033 !important;
+}
+
+.app.theme-light .bills-search-box input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Filter buttons */
+.app.theme-light .bill-filter-buttons button {
+  background: #ffffff !important;
+  border-color: #dbe3ed !important;
+  color: #475569 !important;
+}
+
+.app.theme-light .bill-filter-buttons button.active {
+  background: #10b981 !important;
+  border-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* Bill cards */
+.app.theme-light .bill-card {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid #dbe3ed !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+}
+
+.app.theme-light .bill-card:first-child {
+  border-color: #dbe3ed !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+}
+
+/* Bill number and customer name */
+.app.theme-light .bill-number {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-card-top h2 {
+  color: #172033 !important;
+}
+
+/* Total / paid / balance amounts */
+.app.theme-light .bill-card-amounts {
+  background: #f8fafc !important;
+  border: 0 !important;
+}
+
+.app.theme-light .bill-card-amounts span {
+  color: #475569 !important;
+}
+
+.app.theme-light .bill-card-amounts strong {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-card-amounts .bill-paid,
+.app.theme-light .bill-card-amounts .bill-balance-clear {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-card-amounts .bill-balance-due {
+  color: #dc2626 !important;
+}
+
+/* Status badges retain their status colors */
+.app.theme-light .bill-status-badge.unpaid {
+  background: #f43f5e !important;
+  color: #ffffff !important;
+}
+
+.app.theme-light .bill-status-badge.paid {
+  background: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.app.theme-light .bill-status-badge.partially-paid {
+  background: #f59e0b !important;
+  color: #ffffff !important;
+}
+
+.app.theme-light .bill-status-badge.cancelled {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+/* Details modal */
+.app.theme-light .bill-modal {
+  background: #ffffff !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .bill-modal-header h2,
+.app.theme-light .bill-modal-section-title {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-modal-details,
+.app.theme-light .bill-modal-amounts {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-modal-details strong,
+.app.theme-light .bill-modal-amounts strong {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-modal-item,
+.app.theme-light .bill-modal-no-items {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-modal-item-info strong {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-modal-item-info span {
+  color: #64748b !important;
+}
+
+
+/* BILLS PAGE - FINISH LIGHT MODE */
+.app.theme-light .main-content .bills-page {
+  background: #f1f5f9 !important;
+  background-image: none !important;
+  color: #17283c !important;
+  min-height: 100%;
+}
+
+.app.theme-light .main-content .bills-page .bills-title-section h1 {
+  color: #17283c !important;
+}
+
+.app.theme-light .main-content .bills-page .bills-title-section p {
+  color: #64748b !important;
+}
+
+.app.theme-light .main-content .bills-page .bill-status-card,
+.app.theme-light .main-content .bills-page .bill-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border-color: #d8e1eb !important;
+}
+
+.app.theme-light .main-content .bills-page .bill-card-amounts {
+  background: #f8fafc !important;
+}
+
+.app.theme-light .main-content .bills-page .bill-card-amounts span,
+.app.theme-light .main-content .bills-page .bill-card-amounts strong {
+  color: #17283c !important;
+}
+
+
+
+/* ==========================================
+   BILLS PAGE - FINAL RESPONSIVE POLISH
+   Light Mode only; Night Mode untouched
+========================================== */
+
+.app.theme-light .bills-page {
+  box-sizing: border-box;
+  width: 100%;
+  color: #17283c;
+}
+
+.app.theme-light .bills-page * {
+  box-sizing: border-box;
+}
+
+/* Heading */
+.app.theme-light .bills-title-section {
+  margin-bottom: 18px;
+}
+
+.app.theme-light .bills-title-section h1 {
+  margin-bottom: 6px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.app.theme-light .bills-title-section p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Summary cards */
+.app.theme-light .bill-status-card {
+  min-width: 0;
+  border-radius: 13px;
+  padding: 13px 14px;
+  transition: box-shadow 0.2s ease;
+}
+
+.app.theme-light .bill-status-card:hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.app.theme-light .bill-status-card strong {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* Search */
+.app.theme-light .bills-search-box {
+  min-height: 43px;
+  border-radius: 11px;
+  padding: 0 13px;
+}
+
+.app.theme-light .bills-search-box input {
+  min-width: 0;
+  width: 100%;
+  outline: none;
+  font-size: 12px;
+}
+
+/* Filters */
+.app.theme-light .bill-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.app.theme-light .bill-filter-buttons button {
+  min-height: 37px;
+  padding: 0 13px;
+  border-radius: 999px;
+  font-size: 11px;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Bill list */
+.app.theme-light .bill-card {
+  min-width: 0;
+  border-radius: 13px;
+  padding: 14px;
+  margin-bottom: 14px;
+  overflow-wrap: anywhere;
+}
+
+.app.theme-light .bill-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.app.theme-light .bill-card-top h2 {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 5px 0 0;
+}
+
+.app.theme-light .bill-number {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.app.theme-light .bill-status-badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Total and balance row */
+.app.theme-light .bill-card-amounts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 10px;
+  padding: 7px 0 0;
+  border-radius: 0;
+}
+
+.app.theme-light .bill-card-amounts > * {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .app.theme-light .bills-page {
+    padding: 16px 12px;
+  }
+
+  .app.theme-light .bills-title-section {
+    margin-bottom: 16px;
+  }
+
+  .app.theme-light .bill-card {
+    padding: 13px;
+    margin-bottom: 12px;
+  }
+
+  .app.theme-light .bill-card-amounts {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 900px) {
+  .app.theme-light .bills-page {
+    padding: 24px;
+  }
+
+  .app.theme-light .bill-card {
+    padding: 18px;
+  }
+}
+
+
+/* Bills page - final mobile spacing adjustment */
+
+@media (max-width: 600px) {
+  .app.theme-light .bills-page {
+    padding: 14px 11px;
+  }
+
+  .app.theme-light .bills-title-section {
+    margin-bottom: 13px;
+  }
+
+  .app.theme-light .bill-card {
+    padding: 11px 12px;
+    margin-bottom: 10px;
+  }
+
+  .app.theme-light .bill-card-top h2 {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+
+  .app.theme-light .bill-card-amounts {
+    margin-top: 7px;
+    padding-top: 6px;
+  }
+}
+
+
+/* =====================================
+   BILL DETAILS - LIGHT MODE
+   Night Mode remains unchanged
+===================================== */
+
+.app.theme-light .bill-details-card {
+  background: #ffffff !important;
+  border: 1px solid #dbe3ed !important;
+  color: #172033 !important;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.app.theme-light .bill-summary-top,
+.app.theme-light .bill-summary-row,
+.app.theme-light .bill-item-row,
+.app.theme-light .bill-section-header {
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-summary-top span,
+.app.theme-light .bill-summary-row span,
+.app.theme-light .bill-item-row span {
+  color: #64748b !important;
+}
+
+.app.theme-light .bill-summary-top h2,
+.app.theme-light .bill-summary-row strong,
+.app.theme-light .bill-item-row strong,
+.app.theme-light .bill-section-header h2 {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-balance-box strong {
+  color: #e11d48 !important;
+}
+
+.app.theme-light .bill-summary-main {
+  background: #ffffff !important;
+}
+
+.app.theme-light .bill-collect-large,
+.app.theme-light .bill-collect-payment-button {
+  color: #ffffff !important;
+}
+
+.app.theme-light .bill-discount-edit {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-items-card .bill-section-header {
+  background: #f8fafc !important;
+}
+
+.app.theme-light .bill-cancel-btn,
+.app.theme-light .bill-delete-btn,
+.app.theme-light .bill-print-btn,
+.app.theme-light .bill-whatsapp-btn {
+  color: #172033;
+}
+
+.app.theme-light .bill-whatsapp-btn {
+  background: #ffffff;
+  border-color: #10b981;
+  color: #059669;
+}
+
+
+/* =====================================
+   BILL DETAILS - LIGHT MODE FIX
+   Night Mode unchanged
+===================================== */
+
+.app.theme-light .bill-details-card,
+.app.theme-light .bill-items-card,
+.app.theme-light .bill-summary-main {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe3ed !important;
+}
+
+/* Bill Items heading */
+.app.theme-light .bill-items-card .bill-section-header {
+  background: #f8fafc !important;
+  color: #172033 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-items-card .bill-section-header h2 {
+  color: #172033 !important;
+}
+
+/* Item rows */
+.app.theme-light .bill-items-card .bill-item-row {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-items-card .bill-item-row strong {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-items-card .bill-item-row span {
+  color: #64748b !important;
+}
+
+/* Sub Total and Grand Total */
+.app.theme-light .bill-items-card .bill-summary-row {
+  background: #f1f5f9 !important;
+  color: #172033 !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .bill-items-card .bill-summary-row span,
+.app.theme-light .bill-items-card .bill-summary-row strong {
+  color: #172033 !important;
+}
+
+/* Customer and balance details */
+.app.theme-light .bill-summary-top h2,
+.app.theme-light .bill-summary-row strong {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-summary-top span,
+.app.theme-light .bill-summary-top p,
+.app.theme-light .bill-summary-row span {
+  color: #64748b !important;
+}
+
+/* Payments section */
+.app.theme-light .bill-payments-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe3ed !important;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .app.theme-light .bill-details-card {
+    border-radius: 12px;
+    margin-bottom: 14px;
+  }
+
+  .app.theme-light .bill-items-card .bill-item-row,
+  .app.theme-light .bill-items-card .bill-summary-row {
+    padding: 12px;
+  }
+}
+
+
+
+/* FIX BILL ITEMS TOTAL ROWS - LIGHT MODE */
+
+.app.theme-light .bill-items-card > *,
+.app.theme-light .bill-items-card .bill-summary-row {
+  background-color: #ffffff !important;
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-items-card .bill-summary-row,
+.app.theme-light .bill-items-card .bill-total-row,
+.app.theme-light .bill-items-card .bill-grand-total,
+.app.theme-light .bill-items-card .subtotal-row,
+.app.theme-light .bill-items-card .grand-total-row {
+  background: #f1f5f9 !important;
+  color: #172033 !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .bill-items-card .bill-summary-row *,
+.app.theme-light .bill-items-card .bill-total-row *,
+.app.theme-light .bill-items-card .bill-grand-total *,
+.app.theme-light .bill-items-card .subtotal-row *,
+.app.theme-light .bill-items-card .grand-total-row * {
+  color: #172033 !important;
+  background-color: transparent !important;
+}
+
+.app.theme-light .bill-items-card .bill-section-header {
+  background: #f8fafc !important;
+  color: #172033 !important;
+}
+
+
+/* =========================================
+   PAYMENTS RECEIVED - LIGHT MODE FIX
+   Night Mode unchanged
+========================================= */
+
+.app.theme-light .bill-payments-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #dbe3ed !important;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* Header */
+.app.theme-light .bill-payments-card .bill-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px;
+  background: #f8fafc !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.app.theme-light .bill-payments-card .bill-section-header h2 {
+  margin: 0;
+  color: #172033 !important;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.app.theme-light .bill-payments-card .bill-section-header strong {
+  color: #172033 !important;
+  font-size: 14px;
+}
+
+/* Payment rows */
+.app.theme-light .bill-payments-card .bill-payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 15px;
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row:last-child {
+  border-bottom: none !important;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row > div:last-child {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row strong {
+  color: #059669 !important;
+  font-size: 14px;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row span {
+  color: #64748b !important;
+  font-size: 12px;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row small {
+  color: #64748b !important;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+/* Empty payments message */
+.app.theme-light .bill-payments-card .bill-payments-empty {
+  padding: 18px 15px;
+  background: #ffffff !important;
+  color: #64748b !important;
+  font-size: 13px;
+  text-align: center;
+  border: none !important;
+}
+
+@media (max-width: 480px) {
+  .app.theme-light .bill-payments-card .bill-section-header {
+    padding: 13px;
+  }
+
+  .app.theme-light .bill-payments-card .bill-payment-row {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+
+
+
+/* =========================================
+   BILL DETAILS - FINAL LIGHT MODE POLISH
+========================================= */
+
+/* Payments Received card */
+.app.theme-light .bill-payments-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #dbe3ed !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Payments heading */
+.app.theme-light .bill-payments-card .bill-section-header {
+  background: #f8fafc !important;
+  color: #172033 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding: 14px;
+}
+
+.app.theme-light .bill-payments-card .bill-section-header h2,
+.app.theme-light .bill-payments-card .bill-section-header strong {
+  color: #172033 !important;
+}
+
+/* Payment history */
+.app.theme-light .bill-payments-card .bill-payment-row {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding: 14px;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row strong {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row span,
+.app.theme-light .bill-payments-card .bill-payment-row small {
+  color: #64748b !important;
+}
+
+/* No payments message */
+.app.theme-light .bill-payments-card .bill-payments-empty {
+  background: #ffffff !important;
+  color: #64748b !important;
+  padding: 18px 14px;
+}
+
+/* Consistent card spacing */
+.app.theme-light .bill-details-card {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+  .app.theme-light .bill-details-card {
+    border-radius: 12px;
+  }
+
+  .app.theme-light .bill-payments-card .bill-section-header,
+  .app.theme-light .bill-payments-card .bill-payment-row {
+    padding: 12px;
+  }
+
+  .app.theme-light .bill-payments-card .bill-payment-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+
+/* Payments Received - exact component classes */
+
+.app.theme-light .bill-details-card.bill-payments-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #dbe3ed !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.app.theme-light .bill-details-card.bill-payments-card > .bill-section-header {
+  background: #f8fafc !important;
+  color: #172033 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding: 14px !important;
+}
+
+.app.theme-light .bill-details-card.bill-payments-card .bill-section-header h2,
+.app.theme-light .bill-details-card.bill-payments-card .bill-section-header strong {
+  color: #172033 !important;
+}
+
+.app.theme-light .bill-details-card.bill-payments-card .bill-payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px !important;
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.app.theme-light .bill-details-card.bill-payments-card .bill-payment-row strong {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-details-card.bill-payments-card .bill-payment-row span,
+.app.theme-light .bill-details-card.bill-payments-card .bill-payment-row small {
+  color: #64748b !important;
+}
+
+.app.theme-light .bill-details-card.bill-payments-card .bill-payments-empty {
+  padding: 18px 14px !important;
+  background: #ffffff !important;
+  color: #64748b !important;
+}
+
+
+
+/* ==========================================
+   BILL DETAILS - LIGHT MODE
+   Clean white design
+========================================== */
+
+.app.theme-light .bill-details-page {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Back to bills */
+.app.theme-light .bill-details-page .back-to-bills,
+.app.theme-light .bill-details-page .bill-back-btn {
+  color: #10b981 !important;
+}
+
+/* Bill number and status */
+.app.theme-light .bill-details-page h1 {
+  color: #0f172a !important;
+}
+
+.app.theme-light .bill-details-page .bill-status {
+  background: #10b981 !important;
+  color: #ffffff !important;
+}
+
+/* Action buttons */
+.app.theme-light .bill-cancel-btn,
+.app.theme-light .bill-whatsapp-btn {
+  background: #ffffff !important;
+  color: #059669 !important;
+  border: 1px solid #10b981 !important;
+  border-radius: 10px;
+}
+
+.app.theme-light .bill-delete-btn {
+  background: #ff3153 !important;
+  color: #ffffff !important;
+  border: 1px solid #ff3153 !important;
+  border-radius: 10px;
+}
+
+.app.theme-light .bill-print-button {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe3ed !important;
+  border-radius: 10px;
+}
+
+/* Collect Payment action */
+.app.theme-light .bill-collect-payment-button {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border: 1px solid #10b981 !important;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.app.theme-light .bill-collect-payment-button:disabled {
+  background: #d1fae5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+
+/* Customer details card */
+.app.theme-light .bill-details-card {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe3ed !important;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+}
+
+.app.theme-light .bill-summary-top,
+.app.theme-light .bill-summary-row {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-summary-top h2,
+.app.theme-light .bill-summary-row strong {
+  color: #0f172a !important;
+}
+
+.app.theme-light .bill-summary-top span,
+.app.theme-light .bill-summary-top p,
+.app.theme-light .bill-summary-row span {
+  color: #64748b !important;
+}
+
+/* Balance due */
+.app.theme-light .bill-balance-box strong {
+  color: #f43f5e !important;
+}
+
+/* Discount */
+.app.theme-light .bill-discount-edit {
+  color: #059669 !important;
+}
+
+/* Bill Items */
+.app.theme-light .bill-items-card {
+  background: #ffffff !important;
+  border: 1px solid #dbe3ed !important;
+}
+
+.app.theme-light .bill-items-card .bill-section-header {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-items-card .bill-section-header h2,
+.app.theme-light .bill-items-card .bill-item-row strong,
+.app.theme-light .bill-items-card .bill-summary-row strong,
+.app.theme-light .bill-items-card .bill-summary-row span {
+  color: #0f172a !important;
+}
+
+.app.theme-light .bill-items-card .bill-item-row {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-items-card .bill-summary-row {
+  background: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Payments Received */
+.app.theme-light .bill-payments-card {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.app.theme-light .bill-payments-card .bill-section-header {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-payments-card .bill-section-header h2,
+.app.theme-light .bill-payments-card .bill-section-header strong {
+  color: #0f172a !important;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row strong {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-payments-card .bill-payment-row span,
+.app.theme-light .bill-payments-card .bill-payment-row small,
+.app.theme-light .bill-payments-card .bill-payments-empty {
+  color: #64748b !important;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .app.theme-light .bill-details-page {
+    padding: 14px;
+  }
+
+  .app.theme-light .bill-details-card {
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+
+/* Light Mode: disabled payment action */
+.app.theme-light .bill-collect-payment-button:disabled {
+  background: #d1fae5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+
+/* Light Mode: enabled payment action */
+.app.theme-light .bill-collect-payment-button:not(:disabled) {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border: 1px solid #10b981 !important;
+  opacity: 1 !important;
+}
+
+
+
+/* Customer details - left alignment */
+
+.app.theme-light .bill-summary-top > div:first-child {
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+.app.theme-light .bill-summary-top > div:first-child h2,
+.app.theme-light .bill-summary-top > div:first-child h3,
+.app.theme-light .bill-summary-top > div:first-child p,
+.app.theme-light .bill-summary-top > div:first-child span {
+  text-align: left !important;
+  margin-left: 0 !important;
+}

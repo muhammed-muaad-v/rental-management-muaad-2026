@@ -1,0 +1,5669 @@
+/* =====================================================
+   OUTSTANDING PAGE
+   ===================================================== */
+
+.outstanding-page {
+  width: 100%;
+  padding: 28px;
+  color: #f8fafc;
+}
+
+/* ================= HEADER ================= */
+
+.outstanding-header {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.outstanding-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.outstanding-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(249, 115, 22, 0.12);
+  color: #fb923c;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  flex-shrink: 0;
+}
+
+.outstanding-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.outstanding-header p {
+  margin: 5px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* ================= STATS ================= */
+
+.outstanding-stats-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.outstanding-stat-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #202c3d;
+  border-radius: 14px;
+  background: #111827;
+}
+
+.outstanding-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.outstanding-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outstanding-stat-icon.orange {
+  color: #fb923c;
+  background: rgba(249, 115, 22, 0.12);
+}
+
+.outstanding-stat-icon.blue {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.outstanding-stat-icon.green {
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.outstanding-stat-card p {
+  margin: 0 0 7px;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.outstanding-stat-card h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.outstanding-stat-card small {
+  display: block;
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ================= TOOLBAR ================= */
+
+.outstanding-toolbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.outstanding-search-box {
+  width: 100%;
+  max-width: 420px;
+  min-height: 44px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #263448;
+  border-radius: 10px;
+  background: #111827;
+  color: #64748b;
+}
+
+.outstanding-search-box:focus-within {
+  border-color: #475569;
+}
+
+.outstanding-search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 13px;
+}
+
+.outstanding-search-box input::placeholder {
+  color: #64748b;
+}
+
+.outstanding-result-count {
+  color: #94a3b8;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ================= TABLE ================= */
+
+.outstanding-table-container {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #202c3d;
+  border-radius: 14px;
+  background: #111827;
+}
+
+.outstanding-table-header {
+  padding: 20px 22px;
+  border-bottom: 1px solid #202c3d;
+}
+
+.outstanding-table-header h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.outstanding-table-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.outstanding-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.outstanding-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.outstanding-data-table th {
+  padding: 14px 18px;
+  text-align: left;
+  color: #64748b;
+  background: #0f172a;
+  border-bottom: 1px solid #202c3d;
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.outstanding-data-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.outstanding-data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.outstanding-data-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.outstanding-data-table td strong {
+  color: #f8fafc;
+  font-weight: 650;
+}
+
+/* ================= AMOUNTS ================= */
+
+.outstanding-quantity-value {
+  font-weight: 800;
+}
+
+.outstanding-remaining-value {
+  color: #fb923c;
+}
+
+/* ================= STATUS ================= */
+
+.outstanding-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.outstanding-status-badge.active {
+  color: #fb923c;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.18);
+}
+
+/* ================= EMPTY ================= */
+
+.outstanding-empty-state {
+  min-height: 260px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #64748b;
+}
+
+.outstanding-empty-state svg {
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.outstanding-empty-state h3 {
+  margin: 0 0 6px;
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+.outstanding-empty-state p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .outstanding-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .outstanding-page {
+    padding: 20px;
+  }
+
+  .outstanding-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .outstanding-search-box {
+    max-width: none;
+  }
+
+  .outstanding-result-count {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .outstanding-page {
+    padding: 15px;
+  }
+
+  .outstanding-header h1 {
+    font-size: 23px;
+  }
+
+  .outstanding-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .outstanding-stat-card {
+    padding: 16px;
+  }
+
+  .outstanding-table-header {
+    padding: 16px;
+  }
+}
+
+
+/* =====================================================
+   OUTSTANDING MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .outstanding-page {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 12px 30px;
+  }
+
+  /* HEADER */
+
+  .outstanding-header {
+    margin-bottom: 16px;
+  }
+
+  .outstanding-header-text h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  .outstanding-header-text p {
+    margin: 4px 0 0;
+    font-size: 11px;
+    color: #a9bddb;
+  }
+
+  /* FILTER CARDS */
+
+  .outstanding-filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .outstanding-filter-card {
+    min-height: 64px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+      135deg,
+      #1746a3,
+      #2458bc
+    );
+
+    border: 1px solid #2b68d5;
+  }
+
+  .outstanding-filter-card.active {
+    border-color: #36efa6;
+    box-shadow:
+      0 0 0 1px rgba(54, 239, 166, 0.18);
+  }
+
+  .outstanding-filter-card span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .outstanding-filter-card strong {
+    color: #ff5469;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  /* THIRD FILTER */
+
+  .outstanding-filter-card:nth-child(3) {
+    width: 50%;
+  }
+
+  /* SEARCH */
+
+  .outstanding-search-row {
+    margin-bottom: 12px;
+  }
+
+  .outstanding-search-box {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0 11px;
+
+    background: #101b2d;
+    border: 1px solid #29446b;
+    border-radius: 9px;
+
+    color: #8aa4cb;
+  }
+
+  .outstanding-search-box input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 11px;
+  }
+
+  .outstanding-search-box input::placeholder {
+    color: #7188a9;
+  }
+
+  /* CUSTOMER LIST */
+
+  .outstanding-customer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  /* CUSTOMER CARD */
+
+  .outstanding-customer-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+      135deg,
+      #1746a5,
+      #2458bb
+    );
+
+    border: 1px solid #2e69d8;
+  }
+
+  .outstanding-customer-card:first-child {
+    border-color: #38efaa;
+    box-shadow:
+      0 0 0 1px rgba(56, 239, 170, 0.18);
+  }
+
+  .outstanding-customer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+
+  .outstanding-customer-top h2 {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .outstanding-customer-top p {
+    margin: 4px 0 0;
+
+    color: #ffffff;
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  .outstanding-customer-amount {
+    flex-shrink: 0;
+
+    color: #ff5368;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .outstanding-customer-bottom {
+    margin-top: 6px;
+  }
+
+  .outstanding-customer-bottom span {
+    color: #35f2a2;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  /* EMPTY */
+
+  .outstanding-empty-state {
+    padding: 45px 15px;
+    text-align: center;
+    color: #8ba3c4;
+  }
+
+  .outstanding-empty-state h3 {
+    margin: 10px 0 5px;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  .outstanding-empty-state p {
+    font-size: 11px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .outstanding-page {
+    padding: 12px 10px 25px;
+  }
+
+  .outstanding-header-text h1 {
+    font-size: 23px;
+  }
+
+  .outstanding-filter-grid {
+    gap: 8px;
+  }
+
+  .outstanding-filter-card {
+    min-height: 62px;
+    padding: 9px 11px;
+  }
+
+  .outstanding-customer-card {
+    padding: 12px 13px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* HEADING LEFT */
+
+  .outstanding-header {
+    display: block !important;
+    text-align: left !important;
+  }
+
+  .outstanding-header-text {
+    text-align: left !important;
+  }
+
+  .outstanding-header-text h1,
+  .outstanding-header-text p {
+    text-align: left !important;
+  }
+
+  /* BELOW 10K - SAME WIDTH */
+
+  .outstanding-filter-card:nth-child(3) {
+    width: 100% !important;
+  }
+
+}
+
+/* =====================================================
+   OUTSTANDING CUSTOMER DETAILS
+===================================================== */
+
+.outstanding-customer-details {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 16px 35px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* BACK + BREADCRUMB */
+
+.outstanding-details-back {
+  border: 0;
+  background: transparent;
+  color: #d7e5fa;
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.outstanding-details-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 12px;
+  color: #a9bdd8;
+  font-size: 12px;
+}
+
+.outstanding-details-breadcrumb strong:last-child {
+  color: #ffffff;
+}
+
+/* ACTIONS */
+
+.outstanding-details-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.outstanding-details-actions button {
+  min-height: 40px;
+  padding: 0 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.outstanding-delete-btn {
+  background: #ff3f56;
+  border: 1px solid #ff3f56;
+  color: #ffffff;
+}
+
+.outstanding-edit-btn {
+  background: #12d991;
+  border: 1px solid #12d991;
+  color: #03140d;
+}
+
+/* PROFILE */
+
+.outstanding-profile-card {
+  background: linear-gradient(
+    135deg,
+    #1747a7,
+    #2459be
+  );
+
+  border: 1px solid #2d6cdf;
+  border-radius: 17px;
+
+  padding: 24px 18px 20px;
+
+  text-align: center;
+
+  margin-bottom: 16px;
+}
+
+.outstanding-profile-avatar {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #55e6b1;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.outstanding-profile-card h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.outstanding-profile-card p {
+  margin: 5px 0 9px;
+  color: #e1ebfa;
+  font-size: 12px;
+}
+
+.outstanding-profile-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  background: rgba(20, 217, 144, 0.18);
+  border: 1px solid rgba(20, 217, 144, 0.35);
+
+  color: #42f3ab;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* STATS */
+
+.outstanding-customer-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.outstanding-customer-stats > div {
+  min-height: 112px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #1747a7,
+    #2358ba
+  );
+
+  border: 1px solid #2c69d7;
+}
+
+.outstanding-customer-stats span {
+  margin-bottom: 9px;
+
+  color: #e2ebfa;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.outstanding-customer-stats strong {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.outstanding-customer-stats .received {
+  color: #36f1a0;
+}
+
+.outstanding-customer-stats .due {
+  color: #ff5269;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .outstanding-customer-details {
+    padding: 14px 10px 30px;
+  }
+
+  .outstanding-details-back {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .outstanding-details-breadcrumb {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  .outstanding-details-actions {
+    gap: 7px;
+    margin-bottom: 15px;
+  }
+
+  .outstanding-details-actions button {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+
+  .outstanding-profile-card {
+    padding: 21px 14px 18px;
+    border-radius: 16px;
+  }
+
+  .outstanding-profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .outstanding-profile-card h1 {
+    font-size: 21px;
+  }
+
+  .outstanding-customer-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .outstanding-customer-stats > div {
+    min-height: 96px;
+    padding: 10px 6px;
+    border-radius: 13px;
+  }
+
+  .outstanding-customer-stats span {
+    font-size: 8px;
+    margin-bottom: 7px;
+  }
+
+  .outstanding-customer-stats strong {
+    font-size: 15px;
+  }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+  .outstanding-customer-details {
+    padding: 12px 9px 25px;
+  }
+
+  .outstanding-details-actions button {
+    min-height: 36px;
+    font-size: 10px;
+  }
+
+  .outstanding-profile-card {
+    padding: 20px 12px 17px;
+  }
+
+  .outstanding-profile-avatar {
+    width: 66px;
+    height: 66px;
+    font-size: 22px;
+  }
+
+  .outstanding-profile-card h1 {
+    font-size: 20px;
+  }
+
+  .outstanding-customer-stats {
+    gap: 6px;
+  }
+
+  .outstanding-customer-stats > div {
+    min-height: 90px;
+  }
+
+  .outstanding-customer-stats strong {
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+   OUTSTANDING - RENTALS DETAILS
+===================================================== */
+
+.outstanding-rentals-card {
+  width: 100%;
+  margin-top: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #1747a7,
+    #2458be
+  );
+
+  border: 1px solid #2d6cdf;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.outstanding-rentals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 17px 16px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.outstanding-rentals-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.outstanding-rentals-header strong {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.outstanding-rentals-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.outstanding-rental-item {
+  padding: 15px 16px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.outstanding-rental-item:last-child {
+  border-bottom: 0;
+}
+
+.outstanding-rental-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.outstanding-rental-top strong {
+  color: #28f0be;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.outstanding-rental-status {
+  padding: 5px 10px;
+  border-radius: 999px;
+
+  background: rgba(28, 225, 150, 0.18);
+  border: 1px solid rgba(28, 225, 150, 0.35);
+
+  color: #3ef2a7;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.outstanding-rental-site {
+  margin-top: 8px;
+
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.outstanding-rental-info {
+  margin-top: 5px;
+
+  color: #e3ebfa;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.outstanding-rental-cancel {
+  margin-top: 9px;
+
+  color: #ff5368;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .outstanding-rentals-card {
+    margin-top: 14px;
+    border-radius: 15px;
+  }
+
+  .outstanding-rentals-header {
+    padding: 15px 14px;
+  }
+
+  .outstanding-rentals-header h2 {
+    font-size: 17px;
+  }
+
+  .outstanding-rental-item {
+    padding: 13px 14px;
+  }
+
+  .outstanding-rental-top strong {
+    font-size: 13px;
+  }
+
+  .outstanding-rental-site {
+    font-size: 12px;
+  }
+
+  .outstanding-rental-info {
+    font-size: 10px;
+  }
+
+  .outstanding-rental-cancel {
+    font-size: 11px;
+  }
+}
+
+/* MEMBER SINCE */
+
+.outstanding-member-since {
+  margin-top: 20px;
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  text-align: left;
+}
+
+.outstanding-member-since span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #d7e4f7;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.outstanding-member-since strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .outstanding-member-since {
+    margin-top: 17px;
+    padding-top: 14px;
+  }
+
+  .outstanding-member-since span {
+    font-size: 9px;
+  }
+
+  .outstanding-member-since strong {
+    font-size: 14px;
+  }
+}
+
+/* =====================================================
+   OUTSTANDING CUSTOMER - RENTALS CARD
+===================================================== */
+
+.outstanding-rentals-card {
+  width: 100%;
+  margin-top: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #1747a7,
+    #2458be
+  );
+
+  border: 1px solid #2d6cdf;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.outstanding-rentals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 16px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.outstanding-rentals-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.outstanding-rentals-header strong {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.outstanding-rentals-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.outstanding-rental-item {
+  padding: 13px 15px;
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.outstanding-rental-item:last-child {
+  border-bottom: 0;
+}
+
+.outstanding-rental-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.outstanding-rental-top strong {
+  color: #25f0bf;
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.outstanding-rental-status {
+  flex-shrink: 0;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(42, 224, 165, 0.18);
+  border: 1px solid rgba(42, 224, 165, 0.30);
+
+  color: #3df1aa;
+
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.outstanding-rental-site {
+  margin-top: 7px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: left;
+}
+
+.outstanding-rental-info {
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-align: left;
+}
+
+.outstanding-rental-cancel {
+  margin-top: 8px;
+
+  color: #ff5368;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-align: left;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .outstanding-rentals-card {
+    margin-top: 14px;
+    border-radius: 14px;
+  }
+
+  .outstanding-rentals-header {
+    padding: 13px 14px;
+  }
+
+  .outstanding-rentals-header h2 {
+    font-size: 16px;
+  }
+
+  .outstanding-rentals-header strong {
+    font-size: 11px;
+  }
+
+  .outstanding-rental-item {
+    padding: 12px 14px;
+  }
+
+  .outstanding-rental-top strong {
+    font-size: 12px;
+  }
+
+  .outstanding-rental-site {
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  .outstanding-rental-info {
+    font-size: 9px;
+  }
+
+  .outstanding-rental-cancel {
+    font-size: 10px;
+    margin-top: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .outstanding-rental-item {
+    padding: 9px 14px !important;
+  }
+
+  .outstanding-rental-site {
+    margin-top: 4px !important;
+  }
+
+  .outstanding-rental-info {
+    margin-top: 3px !important;
+  }
+
+  .outstanding-rental-cancel {
+    margin-top: 5px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .outstanding-customer-card {
+    width: 100%;
+    padding: 13px 14px !important;
+    box-sizing: border-box;
+  }
+
+  .outstanding-customer-top {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+  }
+
+  .outstanding-customer-top > div {
+    text-align: left !important;
+  }
+
+  .outstanding-customer-top h2 {
+    text-align: left !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+
+  .outstanding-customer-top p {
+    text-align: left !important;
+    margin-top: 4px !important;
+    font-size: 9px !important;
+  }
+
+  .outstanding-customer-amount {
+    text-align: right !important;
+    font-size: 14px !important;
+  }
+
+  .outstanding-customer-bottom {
+    margin-top: 7px !important;
+    text-align: left !important;
+  }
+
+  .outstanding-customer-bottom span {
+    display: block;
+    text-align: left !important;
+    font-size: 10px !important;
+  }
+
+}
+
+
+/* =========================================
+   OUTSTANDING EDIT CUSTOMER PAGE
+========================================= */
+
+.outstanding-edit-page {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 22px 18px 35px;
+  color: #ffffff;
+}
+
+.outstanding-edit-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.outstanding-edit-breadcrumb button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 29px;
+  height: 29px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.outstanding-edit-slash {
+  color: #94a3b8;
+}
+
+.outstanding-edit-breadcrumb strong {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.outstanding-edit-card {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 27px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(94, 155, 255, 0.4);
+  border-radius: 17px;
+
+  background: linear-gradient(
+    145deg,
+    #1554c5 0%,
+    #164fad 52%,
+    #123f91 100%
+  );
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.26);
+}
+
+.outstanding-edit-title {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.outstanding-edit-title h1 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 850;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.outstanding-edit-form {
+  width: 100%;
+}
+
+.outstanding-edit-field {
+  width: 100%;
+  margin-bottom: 19px;
+  text-align: left;
+}
+
+.outstanding-edit-field label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.outstanding-edit-field label span {
+  color: #ff5366;
+}
+
+.outstanding-edit-field label .required {
+  color: #ff5366;
+}
+
+.outstanding-edit-field input,
+.outstanding-edit-field textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(115, 169, 255, 0.4);
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #0b2d57;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  text-align: left;
+}
+
+.outstanding-edit-field input {
+  height: 51px;
+  padding: 0 14px;
+}
+
+.outstanding-edit-field textarea {
+  min-height: 110px;
+  padding: 13px 14px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.outstanding-edit-field input::placeholder,
+.outstanding-edit-field textarea::placeholder {
+  color: #a9c5e7;
+  opacity: 1;
+}
+
+.outstanding-edit-field input:focus,
+.outstanding-edit-field textarea:focus {
+  border-color: #22e5bf;
+  box-shadow: 0 0 0 2px rgba(34, 229, 191, 0.13);
+}
+
+/* PHONE INPUT */
+
+.outstanding-edit-phone {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 51px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: 1px solid rgba(115, 169, 255, 0.4);
+  border-radius: 10px;
+
+  background: #0b2d57;
+}
+
+.outstanding-edit-phone > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: stretch;
+  padding: 0 15px;
+
+  border-right: 1px solid rgba(115, 169, 255, 0.25);
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.outstanding-edit-phone input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 0;
+  outline: none;
+
+  background: transparent;
+  color: #ffffff;
+
+  font: inherit;
+}
+
+.outstanding-edit-phone:focus-within {
+  border-color: #22e5bf;
+  box-shadow: 0 0 0 2px rgba(34, 229, 191, 0.13);
+}
+
+/* ADD MORE DETAILS */
+
+.outstanding-edit-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+
+  margin: 1px 0 23px;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #45f4c9;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 850;
+
+  cursor: pointer;
+}
+
+.outstanding-edit-more-btn:hover {
+  color: #91ffe3;
+}
+
+.outstanding-edit-extra {
+  width: 100%;
+}
+
+/* ACTIVE CUSTOMER */
+
+.outstanding-edit-active {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  margin: 1px 0 22px;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+
+  cursor: pointer;
+}
+
+.outstanding-edit-active input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+
+  accent-color: #18e5b2;
+
+  cursor: pointer;
+}
+
+/* SAVE / CANCEL */
+
+.outstanding-edit-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 11px;
+
+  margin-top: 7px;
+}
+
+.outstanding-edit-save,
+.outstanding-edit-cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 23px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 850;
+
+  cursor: pointer;
+}
+
+.outstanding-edit-save {
+  min-width: 170px;
+
+  border: 1px solid #24e9bb;
+
+  background: linear-gradient(
+    120deg,
+    #1be9b7,
+    #16d9bd
+  );
+
+  color: #ffffff;
+}
+
+.outstanding-edit-cancel {
+  min-width: 120px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #06111f;
+
+  color: #ffffff;
+}
+
+.outstanding-edit-save:disabled,
+.outstanding-edit-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.outstanding-edit-error {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+
+  border: 1px solid rgba(255, 85, 105, 0.45);
+  border-radius: 10px;
+
+  background: rgba(255, 55, 75, 0.13);
+  color: #ffe0e4;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   OUTSTANDING CUSTOMER LEDGER
+========================================= */
+
+.outstanding-customer-details {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 16px 30px;
+  color: #ffffff;
+}
+
+.outstanding-details-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-bottom: 19px;
+
+  color: #dbeafe;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.outstanding-details-breadcrumb > span {
+  color: #8da9cc;
+}
+
+.outstanding-details-breadcrumb strong {
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-details-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  color: #dbeafe;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  cursor: pointer;
+}
+
+.outstanding-details-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.outstanding-details-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  min-height: 39px;
+  padding: 0 15px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.outstanding-delete-btn {
+  border: 1px solid #ff4057;
+  background: #ff4057;
+  color: #ffffff;
+}
+
+.outstanding-edit-btn {
+  border: 1px solid #16dba6;
+  background: #16dba6;
+  color: #062d25;
+}
+
+/* PROFILE */
+
+.outstanding-profile-card {
+  padding: 23px 20px;
+
+  border: 1px solid #3476d0;
+  border-radius: 17px;
+
+  background: linear-gradient(
+    145deg,
+    #2057b8,
+    #1b4eaa
+  );
+
+  color: #ffffff;
+}
+
+.outstanding-profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 13px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #38e9b3;
+
+  font-size: 23px;
+  font-weight: 850;
+}
+
+.outstanding-profile-card > h1 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 850;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-profile-card > p {
+  margin: 0 0 14px;
+  color: #e0ecff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.outstanding-profile-status {
+  display: table;
+  margin: 0 auto;
+
+  padding: 8px 14px;
+
+  border: 1px solid rgba(36, 232, 174, 0.3);
+  border-radius: 999px;
+
+  background: rgba(21, 210, 159, 0.15);
+  color: #4af4bd;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.outstanding-profile-status.inactive {
+  border-color: rgba(255, 100, 120, 0.35);
+  background: rgba(255, 65, 85, 0.14);
+  color: #ff9daa;
+}
+
+.outstanding-profile-divider {
+  height: 1px;
+  margin: 19px 0;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.outstanding-profile-member {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.outstanding-profile-member span {
+  color: #c8dcff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.outstanding-profile-member strong {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* STATS */
+
+.outstanding-customer-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+
+  margin: 16px 0 19px;
+}
+
+.outstanding-customer-stats > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+
+  min-width: 0;
+  min-height: 91px;
+  padding: 13px 9px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #2d68bb;
+  border-radius: 13px;
+
+  background: #174785;
+
+  text-align: center;
+}
+
+.outstanding-customer-stats span {
+  color: #d2e3ff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.outstanding-customer-stats strong {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-customer-stats strong.received {
+  color: #35efad;
+}
+
+.outstanding-customer-stats strong.due {
+  color: #ff6679;
+}
+
+/* RENTALS */
+
+.outstanding-ledger-rentals {
+  overflow: hidden;
+
+  border: 1px solid #2d68bb;
+  border-radius: 15px;
+
+  background: #174785;
+}
+
+.outstanding-ledger-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 17px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.outstanding-ledger-title > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.outstanding-ledger-title h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.outstanding-ledger-title > div svg {
+  color: #d1e3ff;
+  flex-shrink: 0;
+}
+
+.outstanding-ledger-title > span {
+  color: #e1edff;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.outstanding-ledger-rental {
+  padding: 17px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.outstanding-ledger-rental:last-child {
+  border-bottom: none;
+}
+
+.outstanding-ledger-rental-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.outstanding-ledger-rental-top > strong {
+  color: #39efbd;
+  font-size: 14px;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-status {
+  flex-shrink: 0;
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.outstanding-ledger-status.active {
+  background: rgba(19, 211, 152, 0.15);
+  color: #42f0b8;
+}
+
+.outstanding-ledger-status.completed {
+  background: rgba(59, 130, 246, 0.17);
+  color: #9ccaff;
+}
+
+.outstanding-ledger-rental-site {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 13px;
+
+  color: #e1edff;
+  font-size: 13px;
+}
+
+.outstanding-ledger-rental-site svg {
+  flex-shrink: 0;
+  color: #bad5ff;
+}
+
+.outstanding-ledger-rental-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 10px;
+
+  color: #cbdfff;
+  font-size: 12px;
+}
+
+.outstanding-ledger-rental-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.outstanding-ledger-rental-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+
+  margin-top: 16px;
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.outstanding-ledger-rental-amounts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.outstanding-ledger-rental-amounts span {
+  color: #c4daf8;
+  font-size: 11px;
+}
+
+.outstanding-ledger-rental-amounts strong {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 850;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-rental-amounts strong.received {
+  color: #39edb0;
+}
+
+.outstanding-ledger-rental-amounts strong.due {
+  color: #ff7082;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .outstanding-edit-page {
+    padding: 18px 14px 30px;
+  }
+
+  .outstanding-edit-breadcrumb {
+    gap: 7px;
+    margin-bottom: 17px;
+    font-size: 12px;
+  }
+
+  .outstanding-edit-card {
+    max-width: 100%;
+    padding: 22px 17px;
+    border-radius: 14px;
+  }
+
+  .outstanding-edit-title {
+    margin-bottom: 21px;
+  }
+
+  .outstanding-edit-title h1 {
+    font-size: 24px;
+  }
+
+  .outstanding-edit-field {
+    margin-bottom: 16px;
+  }
+
+  .outstanding-edit-field label {
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+
+  .outstanding-edit-field input {
+    height: 47px;
+    font-size: 14px;
+  }
+
+  .outstanding-edit-field textarea {
+    min-height: 100px;
+    font-size: 14px;
+  }
+
+  .outstanding-edit-phone {
+    height: 47px;
+  }
+
+  .outstanding-edit-phone > span {
+    padding: 0 12px;
+  }
+
+  .outstanding-edit-phone input {
+    font-size: 14px;
+  }
+
+  .outstanding-edit-more-btn {
+    margin-bottom: 19px;
+    font-size: 14px;
+  }
+
+  .outstanding-edit-actions {
+    gap: 9px;
+  }
+
+  .outstanding-edit-save,
+  .outstanding-edit-cancel {
+    flex: 1;
+    min-width: 0;
+    min-height: 45px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .outstanding-customer-details {
+    padding: 17px 12px 25px;
+  }
+
+  .outstanding-profile-card {
+    padding: 21px 16px;
+  }
+
+  .outstanding-customer-stats {
+    gap: 7px;
+  }
+
+  .outstanding-customer-stats > div {
+    min-height: 82px;
+    padding: 10px 5px;
+  }
+
+  .outstanding-customer-stats span {
+    font-size: 9px;
+  }
+
+  .outstanding-customer-stats strong {
+    font-size: 12px;
+  }
+
+  .outstanding-ledger-rental {
+    padding: 14px;
+  }
+
+  .outstanding-ledger-rental-amounts {
+    gap: 7px;
+  }
+
+  .outstanding-ledger-rental-amounts span {
+    font-size: 10px;
+  }
+
+  .outstanding-ledger-rental-amounts strong {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .outstanding-filter-card b {
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+
+/* =========================================
+   OUTSTANDING CUSTOMERS - DESKTOP LAYOUT
+========================================= */
+
+@media (min-width: 769px) {
+  .outstanding-page {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 30px 36px 40px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  /* Heading */
+  .outstanding-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 24px;
+    text-align: left;
+  }
+
+  .outstanding-header-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .outstanding-header-text h1 {
+    margin: 0 0 6px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 850;
+    text-align: left;
+  }
+
+  .outstanding-header-text p {
+    margin: 0;
+    color: #a9c4e7;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  /* Three summary cards */
+  .outstanding-filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 0 20px;
+  }
+
+  .outstanding-filter-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 120px;
+    padding: 18px;
+    border: 1px solid #2866d2;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #1749aa, #2160c9);
+    text-align: center;
+  }
+
+  .outstanding-filter-card.active {
+    border-color: #19e6a0;
+    box-shadow: 0 0 0 1px rgba(25, 230, 160, 0.25);
+  }
+
+  .outstanding-filter-card > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .outstanding-filter-card span {
+    display: block;
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 750;
+  }
+
+  .outstanding-filter-card strong {
+    color: #ff536b;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  .outstanding-filter-card b {
+    display: block;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 850;
+  }
+
+  /* Search */
+  .outstanding-search-row {
+    width: 100%;
+    max-width: 670px;
+    margin: 0 0 18px;
+  }
+
+  .outstanding-search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 54px;
+    padding: 0 17px;
+    box-sizing: border-box;
+    border: 1px solid #29446b;
+    border-radius: 13px;
+    background: #101b2d;
+    color: #9bb9df;
+  }
+
+  .outstanding-search-box input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  .outstanding-search-box input::placeholder {
+    color: #819abb;
+  }
+
+  /* Customer list */
+  .outstanding-customer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 13px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Customer cards */
+  .outstanding-customer-card {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 19px 23px;
+    box-sizing: border-box;
+    border: 1px solid #1761d8;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #1749aa, #2160c9);
+    color: #ffffff;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .outstanding-customer-card:first-child {
+    border-color: #1761d8;
+    box-shadow: none;
+  }
+
+  .outstanding-customer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .outstanding-customer-top > div:first-child {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .outstanding-customer-top h2 {
+    margin: 0 0 5px;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 850;
+    text-align: left;
+  }
+
+  .outstanding-customer-top p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .outstanding-customer-amount {
+    flex-shrink: 0;
+    color: #ff536b;
+    font-size: 23px;
+    font-weight: 900;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .outstanding-customer-bottom {
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .outstanding-customer-bottom span {
+    color: #21f0b0;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: left;
+  }
+}
+
+/* Medium desktop / laptop */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .outstanding-page {
+    padding: 24px 22px 35px;
+  }
+
+  .outstanding-customer-top h2 {
+    font-size: 20px;
+  }
+
+  .outstanding-customer-amount {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================
+   OUTSTANDING - FINAL DARK NAVY THEME
+   Paste at the END of Outstanding.css
+========================================= */
+
+/* Main page */
+.outstanding-page,
+.outstanding-edit-page,
+.outstanding-customer-details {
+  background: #080d16 !important;
+  color: #f4f7ff !important;
+}
+
+/* Header */
+.outstanding-header h1,
+.outstanding-header-text h1,
+.outstanding-edit-title h1 {
+  color: #ffffff !important;
+}
+
+.outstanding-header p,
+.outstanding-header-text p {
+  color: #9bb0cb !important;
+}
+
+.outstanding-icon {
+  background: #14243a !important;
+  border-color: #26384f !important;
+  color: #19e5b0 !important;
+}
+
+/* Summary cards */
+.outstanding-stat-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border-color: #26384f !important;
+}
+
+.outstanding-stat-card p,
+.outstanding-stat-card small {
+  color: #9bb0cb !important;
+}
+
+.outstanding-stat-card h2 {
+  color: #ffffff !important;
+}
+
+.outstanding-stat-icon.orange,
+.outstanding-stat-icon.blue,
+.outstanding-stat-icon.green {
+  background: #14243a !important;
+  color: #19e5b0 !important;
+}
+
+/* Mobile filter cards */
+.outstanding-filter-card,
+.outstanding-filter-card.active,
+.outstanding-filter-card:nth-child(3) {
+  width: 100% !important;
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border: 1px solid #26384f !important;
+  box-shadow: none !important;
+}
+
+.outstanding-filter-card.active {
+  border-color: #19dca9 !important;
+}
+
+.outstanding-filter-card span,
+.outstanding-filter-card b {
+  color: #d6e3f5 !important;
+}
+
+.outstanding-filter-card strong {
+  color: #19e5b0 !important;
+}
+
+/* Search */
+.outstanding-search-box {
+  background: #0d1929 !important;
+  border-color: #26384f !important;
+  color: #9bb0cb !important;
+}
+
+.outstanding-search-box:focus-within {
+  border-color: #19dca9 !important;
+}
+
+.outstanding-search-box input {
+  color: #ffffff !important;
+}
+
+.outstanding-search-box input::placeholder {
+  color: #8297b3 !important;
+}
+
+/* Desktop table */
+.outstanding-table-container {
+  background: #0d1929 !important;
+  border-color: #26384f !important;
+}
+
+.outstanding-table-header {
+  border-bottom-color: #26384f !important;
+}
+
+.outstanding-table-header h2 {
+  color: #ffffff !important;
+}
+
+.outstanding-table-header p {
+  color: #9bb0cb !important;
+}
+
+.outstanding-data-table th {
+  background: #101e30 !important;
+  color: #9bb0cb !important;
+  border-bottom-color: #26384f !important;
+}
+
+.outstanding-data-table td {
+  color: #cbd9ec !important;
+  border-bottom-color: #203149 !important;
+}
+
+.outstanding-data-table td strong {
+  color: #ffffff !important;
+}
+
+.outstanding-data-table tbody tr:hover {
+  background: #132238 !important;
+}
+
+.outstanding-remaining-value {
+  color: #ff7185 !important;
+}
+
+/* Status */
+.outstanding-status-badge.active {
+  background: rgba(255, 113, 133, 0.10) !important;
+  border-color: rgba(255, 113, 133, 0.25) !important;
+  color: #ff8b9b !important;
+}
+
+/* Mobile customer cards */
+.outstanding-customer-card,
+.outstanding-customer-card:first-child {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border: 1px solid #26384f !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+.outstanding-customer-card:hover {
+  border-color: #38516e !important;
+}
+
+.outstanding-customer-top h2 {
+  color: #ffffff !important;
+}
+
+.outstanding-customer-top p {
+  color: #9bb0cb !important;
+}
+
+.outstanding-customer-amount {
+  color: #ff7185 !important;
+}
+
+.outstanding-customer-bottom span {
+  color: #19e5b0 !important;
+}
+
+/* Customer details profile */
+.outstanding-profile-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border: 1px solid #26384f !important;
+  color: #ffffff !important;
+}
+
+.outstanding-profile-avatar {
+  background: #14243a !important;
+  color: #19e5b0 !important;
+}
+
+.outstanding-profile-card h1,
+.outstanding-profile-member strong {
+  color: #ffffff !important;
+}
+
+.outstanding-profile-card p,
+.outstanding-profile-member span {
+  color: #9bb0cb !important;
+}
+
+.outstanding-profile-divider {
+  background: #26384f !important;
+}
+
+/* Customer summary boxes */
+.outstanding-customer-stats > div {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border-color: #26384f !important;
+}
+
+.outstanding-customer-stats span {
+  color: #9bb0cb !important;
+}
+
+.outstanding-customer-stats strong {
+  color: #ffffff !important;
+}
+
+.outstanding-customer-stats strong.received {
+  color: #19e5b0 !important;
+}
+
+.outstanding-customer-stats strong.due {
+  color: #ff7185 !important;
+}
+
+/* Rental details */
+.outstanding-rentals-card,
+.outstanding-ledger-rentals {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border-color: #26384f !important;
+}
+
+.outstanding-rentals-header,
+.outstanding-ledger-title {
+  border-bottom-color: #26384f !important;
+}
+
+.outstanding-rentals-header h2,
+.outstanding-rentals-header strong,
+.outstanding-ledger-title h2 {
+  color: #ffffff !important;
+}
+
+.outstanding-rental-item,
+.outstanding-ledger-rental {
+  border-bottom-color: #26384f !important;
+}
+
+.outstanding-rental-top strong,
+.outstanding-ledger-rental-top > strong {
+  color: #19e5b0 !important;
+}
+
+.outstanding-rental-site,
+.outstanding-rental-info {
+  color: #bdcfe7 !important;
+}
+
+.outstanding-rental-status,
+.outstanding-ledger-status.active {
+  background: rgba(25, 229, 176, 0.10) !important;
+  border-color: #244b48 !important;
+  color: #19e5b0 !important;
+}
+
+.outstanding-ledger-status.completed {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #93c5fd !important;
+}
+
+.outstanding-ledger-rental-site,
+.outstanding-ledger-rental-meta {
+  color: #bdcfe7 !important;
+}
+
+.outstanding-ledger-rental-site svg,
+.outstanding-ledger-title > div svg {
+  color: #19e5b0 !important;
+}
+
+.outstanding-ledger-rental-amounts {
+  border-top-color: #26384f !important;
+}
+
+.outstanding-ledger-rental-amounts span {
+  color: #9bb0cb !important;
+}
+
+.outstanding-ledger-rental-amounts strong {
+  color: #ffffff !important;
+}
+
+.outstanding-ledger-rental-amounts strong.received {
+  color: #19e5b0 !important;
+}
+
+.outstanding-ledger-rental-amounts strong.due {
+  color: #ff7185 !important;
+}
+
+/* Breadcrumb and back button */
+.outstanding-details-back,
+.outstanding-details-breadcrumb,
+.outstanding-edit-breadcrumb {
+  color: #bdcfe7 !important;
+}
+
+.outstanding-details-breadcrumb strong,
+.outstanding-edit-breadcrumb strong {
+  color: #ffffff !important;
+}
+
+/* Edit customer form */
+.outstanding-edit-card {
+  background: linear-gradient(145deg, #0d1929, #0a1320) !important;
+  border-color: #26384f !important;
+  box-shadow: none !important;
+}
+
+.outstanding-edit-field label,
+.outstanding-edit-active {
+  color: #e5eefc !important;
+}
+
+.outstanding-edit-field input,
+.outstanding-edit-field textarea,
+.outstanding-edit-phone {
+  background: #091629 !important;
+  border-color: #29415d !important;
+  color: #ffffff !important;
+}
+
+.outstanding-edit-phone input {
+  background: transparent !important;
+}
+
+.outstanding-edit-field input::placeholder,
+.outstanding-edit-field textarea::placeholder {
+  color: #8297b3 !important;
+}
+
+.outstanding-edit-field input:focus,
+.outstanding-edit-field textarea:focus,
+.outstanding-edit-phone:focus-within {
+  border-color: #19dca9 !important;
+}
+
+.outstanding-edit-more-btn {
+  color: #19e5b0 !important;
+}
+
+/* Edit and action buttons */
+.outstanding-edit-save,
+.outstanding-edit-btn {
+  background: #19dca9 !important;
+  border-color: #19dca9 !important;
+  color: #06271d !important;
+}
+
+.outstanding-edit-cancel {
+  background: #101e30 !important;
+  border-color: #26384f !important;
+  color: #ffffff !important;
+}
+
+.outstanding-delete-btn {
+  background: #351824 !important;
+  border-color: #713044 !important;
+  color: #ff8798 !important;
+}
+
+/* Empty state */
+.outstanding-empty-state {
+  color: #9bb0cb !important;
+}
+
+.outstanding-empty-state h3 {
+  color: #ffffff !important;
+}
+
+.outstanding-empty-state p {
+  color: #9bb0cb !important;
+}
+
+/* Keep mobile layout and sizing intact */
+@media (max-width: 768px) {
+  .outstanding-filter-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .outstanding-filter-card:nth-child(3) {
+    width: 100% !important;
+  }
+
+  .outstanding-customer-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+
+/* =========================================
+   OUTSTANDING PAGE - PREMIUM DARK UI
+========================================= */
+
+.outstanding-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #f8fafc;
+}
+
+.outstanding-page * {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.outstanding-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.outstanding-header-text h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 27px;
+  line-height: 1.3;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.outstanding-header-text p {
+  margin: 7px 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* SUMMARY CARDS */
+
+.outstanding-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.outstanding-filter-card {
+  min-width: 0;
+  min-height: 105px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #26364b;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #101c2c, #0b1421);
+  transition: border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.outstanding-filter-card.active {
+  border-color: #00d9ad;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 217, 173, 0.10),
+    #0b1421
+  );
+}
+
+.outstanding-filter-card > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.outstanding-filter-card span {
+  color: #a8b7cc;
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.outstanding-filter-card strong {
+  color: #00e5b0;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.outstanding-filter-card b {
+  color: #f1f5f9;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+/* SEARCH */
+
+.outstanding-search-row {
+  width: 100%;
+  margin: 0 0 18px;
+}
+
+.outstanding-search-box {
+  width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 14px;
+  border: 1px solid #29394f;
+  border-radius: 11px;
+  background: #0d1827;
+  color: #94a3b8;
+  transition: border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.outstanding-search-box:focus-within {
+  border-color: #00d9ad;
+  box-shadow: 0 0 0 3px rgba(0, 217, 173, 0.08);
+}
+
+.outstanding-search-box input {
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 13px;
+}
+
+.outstanding-search-box input::placeholder {
+  color: #8292a9;
+}
+
+/* CUSTOMER LIST */
+
+.outstanding-customer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.outstanding-customer-card {
+  width: 100%;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #26364b;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #101c2c, #0b1421);
+  transition: border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.outstanding-customer-card:hover {
+  border-color: #00a98a;
+  transform: translateY(-1px);
+}
+
+.outstanding-customer-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.outstanding-customer-card h2,
+.outstanding-customer-card h3 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-customer-card p {
+  margin: 6px 0 0;
+  color: #91a2b9;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.outstanding-customer-card .due,
+.outstanding-customer-card .outstanding-amount {
+  flex-shrink: 0;
+  color: #fb7185;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.outstanding-customer-card a,
+.outstanding-customer-card button {
+  color: #00e5b0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.outstanding-empty-state {
+  padding: 36px 20px;
+  border: 1px solid #26364b;
+  border-radius: 14px;
+  background: #0c1624;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.outstanding-empty-state h3 {
+  margin: 12px 0 6px;
+  color: #f8fafc;
+  font-size: 16px;
+}
+
+.outstanding-empty-state p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .outstanding-page {
+    padding: 16px 12px 24px;
+  }
+
+  .outstanding-header {
+    margin-bottom: 17px;
+  }
+
+  .outstanding-header-text h1 {
+    font-size: 21px;
+    letter-spacing: -0.3px;
+  }
+
+  .outstanding-header-text p {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .outstanding-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-bottom: 14px;
+  }
+
+  .outstanding-filter-card {
+    min-height: 88px;
+    padding: 13px;
+    border-radius: 11px;
+  }
+
+  .outstanding-filter-card:last-child {
+    grid-column: 1 / -1;
+    min-height: 72px;
+  }
+
+  .outstanding-filter-card > div {
+    gap: 7px;
+  }
+
+  .outstanding-filter-card span {
+    font-size: 11px;
+  }
+
+  .outstanding-filter-card strong {
+    font-size: 22px;
+  }
+
+  .outstanding-filter-card b {
+    font-size: 13px;
+  }
+
+  .outstanding-search-row {
+    margin-bottom: 13px;
+  }
+
+  .outstanding-search-box {
+    min-height: 43px;
+    padding: 0 11px;
+  }
+
+  .outstanding-search-box input {
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .outstanding-customer-list {
+    gap: 9px;
+  }
+
+  .outstanding-customer-card {
+    padding: 13px;
+    border-radius: 11px;
+  }
+
+  .outstanding-customer-card h2,
+  .outstanding-customer-card h3 {
+    font-size: 14px;
+  }
+
+  .outstanding-customer-card .due,
+  .outstanding-customer-card .outstanding-amount {
+    font-size: 14px;
+  }
+}
+
+
+
+/* =========================================
+   OUTSTANDING VIEW LEDGER
+   PREMIUM DARK RESPONSIVE UI
+========================================= */
+
+.outstanding-customer-details {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+  color: #f8fafc;
+}
+
+.outstanding-customer-details * {
+  box-sizing: border-box;
+}
+
+/* BREADCRUMB */
+
+.outstanding-details-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  color: #8293a9;
+  font-size: 13px;
+}
+
+.outstanding-details-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid #29394f;
+  border-radius: 9px;
+  background: #101b2a;
+  color: #dbe5f2;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.outstanding-details-back:hover {
+  border-color: #00d9ad;
+  color: #00e5b0;
+}
+
+.outstanding-details-breadcrumb > strong {
+  color: #f8fafc;
+  overflow-wrap: anywhere;
+}
+
+/* EDIT AND DELETE ACTIONS */
+
+.outstanding-details-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+}
+
+.outstanding-details-actions button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 15px;
+  border: 1px solid #29394f;
+  border-radius: 9px;
+  background: #101b2a;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.outstanding-details-actions .outstanding-edit-btn {
+  color: #00e5b0;
+  border-color: rgba(0, 229, 176, 0.3);
+  background: rgba(0, 229, 176, 0.07);
+}
+
+.outstanding-details-actions .outstanding-edit-btn:hover {
+  background: rgba(0, 229, 176, 0.15);
+}
+
+.outstanding-details-actions .outstanding-delete-btn {
+  color: #fb7185;
+  border-color: rgba(251, 113, 133, 0.3);
+  background: rgba(251, 113, 133, 0.06);
+}
+
+.outstanding-details-actions .outstanding-delete-btn:hover {
+  background: rgba(251, 113, 133, 0.13);
+}
+
+/* ERROR MESSAGE */
+
+.outstanding-customer-details .outstanding-edit-error {
+  padding: 12px 14px;
+  border: 1px solid rgba(251, 113, 133, 0.3);
+  border-radius: 10px;
+  background: rgba(127, 29, 29, 0.15);
+  color: #fda4af;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* CUSTOMER PROFILE */
+
+.outstanding-profile-card {
+  width: 100%;
+  min-width: 0;
+  padding: 28px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #29394f;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #111e2e, #0b1421);
+}
+
+.outstanding-profile-avatar {
+  width: 76px;
+  height: 76px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 229, 176, 0.3);
+  border-radius: 50%;
+  background: rgba(0, 229, 176, 0.1);
+  color: #00e5b0;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.outstanding-profile-card h1 {
+  max-width: 100%;
+  margin: 0;
+  color: #f8fafc;
+  font-size: 24px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-profile-card > p {
+  margin: 8px 0 12px;
+  color: #a8b7cc;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-profile-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.outstanding-profile-status.active {
+  color: #00e5b0;
+  border-color: rgba(0, 229, 176, 0.25);
+  background: rgba(0, 229, 176, 0.1);
+}
+
+.outstanding-profile-status.inactive {
+  color: #fda4af;
+  border-color: rgba(251, 113, 133, 0.25);
+  background: rgba(251, 113, 133, 0.1);
+}
+
+.outstanding-profile-divider {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0 15px;
+  background: #26364a;
+}
+
+.outstanding-profile-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.outstanding-profile-member span {
+  color: #8293a9;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.outstanding-profile-member strong {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+/* TOTAL BILLED / RECEIVED / OUTSTANDING */
+
+.outstanding-customer-stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+  margin: 0;
+}
+
+.outstanding-customer-stats > div {
+  min-width: 0;
+  min-height: 112px;
+  padding: 19px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #29394f;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #111e2e, #0b1421);
+}
+
+.outstanding-customer-stats > div:first-child {
+  border-top: 2px solid #64748b;
+}
+
+.outstanding-customer-stats > div:nth-child(2) {
+  border-top: 2px solid #00d9ad;
+}
+
+.outstanding-customer-stats > div:nth-child(3) {
+  border-top: 2px solid #fb7185;
+}
+
+.outstanding-customer-stats span {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+}
+
+.outstanding-customer-stats strong {
+  max-width: 100%;
+  color: #f8fafc;
+  font-size: clamp(15px, 2vw, 21px);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-customer-stats strong.received {
+  color: #00e5b0;
+}
+
+.outstanding-customer-stats strong.due {
+  color: #fb7185;
+}
+
+/* RENTALS SECTION */
+
+.outstanding-ledger-rentals {
+  width: 100%;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #29394f;
+  border-radius: 15px;
+  background: #0b1421;
+}
+
+.outstanding-ledger-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 17px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #26364a;
+}
+
+.outstanding-ledger-title > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00e5b0;
+}
+
+.outstanding-ledger-title h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.outstanding-ledger-title > span {
+  padding: 6px 10px;
+  border: 1px solid #29394f;
+  border-radius: 999px;
+  background: #111e2e;
+  color: #a8b7cc;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* EACH RENTAL */
+
+.outstanding-ledger-rental {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #29394f;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #111d2c, #0c1624);
+}
+
+.outstanding-ledger-rental + .outstanding-ledger-rental {
+  margin-top: 12px;
+}
+
+.outstanding-ledger-rental-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.outstanding-ledger-rental-top > strong {
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.outstanding-ledger-status.active {
+  color: #00e5b0;
+  border-color: rgba(0, 229, 176, 0.25);
+  background: rgba(0, 229, 176, 0.08);
+}
+
+.outstanding-ledger-status.completed {
+  color: #94a3b8;
+  border-color: #334155;
+  background: #172335;
+}
+
+.outstanding-ledger-rental-site {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #a8b7cc;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.outstanding-ledger-rental-site svg {
+  flex-shrink: 0;
+  color: #00d9ad;
+}
+
+.outstanding-ledger-rental-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #26364a;
+}
+
+.outstanding-ledger-rental-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.outstanding-ledger-rental-meta svg {
+  color: #8293a9;
+}
+
+/* RENTAL AMOUNTS */
+
+.outstanding-ledger-rental-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.outstanding-ledger-rental-amounts > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.outstanding-ledger-rental-amounts span {
+  color: #8293a9;
+  font-size: 11px;
+}
+
+.outstanding-ledger-rental-amounts strong {
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-rental-amounts strong.received {
+  color: #00e5b0;
+}
+
+.outstanding-ledger-rental-amounts strong.due {
+  color: #fb7185;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .outstanding-customer-details {
+    padding: 15px 12px 25px;
+    gap: 13px;
+  }
+
+  .outstanding-details-breadcrumb {
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .outstanding-details-back {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .outstanding-details-actions {
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .outstanding-details-actions button {
+    min-height: 36px;
+    padding: 0 11px;
+    font-size: 11px;
+  }
+
+  .outstanding-profile-card {
+    padding: 22px 15px 18px;
+    border-radius: 13px;
+  }
+
+  .outstanding-profile-avatar {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .outstanding-profile-card h1 {
+    font-size: 21px;
+  }
+
+  .outstanding-profile-divider {
+    margin: 16px 0 13px;
+  }
+
+  .outstanding-customer-stats {
+    gap: 8px;
+  }
+
+  .outstanding-customer-stats > div {
+    min-height: 92px;
+    padding: 12px 9px;
+    gap: 9px;
+    border-radius: 11px;
+  }
+
+  .outstanding-customer-stats span {
+    font-size: 9px;
+    letter-spacing: 0;
+    line-height: 1.4;
+  }
+
+  .outstanding-customer-stats strong {
+    font-size: 13px;
+  }
+
+  .outstanding-ledger-rentals {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .outstanding-ledger-title {
+    margin-bottom: 13px;
+    padding-bottom: 12px;
+  }
+
+  .outstanding-ledger-title h2 {
+    font-size: 15px;
+  }
+
+  .outstanding-ledger-rental {
+    padding: 13px;
+    border-radius: 10px;
+  }
+
+  .outstanding-ledger-rental-top {
+    margin-bottom: 12px;
+  }
+
+  .outstanding-ledger-rental-top > strong {
+    font-size: 13px;
+  }
+
+  .outstanding-ledger-rental-amounts {
+    gap: 7px;
+  }
+
+  .outstanding-ledger-rental-amounts span {
+    font-size: 10px;
+  }
+
+  .outstanding-ledger-rental-amounts strong {
+    font-size: 11px;
+  }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 360px) {
+  .outstanding-customer-details {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .outstanding-customer-stats {
+    gap: 5px;
+  }
+
+  .outstanding-customer-stats > div {
+    padding: 10px 6px;
+  }
+
+  .outstanding-customer-stats span {
+    font-size: 8px;
+  }
+
+  .outstanding-customer-stats strong {
+    font-size: 11px;
+  }
+
+  .outstanding-ledger-rentals {
+    padding: 10px;
+  }
+
+  .outstanding-ledger-rental-amounts {
+    gap: 5px;
+  }
+
+  .outstanding-ledger-rental-amounts span {
+    font-size: 9px;
+  }
+
+  .outstanding-ledger-rental-amounts strong {
+    font-size: 10px;
+  }
+}
+
+
+/* Edit and Delete buttons - Left aligned */
+
+.outstanding-details-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-left: 0;
+}
+
+.outstanding-details-actions button {
+  margin-left: 0;
+}
+
+
+
+
+/* =========================================
+   EDIT CUSTOMER - PREMIUM DARK UI
+   UI ONLY - KEEP EXISTING JSX
+========================================= */
+
+.outstanding-edit-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #f8fafc;
+}
+
+/* Breadcrumb */
+
+.outstanding-edit-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.outstanding-edit-breadcrumb button {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #29394f;
+  border-radius: 10px;
+  background: #101b2a;
+  color: #e2e8f0;
+  cursor: pointer;
+}
+
+.outstanding-edit-breadcrumb button:hover {
+  border-color: #00d9ad;
+  color: #00e5b0;
+}
+
+.outstanding-edit-breadcrumb strong {
+  color: #f8fafc;
+}
+
+/* Main Form Card */
+
+.outstanding-edit-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 26px;
+  border: 1px solid #29394f;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #101c2c, #09121f);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Title */
+
+.outstanding-edit-title {
+  margin-bottom: 24px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #26364a;
+  text-align: left;
+}
+
+.outstanding-edit-title h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* Form */
+
+.outstanding-edit-form {
+  width: 100%;
+}
+
+.outstanding-edit-field {
+  width: 100%;
+  margin-bottom: 19px;
+  text-align: left;
+}
+
+.outstanding-edit-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #dbe5f2;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.outstanding-edit-field label span {
+  color: #94a3b8;
+  font-weight: 450;
+}
+
+.outstanding-edit-field label .required {
+  color: #fb7185;
+}
+
+/* Inputs and Textarea */
+
+.outstanding-edit-field input,
+.outstanding-edit-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #29394f;
+  border-radius: 10px;
+  outline: none;
+  background: #0b1421;
+  color: #f8fafc;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.outstanding-edit-field input {
+  height: 47px;
+  padding: 0 13px;
+}
+
+.outstanding-edit-field textarea {
+  min-height: 105px;
+  padding: 12px 13px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.outstanding-edit-field input::placeholder,
+.outstanding-edit-field textarea::placeholder {
+  color: #71839b;
+  opacity: 1;
+}
+
+.outstanding-edit-field input:focus,
+.outstanding-edit-field textarea:focus {
+  border-color: #00d9ad;
+  box-shadow: 0 0 0 3px rgba(0, 217, 173, 0.09);
+}
+
+/* Mobile Number +91 */
+
+.outstanding-edit-phone {
+  width: 100%;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #29394f;
+  border-radius: 10px;
+  background: #0b1421;
+}
+
+.outstanding-edit-phone:focus-within {
+  border-color: #00d9ad;
+  box-shadow: 0 0 0 3px rgba(0, 217, 173, 0.09);
+}
+
+.outstanding-edit-phone > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  border-right: 1px solid #29394f;
+  background: #111e2e;
+  color: #00e5b0;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.outstanding-edit-phone input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  height: 100%;
+  padding: 0 12px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: #f8fafc;
+  box-shadow: none;
+}
+
+.outstanding-edit-phone input:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* Add More Details */
+
+.outstanding-edit-more-btn {
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0 0 20px;
+  padding: 10px 14px;
+  border: 1px dashed #31516a;
+  border-radius: 10px;
+  background: rgba(0, 217, 173, 0.04);
+  color: #00e5b0;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.outstanding-edit-more-btn:hover {
+  border-color: #00d9ad;
+  background: rgba(0, 217, 173, 0.09);
+}
+
+/* Extra Fields */
+
+.outstanding-edit-extra {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.outstanding-edit-active {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 4px 0 20px;
+  padding: 12px 14px;
+  border: 1px solid #29394f;
+  border-radius: 10px;
+  background: #0b1421;
+  color: #dbe5f2;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.outstanding-edit-active input {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  margin: 0;
+  accent-color: #00d9ad;
+  cursor: pointer;
+}
+
+/* Error Message */
+
+.outstanding-edit-page .outstanding-edit-error {
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  border: 1px solid rgba(251, 113, 133, 0.3);
+  border-radius: 10px;
+  background: rgba(251, 113, 133, 0.08);
+  color: #fda4af;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Save and Cancel */
+
+.outstanding-edit-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #26364a;
+}
+
+.outstanding-edit-save,
+.outstanding-edit-cancel {
+  min-height: 46px;
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.outstanding-edit-save {
+  background: #00d9ad;
+  color: #06231d;
+}
+
+.outstanding-edit-save:hover {
+  background: #35f0c3;
+}
+
+.outstanding-edit-cancel {
+  border-color: #34445a;
+  background: #111e2e;
+  color: #dbe5f2;
+}
+
+.outstanding-edit-cancel:hover {
+  background: #1a2a3e;
+}
+
+.outstanding-edit-save:disabled,
+.outstanding-edit-cancel:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .outstanding-edit-page {
+    padding: 15px 12px 25px;
+  }
+
+  .outstanding-edit-breadcrumb {
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 11px;
+  }
+
+  .outstanding-edit-breadcrumb button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .outstanding-edit-card {
+    max-width: 100%;
+    padding: 19px 15px;
+    border-radius: 13px;
+  }
+
+  .outstanding-edit-title {
+    margin-bottom: 19px;
+    padding-bottom: 14px;
+  }
+
+  .outstanding-edit-title h1 {
+    font-size: 22px;
+  }
+
+  .outstanding-edit-field {
+    margin-bottom: 16px;
+  }
+
+  .outstanding-edit-field label {
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+
+  .outstanding-edit-field input {
+    height: 45px;
+    font-size: 13px;
+  }
+
+  .outstanding-edit-field textarea {
+    min-height: 95px;
+    font-size: 13px;
+  }
+
+  .outstanding-edit-phone {
+    height: 45px;
+  }
+
+  .outstanding-edit-more-btn {
+    min-height: 43px;
+    font-size: 12px;
+  }
+
+  .outstanding-edit-active {
+    padding: 11px;
+    font-size: 12px;
+  }
+
+  .outstanding-edit-actions {
+    gap: 9px;
+    margin-top: 20px;
+    padding-top: 15px;
+  }
+
+  .outstanding-edit-save,
+  .outstanding-edit-cancel {
+    min-width: 0;
+    min-height: 44px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .outstanding-edit-page {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .outstanding-edit-card {
+    padding: 16px 12px;
+  }
+
+  .outstanding-edit-title h1 {
+    font-size: 20px;
+  }
+
+  .outstanding-edit-actions {
+    gap: 7px;
+  }
+}
+
+
+
+/* Edit Customer - Final Mobile Polish */
+
+@media (max-width: 600px) {
+  .outstanding-edit-page {
+    padding: 12px 10px 24px;
+  }
+
+  .outstanding-edit-breadcrumb {
+    margin-bottom: 12px;
+  }
+
+  .outstanding-edit-card {
+    padding: 16px 12px;
+    border-radius: 12px;
+  }
+
+  .outstanding-edit-title {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .outstanding-edit-title h1 {
+    font-size: 20px;
+  }
+
+  .outstanding-edit-field {
+    margin-bottom: 13px;
+  }
+
+  .outstanding-edit-field label {
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+
+  .outstanding-edit-field input {
+    height: 42px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .outstanding-edit-field textarea {
+    min-height: 85px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .outstanding-edit-phone {
+    height: 42px;
+  }
+
+  .outstanding-edit-phone > span {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .outstanding-edit-more-btn {
+    min-height: 40px;
+    margin-bottom: 14px;
+  }
+
+  .outstanding-edit-actions {
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 13px;
+  }
+
+  .outstanding-edit-save,
+  .outstanding-edit-cancel {
+    min-height: 42px;
+    font-size: 11px;
+  }
+}
+
+
+
+/* =========================================
+   OUTSTANDING - RENTALS SECTION UI
+   Premium Dark Navy + Teal
+   Existing functionality preserved
+========================================= */
+
+/* Main rentals container */
+
+.outstanding-ledger-rentals {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border: 1px solid #23364b;
+  border-radius: 15px;
+
+  background: linear-gradient(
+    145deg,
+    #0d1827 0%,
+    #09111d 100%
+  );
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* Rentals heading */
+
+.outstanding-ledger-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 17px;
+
+  border-bottom: 1px solid #223248;
+  background: rgba(15, 28, 44, 0.75);
+}
+
+.outstanding-ledger-title > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.outstanding-ledger-title > div svg {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  color: #00e5b0;
+}
+
+.outstanding-ledger-title h2 {
+  margin: 0;
+
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.outstanding-ledger-title > span {
+  flex-shrink: 0;
+
+  padding: 7px 11px;
+  border: 1px solid #293b50;
+  border-radius: 999px;
+
+  background: #111f30;
+  color: #cbd5e1;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Individual rental card */
+
+.outstanding-ledger-rental {
+  position: relative;
+  min-width: 0;
+  box-sizing: border-box;
+
+  margin: 12px;
+  padding: 15px;
+
+  border: 1px solid #25384d;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    145deg,
+    #101d2d,
+    #0b1522
+  );
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.outstanding-ledger-rental:last-child {
+  border-bottom: 1px solid #25384d;
+}
+
+.outstanding-ledger-rental:hover {
+  border-color: #087f70;
+
+  background: linear-gradient(
+    145deg,
+    #122437,
+    #0c1927
+  );
+}
+
+/* Rental number and status */
+
+.outstanding-ledger-rental-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.outstanding-ledger-rental-top > strong {
+  min-width: 0;
+
+  color: #00e5b0;
+  font-size: 14px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* Status badge */
+
+.outstanding-ledger-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.outstanding-ledger-status.active {
+  border-color: rgba(0, 229, 176, 0.2);
+  background: rgba(0, 229, 176, 0.1);
+  color: #36edbd;
+}
+
+.outstanding-ledger-status.completed {
+  border-color: rgba(96, 165, 250, 0.2);
+  background: rgba(59, 130, 246, 0.1);
+  color: #93c5fd;
+}
+
+/* Site / location */
+
+.outstanding-ledger-rental-site {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  margin-top: 14px;
+
+  color: #d5e0ed;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-rental-site svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+
+  color: #00d9ad;
+}
+
+/* Date and quantity */
+
+.outstanding-ledger-rental-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+
+  margin-top: 12px;
+  padding-bottom: 13px;
+
+  border-bottom: 1px solid #223248;
+
+  color: #9eb0c5;
+  font-size: 11px;
+}
+
+.outstanding-ledger-rental-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.outstanding-ledger-rental-meta svg {
+  flex-shrink: 0;
+  color: #7f94ab;
+}
+
+/* Amount summary */
+
+.outstanding-ledger-rental-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+
+  margin-top: 13px;
+}
+
+.outstanding-ledger-rental-amounts > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 7px;
+
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 11px 9px;
+
+  border: 1px solid #23364b;
+  border-radius: 9px;
+
+  background: rgba(5, 13, 23, 0.55);
+}
+
+.outstanding-ledger-rental-amounts span {
+  color: #91a4ba;
+  font-size: 10px;
+  font-weight: 550;
+}
+
+.outstanding-ledger-rental-amounts strong {
+  color: #f1f5f9;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-rental-amounts strong.received {
+  color: #00e5b0;
+}
+
+.outstanding-ledger-rental-amounts strong.due {
+  color: #ff7185;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .outstanding-ledger-rentals {
+    border-radius: 12px;
+  }
+
+  .outstanding-ledger-title {
+    padding: 14px 12px;
+    gap: 8px;
+  }
+
+  .outstanding-ledger-title h2 {
+    font-size: 14px;
+  }
+
+  .outstanding-ledger-title > span {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .outstanding-ledger-rental {
+    margin: 9px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .outstanding-ledger-rental-top {
+    gap: 8px;
+  }
+
+  .outstanding-ledger-rental-top > strong {
+    font-size: 12px;
+  }
+
+  .outstanding-ledger-status {
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+
+  .outstanding-ledger-rental-site {
+    margin-top: 11px;
+    font-size: 11px;
+  }
+
+  .outstanding-ledger-rental-meta {
+    gap: 8px 11px;
+    margin-top: 10px;
+    padding-bottom: 11px;
+    font-size: 10px;
+  }
+
+  .outstanding-ledger-rental-amounts {
+    gap: 6px;
+    margin-top: 11px;
+  }
+
+  .outstanding-ledger-rental-amounts > div {
+    gap: 6px;
+    padding: 9px 7px;
+    border-radius: 8px;
+  }
+
+  .outstanding-ledger-rental-amounts span {
+    font-size: 9px;
+  }
+
+  .outstanding-ledger-rental-amounts strong {
+    font-size: 10px;
+  }
+}
+
+/* Very narrow mobile screens */
+
+@media (max-width: 360px) {
+  .outstanding-ledger-title {
+    padding: 12px 10px;
+  }
+
+  .outstanding-ledger-rental {
+    margin: 7px;
+    padding: 10px;
+  }
+
+  .outstanding-ledger-rental-amounts {
+    gap: 4px;
+  }
+
+  .outstanding-ledger-rental-amounts > div {
+    padding: 8px 5px;
+  }
+
+  .outstanding-ledger-rental-amounts span {
+    font-size: 8px;
+  }
+
+  .outstanding-ledger-rental-amounts strong {
+    font-size: 9px;
+  }
+}
+
+
+/* OUTSTANDING LEDGER - RENTALS FINAL POLISH */
+
+.outstanding-ledger-rentals {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid #26384f;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #0d1929, #09121e);
+}
+
+.outstanding-ledger-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid #26384f;
+}
+
+.outstanding-ledger-title > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.outstanding-ledger-title h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.outstanding-ledger-title > span {
+  flex-shrink: 0;
+  padding: 6px 9px;
+  border: 1px solid #26384f;
+  border-radius: 999px;
+  background: #111e2e;
+  color: #b7c7da;
+  font-size: 10px;
+}
+
+.outstanding-ledger-rental {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #26384f;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #101d2d, #0b1522);
+}
+
+.outstanding-ledger-rental + .outstanding-ledger-rental {
+  margin-top: 10px;
+}
+
+.outstanding-ledger-rental-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.outstanding-ledger-rental-top > strong {
+  color: #00e5b0;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-rental-site {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #d1deed;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-rental-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #26384f;
+  color: #9fb2c9;
+  font-size: 11px;
+}
+
+.outstanding-ledger-rental-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.outstanding-ledger-rental-amounts > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 10px 5px;
+  border: 1px solid #26384f;
+  border-radius: 8px;
+  background: #091421;
+  text-align: center;
+}
+
+.outstanding-ledger-rental-amounts span {
+  color: #a6b7cb;
+  font-size: 10px;
+}
+
+.outstanding-ledger-rental-amounts strong {
+  color: #f8fafc;
+  font-size: 10px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.outstanding-ledger-rental-amounts strong.received {
+  color: #00e5b0;
+}
+
+.outstanding-ledger-rental-amounts strong.due {
+  color: #ff7185;
+}
+
+@media (max-width: 380px) {
+  .outstanding-ledger-rentals {
+    padding: 10px;
+  }
+
+  .outstanding-ledger-rental {
+    padding: 9px;
+  }
+
+  .outstanding-ledger-rental-amounts {
+    gap: 4px;
+  }
+
+  .outstanding-ledger-rental-amounts > div {
+    padding: 8px 3px;
+  }
+
+  .outstanding-ledger-rental-amounts span {
+    font-size: 9px;
+  }
+
+  .outstanding-ledger-rental-amounts strong {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================
+   OUTSTANDING CUSTOMERS - LIGHT MODE
+   Existing dark mode remains unchanged
+========================================= */
+
+.app.theme-light .outstanding-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #f1f5f9 !important;
+  color: #17283c !important;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.app.theme-light .outstanding-header h1,
+.app.theme-light .outstanding-header-text h1 {
+  color: #17283c !important;
+}
+
+.app.theme-light .outstanding-header p,
+.app.theme-light .outstanding-header-text p {
+  color: #64748b !important;
+}
+
+/* Summary cards */
+.app.theme-light .outstanding-filter-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 13px;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.app.theme-light .outstanding-filter-card span {
+  color: #475569 !important;
+}
+
+.app.theme-light .outstanding-filter-card strong {
+  color: #059e78 !important;
+}
+
+.app.theme-light .outstanding-filter-card b {
+  color: #17283c !important;
+}
+
+.app.theme-light .outstanding-filter-card.active {
+  background: #ecfdf5 !important;
+  border-color: #10b981 !important;
+}
+
+/* Search */
+.app.theme-light .outstanding-search-row {
+  background: transparent !important;
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-search-box {
+  background: #ffffff !important;
+  color: #64748b !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.app.theme-light .outstanding-search-box input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: none !important;
+}
+
+.app.theme-light .outstanding-search-box input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Customer cards */
+.app.theme-light .outstanding-customer-card,
+.app.theme-light .outstanding-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 13px;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+.app.theme-light .outstanding-customer-card h3,
+.app.theme-light .outstanding-card h3,
+.app.theme-light .outstanding-customer-name {
+  color: #17283c !important;
+}
+
+.app.theme-light .outstanding-customer-card p,
+.app.theme-light .outstanding-card p,
+.app.theme-light .outstanding-customer-card small,
+.app.theme-light .outstanding-card small {
+  color: #64748b !important;
+}
+
+/* Outstanding amount */
+.app.theme-light .outstanding-customer-amount,
+.app.theme-light .outstanding-card-amount,
+.app.theme-light .outstanding-amount {
+  color: #f43f5e !important;
+  font-weight: 800;
+}
+
+/* View Ledger */
+.app.theme-light .outstanding-customer-card a,
+.app.theme-light .outstanding-customer-card button,
+.app.theme-light .outstanding-card a,
+.app.theme-light .outstanding-card button {
+  color: #059e78 !important;
+}
+
+/* Prevent horizontal overflow on mobile */
+@media (max-width: 600px) {
+  .app.theme-light .outstanding-page {
+    padding: 16px 12px !important;
+  }
+
+  .app.theme-light .outstanding-filter-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .app.theme-light .outstanding-filter-card,
+  .app.theme-light .outstanding-customer-card,
+  .app.theme-light .outstanding-card {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .app.theme-light .outstanding-search-box {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+
+
+/* FIX: Outstanding customer names visible in Light Mode */
+
+.app.theme-light .outstanding-customer-card .outstanding-customer-top {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+
+.app.theme-light .outstanding-customer-card .outstanding-customer-top > div:first-child {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  text-align: left !important;
+}
+
+.app.theme-light .outstanding-customer-card .outstanding-customer-top h2 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin: 0 0 5px !important;
+  color: #17283c !important;
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+}
+
+.app.theme-light .outstanding-customer-card .outstanding-customer-top p {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+  color: #64748b !important;
+  font-size: 11px !important;
+  text-align: left !important;
+}
+
+.app.theme-light .outstanding-customer-card .outstanding-customer-amount {
+  flex: 0 0 auto !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #f43f5e !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+  text-align: right !important;
+}
+
+.app.theme-light .outstanding-customer-card .outstanding-customer-bottom {
+  display: block !important;
+  text-align: left !important;
+  margin-top: 10px !important;
+}
+
+.app.theme-light .outstanding-customer-card .outstanding-customer-bottom span {
+  color: #059e78 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.outstanding-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.outstanding-filter-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Make Below ₹10k card the same width as the top cards */
+.outstanding-filter-grid > .outstanding-filter-card:nth-child(3) {
+  grid-column: auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+
+/* CUSTOMER PROFILE - LIGHT MODE */
+.app.theme-light .outstanding-profile-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #dbe5ef !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05) !important;
+}
+
+.app.theme-light .outstanding-profile-card h1,
+.app.theme-light .outstanding-profile-member strong {
+  color: #17283c !important;
+}
+
+.app.theme-light .outstanding-profile-card p,
+.app.theme-light .outstanding-profile-member span {
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-profile-divider {
+  background: #e2e8f0 !important;
+}
+
+/* CUSTOMER STATS */
+.app.theme-light .outstanding-customer-stats > div {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #dbe5ef !important;
+}
+
+.app.theme-light .outstanding-customer-stats span {
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-customer-stats strong {
+  color: #17283c !important;
+}
+
+.app.theme-light .outstanding-customer-stats strong.received {
+  color: #059669 !important;
+}
+
+.app.theme-light .outstanding-customer-stats strong.due {
+  color: #f43f5e !important;
+}
+
+/* RENTALS */
+.app.theme-light .outstanding-rentals-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border-color: #dbe5ef !important;
+}
+
+.app.theme-light .outstanding-rentals-header h2,
+.app.theme-light .outstanding-rental-item {
+  color: #17283c !important;
+}
+
+.app.theme-light .outstanding-rental-site,
+.app.theme-light .outstanding-rental-info {
+  color: #475569 !important;
+}
+
+/* =========================================
+   CUSTOMER DETAILS - LIGHT MODE FIX
+   Keep existing layout and Night Mode
+========================================= */
+
+.app.theme-light .outstanding-customer-details {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  overflow-x: hidden;
+}
+
+/* Profile card */
+.app.theme-light .outstanding-profile-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+/* Customer totals */
+.app.theme-light .outstanding-customer-stats {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.app.theme-light .outstanding-customer-stats > div {
+  min-width: 0;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+}
+
+.app.theme-light .outstanding-customer-stats span {
+  color: #64748b !important;
+}
+
+/* Rentals section */
+.app.theme-light .outstanding-ledger-rentals {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+}
+
+/* Individual rental */
+.app.theme-light .outstanding-ledger-rental {
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+}
+
+/* Rental details */
+.app.theme-light .outstanding-ledger-rental-site {
+  color: #059669 !important;
+}
+
+.app.theme-light .outstanding-ledger-rental-meta {
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-ledger-rental-amounts {
+  color: #0f172a !important;
+}
+
+/* Breadcrumb and action area */
+.app.theme-light .outstanding-details-breadcrumb {
+  color: #0f172a !important;
+}
+
+.app.theme-light .outstanding-details-actions {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Edit card */
+.app.theme-light .outstanding-edit-card {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #dbe5ef !important;
+}
+
+/* Mobile overflow protection */
+@media (max-width: 600px) {
+  .app.theme-light .outstanding-customer-details,
+  .app.theme-light .outstanding-profile-card,
+  .app.theme-light .outstanding-customer-stats,
+  .app.theme-light .outstanding-ledger-rentals,
+  .app.theme-light .outstanding-ledger-rental {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+/* CUSTOMER DETAILS - RENTALS LIGHT MODE FIX */
+
+.app.theme-light .outstanding-ledger-rentals {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 14px !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Rentals heading - remove dark grey background */
+.app.theme-light .outstanding-ledger-rentals h2,
+.app.theme-light .outstanding-ledger-rentals-header {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Individual rental cards */
+.app.theme-light .outstanding-ledger-rental {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+}
+
+/* Rental totals - remove dark navy boxes */
+.app.theme-light .outstanding-ledger-rental-amounts > div,
+.app.theme-light .outstanding-ledger-rental-stats > div {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 8px !important;
+}
+
+/* Text inside rental totals */
+.app.theme-light .outstanding-ledger-rental-amounts span,
+.app.theme-light .outstanding-ledger-rental-stats span {
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-ledger-rental-amounts strong,
+.app.theme-light .outstanding-ledger-rental-stats strong {
+  color: #0f172a !important;
+}
+
+/* Rental divider */
+.app.theme-light .outstanding-ledger-rental hr {
+  border-color: #e2e8f0 !important;
+}
+
+/* Keep green and red amount indicators */
+.app.theme-light .outstanding-ledger-rental .received {
+  color: #059669 !important;
+}
+
+.app.theme-light .outstanding-ledger-rental .due {
+  color: #f43f5e !important;
+}
+
+/* Prevent horizontal overflow */
+.app.theme-light .outstanding-ledger-rentals,
+.app.theme-light .outstanding-ledger-rental,
+.app.theme-light .outstanding-ledger-rental-amounts {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+
+/* CUSTOMER DETAILS - RENTALS LIGHT MODE FIX */
+
+.app.theme-light .outstanding-ledger-rentals {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 14px !important;
+  padding: 12px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Rentals heading - correct class name */
+.app.theme-light .outstanding-ledger-title {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  border-radius: 10px 10px 0 0 !important;
+  padding: 12px !important;
+}
+
+.app.theme-light .outstanding-ledger-title > div {
+  background: transparent !important;
+  color: #0f172a !important;
+}
+
+.app.theme-light .outstanding-ledger-title h2 {
+  color: #0f172a !important;
+  background: transparent !important;
+}
+
+/* File icon */
+.app.theme-light .outstanding-ledger-title svg {
+  color: #10b981 !important;
+}
+
+/* Total badge */
+.app.theme-light .outstanding-ledger-title > span {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 999px !important;
+}
+
+/* Rental cards */
+.app.theme-light .outstanding-ledger-rental {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 12px !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+/* Rental ID */
+.app.theme-light .outstanding-ledger-rental-top > strong {
+  color: #10b981 !important;
+}
+
+/* Site and date details */
+.app.theme-light .outstanding-ledger-rental-site,
+.app.theme-light .outstanding-ledger-rental-meta {
+  color: #64748b !important;
+}
+
+/* Total, Received, Outstanding boxes */
+.app.theme-light .outstanding-ledger-rental-amounts > div {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border: 1px solid #dbe5ef !important;
+  border-radius: 8px !important;
+}
+
+.app.theme-light .outstanding-ledger-rental-amounts > div > span {
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-ledger-rental-amounts > div > strong {
+  color: #0f172a !important;
+}
+
+.app.theme-light .outstanding-ledger-rental-amounts > div > strong.received {
+  color: #059669 !important;
+}
+
+.app.theme-light .outstanding-ledger-rental-amounts > div > strong.due {
+  color: #f43f5e !important;
+}
+
+/* Status badges */
+.app.theme-light .outstanding-ledger-status {
+  background: #ecfdf5 !important;
+  color: #059669 !important;
+  border-color: #a7f3d0 !important;
+}
+
+
+/* Customer profile name - final fix */
+.outstanding-profile-card h1 {
+  display: block !important;
+  position: static !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+
+  margin: 10px 0 4px !important;
+  padding: 0 !important;
+
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+
+  text-align: center !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+
+  transform: none !important;
+  text-shadow: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Light Mode text color */
+.app.theme-light .outstanding-profile-card h1 {
+  color: #17283c !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+/* Customer name - Light Mode only */
+.app.theme-light .outstanding-profile-card h1 {
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  margin: 10px 0 6px !important;
+  padding: 0 !important;
+  text-align: center;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+
+/* Breadcrumb fix - Light Mode only */
+.app.theme-light .outstanding-details-breadcrumb {
+  color: #26364a !important;
+}
+
+.app.theme-light .outstanding-details-breadcrumb > span {
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-details-breadcrumb > strong {
+  color: #26364a !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-weight: 700 !important;
+}
+
+/* Back button text */
+.app.theme-light .outstanding-details-back {
+  color: #ffffff !important;
+}
+
+/* Customer Details - Simple breadcrumb */
+.outstanding-details-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.outstanding-details-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.outstanding-details-breadcrumb > span {
+  color: #64748b;
+}
+
+.outstanding-details-breadcrumb > strong {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Night Mode unchanged */
+.app.theme-light .outstanding-details-back {
+  background: transparent !important;
+  color: #334155 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Delete button - Light Mode */
+.app.theme-light .outstanding-delete-btn {
+  background: #ff304f !important;
+  color: #ffffff !important;
+  border: 1px solid #ff304f !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+}
+
+.app.theme-light .outstanding-delete-btn:hover {
+  background: #f51f42 !important;
+  border-color: #f51f42 !important;
+}
+
+.app.theme-light .outstanding-delete-btn svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* =========================================
+   EDIT CUSTOMER - LIGHT MODE ONLY
+========================================= */
+
+.app.theme-light .outstanding-edit-page {
+  background: #f1f5f9 !important;
+  color: #172033 !important;
+}
+
+.app.theme-light .outstanding-edit-breadcrumb {
+  color: #334155 !important;
+}
+
+.app.theme-light .outstanding-edit-breadcrumb button {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #dbe4ef !important;
+}
+
+.app.theme-light .outstanding-edit-breadcrumb strong,
+.app.theme-light .outstanding-edit-breadcrumb span {
+  color: #334155 !important;
+}
+
+.app.theme-light .outstanding-edit-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #dbe4ef !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+}
+
+.app.theme-light .outstanding-edit-title h1 {
+  color: #172033 !important;
+}
+
+.app.theme-light .outstanding-edit-field label {
+  color: #475569 !important;
+}
+
+.app.theme-light .outstanding-edit-field label span {
+  color: #64748b !important;
+}
+
+.app.theme-light .outstanding-edit-field input,
+.app.theme-light .outstanding-edit-field textarea,
+.app.theme-light .outstanding-edit-phone {
+  background: #f8fafc !important;
+  color: #172033 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .outstanding-edit-field input::placeholder,
+.app.theme-light .outstanding-edit-field textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.app.theme-light .outstanding-edit-phone > span {
+  background: #e2e8f0 !important;
+  color: #047857 !important;
+  border-right: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .outstanding-edit-active {
+  background: #f8fafc !important;
+  color: #172033 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .outstanding-edit-active input {
+  accent-color: #10b981 !important;
+}
+
+.app.theme-light .outstanding-edit-more-btn {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+}
+
+.app.theme-light .outstanding-edit-actions {
+  border-top-color: #cbd5e1 !important;
+}
+
+.app.theme-light .outstanding-edit-save {
+  background: #10d9a0 !important;
+  color: #052e2b !important;
+  border-color: #10d9a0 !important;
+}
+
+.app.theme-light .outstanding-edit-cancel {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .outstanding-edit-error {
+  background: #fff1f2 !important;
+  color: #be123c !important;
+  border-color: #fecdd3 !important;
+}
+
+/* Edit Customer heading fix - Light Mode only */
+.app.theme-light .outstanding-edit-title h1 {
+  color: #172033 !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  transform: none !important;
+  position: static !important;
+}
+
+/* Edit Customer heading spacing - Light Mode only */
+.app.theme-light .outstanding-edit-title {
+  margin-bottom: 12px !important;
+  padding-bottom: 8px !important;
+}
+
+.app.theme-light .outstanding-edit-title h1 {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
+  text-shadow: none !important;
+}

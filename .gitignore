@@ -1,0 +1,32 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+
+# Django
+.env
+media/
+staticfiles/
+
+# React
+node_modules/
+dist/
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+# Database backups
+src/data_backup.json
+src/accounts_backup.json
+src/db_backup.sqlite3

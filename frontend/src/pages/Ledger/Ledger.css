@@ -1,0 +1,983 @@
+/* =========================================
+   LEDGER PAGE
+========================================= */
+
+.ledger-page {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px 20px 32px;
+  color: #f8fafc;
+  background: transparent;
+}
+
+/* =========================================
+   HEADER - NO LOGO
+========================================= */
+
+.ledger-header {
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.ledger-header > div {
+  width: 100%;
+}
+
+.ledger-title-row {
+  display: block !important;
+  width: 100%;
+  text-align: left !important;
+}
+
+/* Hide rupee logo */
+
+.ledger-title-icon {
+  display: none !important;
+}
+
+.ledger-title-row > div:last-child {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  text-align: left !important;
+}
+
+.ledger-header h1 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 850;
+  letter-spacing: -0.4px;
+  text-align: left !important;
+}
+
+.ledger-header p {
+  max-width: 390px;
+  margin: 0;
+  color: #9aabc3;
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: left !important;
+}
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.ledger-stat-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.ledger-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+
+  min-width: 0;
+  min-height: 105px;
+  box-sizing: border-box;
+  padding: 19px;
+
+  border: 1px solid #1d2a3d;
+  border-radius: 16px;
+
+  background: #0d1522;
+  color: #ffffff;
+
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.ledger-stat-card:hover {
+  border-color: #34445d;
+  background: #101b2b;
+}
+
+.ledger-stat-card.active {
+  border-color: #20dca7 !important;
+  box-shadow: 0 0 0 1px rgba(32, 220, 167, 0.15);
+}
+
+.ledger-stat-card span {
+  display: block;
+  margin: 0;
+  color: #a8bbd7;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.ledger-stat-card strong {
+  display: block;
+  color: #60a5fa;
+  font-size: 26px;
+  font-weight: 850;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.ledger-stat-card.all strong {
+  color: #a78bfa;
+}
+
+.ledger-stat-card.bills strong {
+  color: #60a5fa;
+}
+
+.ledger-stat-card.payments strong {
+  color: #34d399;
+}
+
+.ledger-stat-card.expenses strong {
+  color: #fb7185;
+}
+
+.ledger-stat-card.active strong {
+  color: #34e8a3;
+}
+
+/* =========================================
+   DATE FILTERS
+   Compact From / To layout
+========================================= */
+
+.ledger-filter-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 18px;
+  padding: 0;
+
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ledger-filter-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 5px;
+
+  width: auto !important;
+  min-width: 0;
+  margin: 0;
+}
+
+.ledger-filter-item label {
+  display: block;
+  margin: 0;
+  color: #a8b8d0;
+  font-size: 11px;
+  font-weight: 650;
+  text-align: left;
+}
+
+.ledger-filter-item input[type="date"] {
+  display: block;
+  width: 145px !important;
+  min-width: 0 !important;
+  max-width: 160px;
+  height: 31px !important;
+  min-height: 31px !important;
+  box-sizing: border-box;
+  padding: 0 8px;
+
+  border: 1px solid transparent !important;
+  border-radius: 7px;
+
+  outline: none;
+  background: #10131b;
+  color: #f8fafc;
+
+  font-family: inherit;
+  font-size: 12px;
+  text-align: left;
+  box-shadow: none;
+}
+
+.ledger-filter-item input[type="date"]:focus {
+  border-color: #39475d !important;
+}
+
+/* Compact calendar icon */
+
+.ledger-filter-item input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+/* Hide Clear button to match the reference layout */
+
+.ledger-filter-panel .ledger-clear-btn {
+  display: none !important;
+}
+
+/* =========================================
+   TOTAL IN / TOTAL OUT / NET
+========================================= */
+
+.ledger-money-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px;
+
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.ledger-money-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 9px;
+
+  min-width: 0;
+  min-height: 82px;
+  box-sizing: border-box;
+  padding: 12px 13px;
+
+  border: 1px solid #1d2a3d;
+  border-radius: 12px;
+
+  background: #0d1522;
+  text-align: left;
+}
+
+.ledger-money-card span {
+  display: block;
+  margin: 0;
+  color: #a8b8d0;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.ledger-money-card strong {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+
+  font-size: clamp(11px, 1.7vw, 20px);
+  font-weight: 850;
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.ledger-money-card.total-in {
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
+.ledger-money-card.total-in strong {
+  color: #34d399;
+}
+
+.ledger-money-card.total-out {
+  border-color: rgba(248, 113, 113, 0.2);
+}
+
+.ledger-money-card.total-out strong {
+  color: #fb526b;
+}
+
+.ledger-money-card.net {
+  border-color: rgba(167, 139, 250, 0.2);
+}
+
+.ledger-money-card.net strong {
+  color: #c4b5fd;
+}
+
+/* =========================================
+   TRANSACTION LIST
+========================================= */
+
+.ledger-list-panel {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: 1px solid #1c293b;
+  border-radius: 15px;
+
+  background: #0d1522;
+}
+
+/* Hide "Transactions / 10 entries" header */
+
+.ledger-list-header {
+  display: none !important;
+}
+
+.ledger-list-header h2,
+.ledger-list-header span {
+  display: none !important;
+}
+
+/* Transaction entry */
+
+.ledger-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 18px 17px;
+
+  border-bottom: 1px solid #182436;
+  background: transparent;
+
+  transition: background 0.2s ease;
+}
+
+.ledger-entry:last-child {
+  border-bottom: none;
+}
+
+.ledger-entry:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.ledger-entry-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 13px;
+
+  flex: 1;
+  min-width: 0;
+}
+
+.ledger-entry-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  min-width: 55px;
+  padding: 6px 9px;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ledger-entry-badge.bill {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.ledger-entry-badge.payment {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.ledger-entry-badge.expense {
+  color: #fb7185;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.ledger-entry-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ledger-entry-info h3 {
+  margin: 0 0 6px;
+
+  color: #edf2f7;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.45;
+
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.ledger-entry-info p {
+  margin: 0;
+
+  color: #9aa9be;
+  font-size: 12px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.ledger-entry-amount {
+  flex-shrink: 0;
+  max-width: 45%;
+
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.45;
+
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.ledger-entry-amount.bill {
+  color: #60a5fa;
+}
+
+.ledger-entry-amount.payment {
+  color: #34d399;
+}
+
+.ledger-entry-amount.expense {
+  color: #fb7185;
+}
+
+/* Loading and empty messages */
+
+.ledger-message {
+  padding: 30px 18px;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.ledger-message.error {
+  color: #fb7185;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .ledger-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .ledger-money-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .ledger-page {
+    padding: 20px 15px 28px;
+  }
+
+  .ledger-header {
+    margin-bottom: 22px;
+  }
+
+  .ledger-header h1 {
+    font-size: 25px;
+  }
+
+  .ledger-header p {
+    max-width: 340px;
+    font-size: 13px;
+  }
+
+  /* Two cards per row */
+
+  .ledger-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+    margin-bottom: 19px;
+  }
+
+  .ledger-stat-card {
+    min-height: 96px;
+    padding: 15px 13px;
+    border-radius: 15px;
+  }
+
+  .ledger-stat-card span {
+    font-size: 12px;
+  }
+
+  .ledger-stat-card strong {
+    font-size: 23px;
+  }
+
+  /* Compact dates, one below the other */
+
+  .ledger-filter-panel {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    margin-bottom: 17px !important;
+  }
+
+  .ledger-filter-item {
+    width: auto !important;
+    align-items: flex-start !important;
+  }
+
+  .ledger-filter-item input[type="date"] {
+    width: 145px !important;
+    max-width: 145px !important;
+    height: 31px !important;
+    min-height: 31px !important;
+  }
+
+  /* Keep all 3 money cards on one row */
+
+  .ledger-money-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .ledger-money-card {
+    min-height: 78px;
+    padding: 10px 8px;
+    border-radius: 11px;
+  }
+
+  .ledger-money-card span {
+    font-size: 10px;
+  }
+
+  .ledger-money-card strong {
+    font-size: clamp(10px, 3vw, 14px);
+  }
+
+  /* Transactions: amount right, details left */
+
+  .ledger-entry {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 8px;
+    padding: 16px 13px;
+  }
+
+  .ledger-entry-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 9px;
+
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ledger-entry-badge {
+    min-width: 0;
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  .ledger-entry-info {
+    width: 100%;
+  }
+
+  .ledger-entry-info h3 {
+    font-size: 13px;
+  }
+
+  .ledger-entry-info p {
+    font-size: 11px;
+  }
+
+  .ledger-entry-amount {
+    align-self: flex-start !important;
+    max-width: 45%;
+    font-size: 12px;
+    text-align: right;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .ledger-page {
+    padding: 17px 10px 24px;
+  }
+
+  .ledger-header h1 {
+    font-size: 23px;
+  }
+
+  .ledger-header p {
+    font-size: 12px;
+  }
+
+  .ledger-stat-grid {
+    gap: 8px;
+  }
+
+  .ledger-stat-card {
+    min-height: 88px;
+    padding: 12px 10px;
+  }
+
+  .ledger-stat-card span {
+    font-size: 11px;
+  }
+
+  .ledger-stat-card strong {
+    font-size: 21px;
+  }
+
+  .ledger-money-grid {
+    gap: 5px;
+  }
+
+  .ledger-money-card {
+    min-height: 74px;
+    padding: 9px 6px;
+  }
+
+  .ledger-money-card span {
+    font-size: 9px;
+  }
+
+  .ledger-money-card strong {
+    font-size: 10px;
+  }
+
+  .ledger-entry {
+    padding: 14px 10px;
+  }
+
+  .ledger-entry-info h3 {
+    font-size: 12px;
+  }
+
+  .ledger-entry-info p {
+    font-size: 10px;
+  }
+
+  .ledger-entry-amount {
+    font-size: 11px;
+  }
+}
+
+/* Total In - White Background */
+.ledger-money-card.total-in {
+  background: #ffffff !important;
+  border: 1px solid #d8d8e8 !important;
+  border-radius: 12px;
+}
+
+.ledger-money-card.total-in span {
+  color: #111827 !important;
+}
+
+.ledger-money-card.total-in strong {
+  color: #00b981 !important;
+}
+
+/* =========================================
+   LEDGER TOTAL CARDS — FONT SIZE FIX
+========================================= */
+
+.ledger-money-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.ledger-money-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+
+  min-width: 0;
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 16px;
+
+  border: 1px solid #1d2a3d;
+  border-radius: 14px;
+  background: #0d1522;
+
+  text-align: left;
+}
+
+/* Card headings */
+.ledger-money-card span {
+  display: block;
+  margin: 0;
+
+  color: #a8b8d0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Amounts */
+.ledger-money-card strong {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+
+  font-size: 21px;
+  font-weight: 850;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+/* TOTAL IN — WHITE BACKGROUND */
+.ledger-money-card.total-in {
+  background: #ffffff;
+  border-color: #d1d5db;
+}
+
+.ledger-money-card.total-in span {
+  color: #172033;
+}
+
+.ledger-money-card.total-in strong {
+  color: #10b981;
+}
+
+/* TOTAL OUT */
+.ledger-money-card.total-out {
+  background: #0d1522;
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.ledger-money-card.total-out span {
+  color: #a8b8d0;
+}
+
+.ledger-money-card.total-out strong {
+  color: #fb526b;
+}
+
+/* NET */
+.ledger-money-card.net {
+  background: #0d1522;
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.ledger-money-card.net span {
+  color: #a8b8d0;
+}
+
+.ledger-money-card.net strong {
+  color: #c4b5fd;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .ledger-money-grid {
+    gap: 7px;
+  }
+
+  .ledger-money-card {
+    min-height: 84px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .ledger-money-card span {
+    font-size: 12px;
+  }
+
+  .ledger-money-card strong {
+    font-size: 15px;
+  }
+}
+
+
+/* ==========================================
+   LEDGER PAGE — LIGHT MODE FIX
+   Add at the VERY END of Ledger.css
+========================================== */
+
+.app.theme-light .ledger-page {
+  background: #f1f5f9 !important;
+  color: #172033 !important;
+}
+
+.app.theme-light .ledger-page .ledger-header h1 {
+  color: #172033 !important;
+}
+
+.app.theme-light .ledger-page .ledger-header p {
+  color: #64748b !important;
+}
+
+/* All Entries / Bills / Payments / Expenses */
+.app.theme-light .ledger-page .ledger-stat-card,
+.app.theme-light .ledger-page .ledger-stat-card.all,
+.app.theme-light .ledger-page .ledger-stat-card.bills,
+.app.theme-light .ledger-page .ledger-stat-card.payments,
+.app.theme-light .ledger-page .ledger-stat-card.expenses {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #dbe4ef !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+}
+
+.app.theme-light .ledger-page .ledger-stat-card span {
+  color: #475569 !important;
+}
+
+.app.theme-light .ledger-page .ledger-stat-card.all strong,
+.app.theme-light .ledger-page .ledger-stat-card.payments strong {
+  color: #10b981 !important;
+}
+
+.app.theme-light .ledger-page .ledger-stat-card.bills strong {
+  color: #3b82f6 !important;
+}
+
+.app.theme-light .ledger-page .ledger-stat-card.expenses strong {
+  color: #f43f5e !important;
+}
+
+.app.theme-light .ledger-page .ledger-stat-card.active {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 1px #10b981 !important;
+}
+
+/* Date filter panel and fields */
+.app.theme-light .ledger-page .ledger-filter-panel {
+  background: transparent !important;
+  color: #334155 !important;
+  border-color: #dbe4ef !important;
+}
+
+.app.theme-light .ledger-page .ledger-filter-item label {
+  color: #64748b !important;
+}
+
+.app.theme-light .ledger-page .ledger-filter-item input,
+.app.theme-light .ledger-page .ledger-filter-item input[type="date"] {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #dbe4ef !important;
+  color-scheme: light !important;
+}
+
+/* Total In / Total Out / Net */
+.app.theme-light .ledger-page .ledger-money-card,
+.app.theme-light .ledger-page .ledger-money-card.total-in,
+.app.theme-light .ledger-page .ledger-money-card.total-out,
+.app.theme-light .ledger-page .ledger-money-card.net {
+  background: #ffffff !important;
+  border: 1px solid #dbe4ef !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+}
+
+.app.theme-light .ledger-page .ledger-money-card span {
+  color: #475569 !important;
+}
+
+.app.theme-light .ledger-page .ledger-money-card.total-in strong {
+  color: #059669 !important;
+}
+
+.app.theme-light .ledger-page .ledger-money-card.total-out strong {
+  color: #e11d48 !important;
+}
+
+.app.theme-light .ledger-page .ledger-money-card.net strong {
+  color: #7c3aed !important;
+}
+
+/* Transactions panel */
+.app.theme-light .ledger-page .ledger-list-panel {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #dbe4ef !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+}
+
+.app.theme-light .ledger-page .ledger-list-header {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .ledger-page .ledger-list-header h2 {
+  color: #172033 !important;
+}
+
+.app.theme-light .ledger-page .ledger-list-header span {
+  color: #64748b !important;
+}
+
+/* Individual transactions */
+.app.theme-light .ledger-page .ledger-entry,
+.app.theme-light .ledger-page .ledger-entry.bill,
+.app.theme-light .ledger-page .ledger-entry.payment,
+.app.theme-light .ledger-page .ledger-entry.expense {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .ledger-page .ledger-entry-info h3 {
+  color: #334155 !important;
+}
+
+.app.theme-light .ledger-page .ledger-entry-info p {
+  color: #64748b !important;
+}
+
+.app.theme-light .ledger-page .ledger-entry-amount.payment {
+  color: #059669 !important;
+}
+
+.app.theme-light .ledger-page .ledger-entry-amount.expense {
+  color: #e11d48 !important;
+}
+
+.app.theme-light .ledger-page .ledger-entry-amount.bill {
+  color: #2563eb !important;
+}
+
+.app.theme-light .ledger-page .ledger-message {
+  background: #ffffff !important;
+  color: #475569 !important;
+}
+
+.app.theme-light .ledger-page .ledger-message.error {
+  color: #be123c !important;
+}

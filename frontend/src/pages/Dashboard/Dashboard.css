@@ -1,0 +1,1985 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.owner-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  color: #f5f8ff;
+  background: #061b17;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.dash-topbar {
+  min-height: 72px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #1554b4;
+  color: #fff;
+}
+
+.dash-topbar strong {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.dash-header-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+}
+
+.dash-main {
+  width: min(100%, 1200px);
+  margin: auto;
+  padding: 26px;
+}
+
+.dash-welcome {
+  margin-bottom: 30px;
+}
+
+.dash-welcome h1 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+}
+
+.dash-welcome h1 span {
+  font-size: 25px;
+}
+
+.dash-welcome p {
+  margin: 0;
+  color: #d1e1f5;
+  font-size: 15px;
+}
+
+.dash-period {
+  margin-bottom: 32px;
+}
+
+.dash-period-label {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.dash-date-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.dash-date-controls > svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: #c6dcff;
+}
+
+.dash-date-controls input {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 0;
+  padding: 11px 8px;
+  color: #fff;
+  background: #174b9c;
+  border: 1px solid #3975d2;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.dash-date-controls input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.dash-date-controls span {
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dash-date-controls button {
+  flex-shrink: 0;
+  padding: 11px 15px;
+  color: #fff;
+  background: #08d8b0;
+  border: none;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dash-section {
+  margin-bottom: 34px;
+}
+
+.dash-section > h2 {
+  margin: 0 0 18px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dash-stat-card {
+  min-width: 0;
+  min-height: 128px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid rgba(124, 180, 255, 0.48);
+  border-radius: 17px;
+  background: linear-gradient(135deg, #1959b9, #2446a0);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.13);
+}
+
+.dash-stat-card.blue {
+  background: linear-gradient(135deg, #1763cb, #23489f);
+}
+
+.dash-stat-card.purple {
+  background: linear-gradient(135deg, #4d36d8, #293d99);
+}
+
+.dash-stat-card.orange {
+  background: linear-gradient(135deg, #ad5b28, #85431f);
+}
+
+.dash-stat-card.pink {
+  background: linear-gradient(135deg, #b92d75, #7e2c86);
+}
+
+.dash-stat-card.green {
+  background: linear-gradient(135deg, #078f83, #116d77);
+}
+
+.dash-stat-card.cyan {
+  background: linear-gradient(135deg, #087eae, #194fa7);
+}
+
+.dash-stat-icon {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: white;
+  background: rgba(0, 224, 255, 0.19);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dash-stat-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.dash-stat-title {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.dash-stat-content strong {
+  font-size: clamp(20px, 2.3vw, 27px);
+  line-height: 1.2;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.dash-stat-content small {
+  color: #e0edff;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.dash-revenue-breakdown {
+  margin-bottom: 30px;
+  padding: 23px;
+  border: 2px solid #ff4565;
+  border-radius: 18px;
+  background: rgba(45, 25, 30, 0.35);
+}
+
+.dash-revenue-breakdown h2 {
+  margin: 0 0 22px;
+  color: #ff91a8;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.dash-revenue-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dash-revenue-items > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 12px;
+  text-align: center;
+}
+
+.dash-revenue-items > div + div {
+  border-left: 2px solid #ff4565;
+}
+
+.dash-revenue-items strong {
+  font-size: clamp(16px, 2vw, 24px);
+  overflow-wrap: anywhere;
+}
+
+.dash-revenue-items span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dash-revenue-items .negative {
+  color: #ff627d;
+}
+
+.dash-revenue-items .positive {
+  color: #29e5ce;
+}
+
+.dash-panel {
+  margin-bottom: 26px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid #3063b7;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #194e9f, #1b4084);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.13);
+}
+
+.dash-panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 23px;
+}
+
+.dash-panel-heading h2 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.dash-panel-heading p {
+  margin: 0;
+  color: #d5e6ff;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dash-panel-heading > svg {
+  flex-shrink: 0;
+  color: #6df4e3;
+}
+
+.dash-chart {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 13px;
+  min-height: 270px;
+  padding-top: 12px;
+}
+
+.dash-chart-ylabels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  color: #e3edff;
+  font-size: 11px;
+  text-align: right;
+}
+
+.dash-chart-bars {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: end;
+  gap: 7px;
+  min-width: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 24%,
+    rgba(255, 255, 255, 0.09) 25%
+  );
+}
+
+.dash-chart-column {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.dash-bar-value {
+  min-height: 12px;
+  color: #d7ffff;
+  font-size: 9px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.dash-bar-track {
+  height: 190px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.dash-bar {
+  width: 100%;
+  min-height: 0;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(180deg, #38f5e2, #0db9ed);
+}
+
+.dash-month-label {
+  padding-bottom: 7px;
+  color: #e4edff;
+  font-size: 10px;
+}
+
+.dash-stock-numbers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin: 28px 0 24px;
+  text-align: center;
+}
+
+.dash-stock-numbers div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dash-stock-numbers span {
+  color: #d3e5ff;
+  font-size: 13px;
+}
+
+.dash-stock-numbers strong {
+  font-size: 29px;
+}
+
+.dash-stock-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.dash-stock-track div {
+  height: 100%;
+  border-radius: inherit;
+  background: #38e5b0;
+}
+
+.dash-stock-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  margin-top: 17px;
+  font-size: 12px;
+}
+
+.dash-stock-legend span:first-child {
+  color: #56f0c1;
+}
+
+.dash-stock-legend span:last-child {
+  color: #d5e4ff;
+}
+
+.dash-stock-caption {
+  margin: 22px 0 0;
+  color: #d9e8ff;
+  font-size: 12px;
+  text-align: center;
+}
+
+.dash-pending-count {
+  flex-shrink: 0;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+}
+
+.dash-pending-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dash-pending-row {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  padding: 19px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.dash-pending-row:last-child {
+  border-bottom: 0;
+}
+
+.dash-customer-avatar {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: rgba(0, 231, 202, 0.18);
+  color: #9bffed;
+  font-weight: 800;
+}
+
+.dash-customer-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dash-customer-info strong {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.dash-customer-info span {
+  color: #d3e5ff;
+  font-size: 11px;
+}
+
+.dash-customer-balance {
+  color: #ff8197;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.dash-empty,
+.dash-loading {
+  color: #d7e7ff;
+  font-size: 13px;
+}
+
+.dash-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 20px;
+  padding: 13px;
+  border: 1px solid #ff8b6c;
+  border-radius: 10px;
+  color: #ffd6cb;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.dash-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #b7d5d4;
+  font-size: 12px;
+}
+
+.dash-footer button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 0;
+  border: 0;
+  color: #70f0d8;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .dash-main {
+    padding: 34px;
+  }
+
+  .dash-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dash-stat-card {
+    min-height: 145px;
+  }
+
+  .dash-panel {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dash-topbar {
+    min-height: 62px;
+    padding: 10px 13px;
+  }
+
+  .dash-topbar strong {
+    font-size: 16px;
+  }
+
+  .dash-header-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .dash-main {
+    padding: 20px 14px;
+  }
+
+  .dash-welcome {
+    margin-bottom: 25px;
+  }
+
+  .dash-welcome h1 {
+    font-size: 25px;
+  }
+
+  .dash-welcome p {
+    font-size: 13px;
+  }
+
+  .dash-date-controls {
+    gap: 7px;
+  }
+
+  .dash-date-controls input {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    padding: 11px 5px;
+    font-size: 11px;
+  }
+
+  .dash-date-controls span {
+    font-size: 12px;
+  }
+
+  .dash-date-controls button {
+    flex: 0 0 auto;
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+
+  .dash-date-controls > svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dash-stats-grid {
+    gap: 10px;
+  }
+
+  .dash-stat-card {
+    min-height: 122px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .dash-stat-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .dash-stat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dash-stat-title {
+    font-size: 12px;
+  }
+
+  .dash-stat-content strong {
+    font-size: 20px;
+  }
+
+  .dash-stat-content small {
+    font-size: 10px;
+  }
+
+  .dash-section > h2 {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .dash-revenue-breakdown {
+    padding: 15px 9px;
+  }
+
+  .dash-revenue-breakdown h2 {
+    font-size: 14px;
+  }
+
+  .dash-revenue-items > div {
+    padding: 5px;
+    gap: 8px;
+  }
+
+  .dash-revenue-items strong {
+    font-size: 14px;
+  }
+
+  .dash-revenue-items span {
+    font-size: 10px;
+  }
+
+  .dash-panel {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .dash-panel-heading h2 {
+    font-size: 16px;
+  }
+
+  .dash-panel-heading p {
+    font-size: 11px;
+  }
+
+  .dash-chart {
+    min-height: 235px;
+    gap: 8px;
+  }
+
+  .dash-chart-bars {
+    gap: 4px;
+  }
+
+  .dash-bar-track {
+    height: 155px;
+  }
+
+  .dash-chart-ylabels {
+    font-size: 9px;
+  }
+
+  .dash-month-label {
+    font-size: 9px;
+  }
+
+  .dash-bar-value {
+    font-size: 8px;
+  }
+
+  .dash-stock-numbers strong {
+    font-size: 25px;
+  }
+
+  .dash-pending-row {
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 15px 0;
+  }
+
+  .dash-customer-avatar {
+    width: 33px;
+    height: 33px;
+  }
+
+  .dash-customer-info strong {
+    font-size: 12px;
+  }
+
+  .dash-customer-info span {
+    font-size: 10px;
+  }
+
+  .dash-customer-balance {
+    font-size: 11px;
+  }
+
+  .dash-pending-count {
+    font-size: 10px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .dash-main {
+    padding: 16px 10px;
+  }
+
+  .dash-stat-card {
+    padding: 11px;
+  }
+
+  .dash-stat-content strong {
+    font-size: 17px;
+  }
+
+  .dash-stat-title {
+    font-size: 11px;
+  }
+
+  .dash-revenue-items strong {
+    font-size: 12px;
+  }
+}
+
+
+/* Align dashboard content to the left */
+.dash-welcome,
+.dash-welcome h1,
+.dash-welcome p,
+.dash-period,
+.dash-period-label,
+.dash-overview,
+.dash-overview h2,
+.dash-overview p {
+  text-align: left !important;
+}
+
+/* Welcome section */
+.dash-welcome {
+  align-items: flex-start !important;
+}
+
+.dash-welcome h1,
+.dash-welcome p {
+  margin-left: 0;
+}
+
+/* Period section */
+.dash-period {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dash-period-label {
+  margin-left: 0;
+}
+
+/* Date inputs and Apply button */
+.dash-date-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Overview section */
+.dash-overview {
+  width: 100%;
+  align-items: flex-start !important;
+}
+
+.dash-overview h2,
+.dash-overview p {
+  margin-left: 0;
+}
+
+/* Date filter - left aligned and compact */
+.dash-date-controls {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
+  width: fit-content !important;
+  max-width: 100%;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+.dash-date-controls > svg {
+  width: 28px !important;
+  height: 28px !important;
+  flex-shrink: 0;
+}
+
+.dash-date-controls input {
+  flex: 0 1 220px !important;
+  width: 220px !important;
+  min-width: 0 !important;
+  height: 52px !important;
+  padding: 0 14px !important;
+  box-sizing: border-box;
+  border-radius: 16px !important;
+  background: #10499f !important;
+  border: 1px solid #3478dc !important;
+  color: #fff !important;
+  font-size: 16px !important;
+}
+
+.dash-date-controls span {
+  flex-shrink: 0;
+  font-size: 16px !important;
+  color: #fff;
+}
+
+.dash-date-controls button {
+  flex-shrink: 0;
+  height: 52px !important;
+  padding: 0 24px !important;
+  border-radius: 16px !important;
+  background: #08d5b0 !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .dash-date-controls {
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .dash-date-controls > svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .dash-date-controls input {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    height: 42px !important;
+    padding: 0 7px !important;
+    font-size: 12px !important;
+    border-radius: 11px !important;
+  }
+
+  .dash-date-controls span {
+    font-size: 12px !important;
+  }
+
+  .dash-date-controls button {
+    height: 42px !important;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+    border-radius: 11px !important;
+  }
+}
+
+/* Remove calendar icon inside date inputs */
+.dash-date-controls input::-webkit-calendar-picker-indicator {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0;
+  width: 0;
+  margin: 0;
+}
+
+.dash-date-controls input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.dash-date-controls input {
+  flex: 0 1 85px !important;
+  width: 85px !important;
+  min-width: 0 !important;
+  padding: 0 6px !important;
+  font-size: 11px !important;
+}
+
+@media (max-width: 600px) {
+  .dash-date-controls input {
+    flex: 0 1 85px !important;
+    width: 85px !important;
+    padding: 0 5px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* Align dashboard section headings to the left */
+.dash-section > h2 {
+  text-align: left !important;
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+/* Keep period summary heading left-aligned on mobile */
+@media (max-width: 600px) {
+  .dash-section > h2 {
+    text-align: left !important;
+  }
+}
+
+
+/* Top Pending Customers */
+.dash-pending-panel {
+  width: 100%;
+  background: #071a30 !important;
+  border: 1px solid #174879 !important;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.dash-pending-panel .dash-panel-heading {
+  padding: 20px;
+  border-bottom: 1px solid #174879;
+}
+
+.dash-pending-panel .dash-panel-heading h2 {
+  text-align: left !important;
+  color: #f4f8ff;
+  font-size: 19px;
+  margin: 0;
+}
+
+.dash-pending-panel .dash-pending-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-pending-panel .dash-pending-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border-bottom: 1px solid #153858;
+  background: transparent;
+}
+
+.dash-pending-panel .dash-pending-row:last-child {
+  border-bottom: none;
+}
+
+.dash-pending-panel .dash-customer-info {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.dash-pending-panel .dash-customer-info strong {
+  display: block;
+  color: #f5f8ff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.dash-pending-panel .dash-customer-info span,
+.dash-pending-panel .dash-customer-avatar {
+  display: none !important;
+}
+
+.dash-pending-panel .dash-customer-balance {
+  color: #ff4778 !important;
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .dash-pending-panel .dash-panel-heading {
+    padding: 16px;
+  }
+
+  .dash-pending-panel .dash-pending-row {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .dash-pending-panel .dash-customer-info strong {
+    font-size: 14px;
+  }
+
+  .dash-pending-panel .dash-customer-balance {
+    font-size: 14px;
+  }
+}
+
+
+:root { color-scheme: dark; }
+.dashboard-page{--bg:#071b17;--muted:#bad0df;--blue:#174fb0;width:100%;min-width:0;min-height:100%;padding:24px;color:#f6f9ff;background:linear-gradient(145deg,#061b17,#092a23);display:flex;flex-direction:column;gap:22px;box-sizing:border-box;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.dashboard-page *,.dashboard-page *:before,.dashboard-page *:after{box-sizing:border-box}.dashboard-page h1,.dashboard-page h2,.dashboard-page p{margin-top:0}.dashboard-welcome{padding:8px 0 4px}.dashboard-eyebrow{color:#5ff4d0;font-size:11px;font-weight:850;letter-spacing:1.8px}.dashboard-welcome h1{margin:20px 0 5px;color:#fff;font-size:clamp(25px,3vw,34px);line-height:1.15;font-weight:850;letter-spacing:-.7px}.dashboard-wave{font-size:.85em}.dashboard-welcome>p{margin:0;color:#c2d7e6;font-size:14px}.dashboard-current-date{display:flex;align-items:center;gap:8px;margin-top:19px;color:#e0edf7;font-size:12px}.dashboard-refresh{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:12px 15px;border:1px solid rgba(104,236,198,.28);border-radius:10px;background:#12372e;color:#eafff8;font-size:12px;font-weight:750;cursor:pointer}.dashboard-refresh:hover{background:#194638}
+.dashboard-period-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}.dashboard-period-toolbar h2,.dashboard-section-heading h2{margin:0 0 7px;color:#fff;font-size:16px;font-weight:850}.dashboard-period-toolbar p,.dashboard-section-heading p{margin:0;color:#b9cedd;font-size:12px;line-height:1.5}.dashboard-period-controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.dashboard-period-controls select,.dashboard-period-controls input{min-width:125px;min-height:40px;padding:0 11px;border:1px solid rgba(112,168,255,.4);border-radius:9px;background:#17427d;color:#fff;font:inherit;font-size:12px}.dashboard-apply{min-height:40px;padding:0 17px;border:0;border-radius:9px;background:#12d9b6;color:#003d35;font-size:12px;font-weight:850;cursor:pointer}.dashboard-to{color:#d4e4f1;font-size:12px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.dashboard-overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.dashboard-overview-card{display:flex;align-items:center;gap:13px;min-width:0;min-height:99px;padding:16px;border:1px solid rgba(130,177,255,.45);border-radius:15px;background:linear-gradient(135deg,#215ab9,#17438d);box-shadow:0 7px 18px rgba(0,0,0,.13)}.dashboard-overview-card>div{display:flex;min-width:0;flex-direction:column;gap:6px}.dashboard-overview-card>div>span{color:#e9f1ff;font-size:12px;font-weight:700}.dashboard-overview-card strong{color:#fff;font-size:clamp(19px,2.4vw,27px);line-height:1.15;font-weight:850;overflow-wrap:anywhere}.dashboard-overview-icon{display:grid;place-items:center;width:45px;height:45px;flex-shrink:0;border-radius:12px;color:#fff;background:rgba(0,190,255,.19);border:1px solid rgba(255,255,255,.13)}.dashboard-overview-icon.purple{background:rgba(110,56,255,.34)}.dashboard-overview-icon.orange{background:rgba(255,156,50,.25)}.dashboard-overview-icon.pink{background:rgba(246,53,130,.25)}
+.dashboard-finance-section{display:flex;flex-direction:column;gap:15px}.dashboard-section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}.dashboard-finance-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dashboard-finance-card{display:flex;align-items:center;gap:12px;min-width:0;min-height:105px;padding:14px;border:1px solid rgba(123,173,255,.42);border-radius:14px;background:linear-gradient(140deg,#2158b3,#17438c)}.finance-icon{display:grid;place-items:center;width:43px;height:43px;flex-shrink:0;border:1px solid rgba(255,255,255,.16);border-radius:11px;background:rgba(8,213,255,.17);color:#a8f5ff}.finance-icon.collections{color:#8dffcf;background:rgba(0,229,166,.17)}.finance-icon.blue{color:#b5c9ff;background:rgba(91,112,255,.23)}.finance-icon.pink{color:#ffb0d2;background:rgba(255,65,141,.2)}.finance-icon.expense{color:#ffc4a6;background:rgba(255,124,89,.2)}.dashboard-finance-card>div{min-width:0}.dashboard-finance-card p{margin:0 0 7px;color:#edf4ff;font-size:12px;line-height:1.35}.dashboard-finance-card strong{display:block;color:#fff;font-size:clamp(18px,2.3vw,23px);line-height:1.2;font-weight:850;overflow-wrap:anywhere}
+.dashboard-revenue-breakdown{padding:17px 16px;border:2px solid #fa486b;border-radius:15px;background:rgba(24,21,28,.6)}.dashboard-revenue-breakdown h2{margin:0 0 15px;color:#ff9ab1;font-size:13px;line-height:1.45;font-weight:850}.dashboard-breakdown-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.dashboard-breakdown-values>div{display:flex;min-width:0;flex-direction:column;align-items:center;gap:7px;padding:5px 7px;text-align:center}.dashboard-breakdown-values>div+div{border-left:2px solid #fa486b}.dashboard-breakdown-values strong{color:#fff;font-size:clamp(15px,2.1vw,22px);font-weight:850;overflow-wrap:anywhere}.dashboard-breakdown-values>div:nth-child(2) strong{color:#ff7791}.dashboard-breakdown-values>div:nth-child(3) strong{color:#3ef3d5}.dashboard-breakdown-values span{color:#e1eaf4;font-size:11px;line-height:1.3}
+.dashboard-panel{min-width:0;padding:18px;border:1px solid rgba(120,172,255,.4);border-radius:16px;background:linear-gradient(145deg,#2058b3,#17438c);box-shadow:0 7px 20px rgba(0,0,0,.13)}.dashboard-panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:20px}.dashboard-panel-heading h2{margin:0 0 6px;color:#fff;font-size:17px;font-weight:850}.dashboard-panel-heading p{margin:0;color:#d0e2fa;font-size:11px;line-height:1.5}.dashboard-panel-icon{display:grid;place-items:center;width:37px;height:37px;flex-shrink:0;border-radius:10px;background:rgba(0,220,235,.16);color:#8ff8ec}.dashboard-line-chart{display:grid;grid-template-columns:47px minmax(0,1fr);gap:8px;height:245px;padding-top:5px}.dashboard-y-labels{display:flex;flex-direction:column;justify-content:space-between;padding-bottom:23px;color:#e0edff;font-size:10px;text-align:right}.dashboard-line-plot{position:relative;min-width:0;height:100%;padding-bottom:23px}.dashboard-chart-gridlines{position:absolute;inset:0 0 23px;display:flex;flex-direction:column;justify-content:space-between}.dashboard-chart-gridlines i{display:block;border-top:1px dashed rgba(255,255,255,.17)}.dashboard-line-plot svg{position:absolute;inset:0 0 23px;width:100%;height:calc(100% - 23px);overflow:visible}.dashboard-line-plot polygon{fill:rgba(0,222,239,.18);stroke:none}.dashboard-line-plot polyline{fill:none;stroke:#36f4e9;stroke-width:1.3;vector-effect:non-scaling-stroke}.dashboard-line-plot circle{fill:#52fff0;stroke:#fff;stroke-width:.3;vector-effect:non-scaling-stroke}.dashboard-x-labels{position:absolute;right:0;bottom:0;left:0;display:flex;justify-content:space-between;color:#e0edff;font-size:10px}
+.dashboard-stock-panel{margin-top:0}.dashboard-stock-numbers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 20px;text-align:center}.dashboard-stock-numbers>div{display:flex;flex-direction:column;gap:8px}.dashboard-stock-numbers span{color:#d9e9ff;font-size:11px}.dashboard-stock-numbers strong{color:#fff;font-size:25px;font-weight:850}.dashboard-stock-track{height:8px;overflow:hidden;border-radius:99px;background:rgba(255,255,255,.24)}.dashboard-stock-track>div{height:100%;border-radius:inherit;background:linear-gradient(90deg,#54edca,#13c4eb)}.dashboard-stock-legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;color:#e0edff;font-size:10px}.dashboard-stock-legend span{display:flex;align-items:center;gap:6px}.stock-dot{width:8px;height:8px;border-radius:50%}.available-dot{background:#5cf0cb}.rented-dot{background:#93a9c3}.dashboard-stock-footnote{margin:20px 0 0;color:#d4e4f5;font-size:11px;text-align:center}
+.dashboard-pending-panel{margin-top:0}.dashboard-pending-count{padding:7px 10px;border:1px solid rgba(255,209,111,.3);border-radius:8px;background:rgba(255,192,73,.12);color:#ffe3a3;font-size:10px;white-space:nowrap}.dashboard-pending-list{display:flex;flex-direction:column}.dashboard-pending-row{display:flex;align-items:center;gap:12px;min-width:0;padding:15px 0;border-top:1px solid rgba(255,255,255,.13)}.dashboard-customer-avatar{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:10px;background:rgba(0,219,177,.18);color:#8effdc;font-size:13px;font-weight:850}.dashboard-customer-info{display:flex;min-width:0;flex:1;flex-direction:column;gap:5px}.dashboard-customer-info strong{overflow:hidden;color:#fff;font-size:12px;text-overflow:ellipsis;white-space:nowrap}.dashboard-customer-info span{color:#c5daf0;font-size:10px;line-height:1.4}.dashboard-pending-amount{flex-shrink:0;color:#ff7895;font-size:12px;font-weight:850;text-align:right}.dashboard-empty{display:flex;min-height:120px;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#8fffe0;text-align:center}.dashboard-empty strong{color:white;font-size:13px}.dashboard-empty span{color:#c5daf0;font-size:11px}.dashboard-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:0;padding:16px 0;border-top:1px solid rgba(255,255,255,.12);color:#a9c9dc;font-size:10px}.dashboard-footer button{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:#8fffe0;font:inherit;cursor:pointer}.dashboard-error{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(255,110,130,.35);border-radius:10px;background:rgba(130,35,55,.18);color:#ffc0cb;font-size:12px}.dashboard-error span{flex:1}.dashboard-error button{border:0;background:transparent;color:white;font-weight:750;cursor:pointer}.dashboard-loading{display:flex;min-height:300px;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#071b17;color:#83ffda}.dashboard-loading p{color:#c0d5e7;font-size:13px}.dashboard-spin{animation:dashboard-rotate 1s linear infinite}@keyframes dashboard-rotate{to{transform:rotate(360deg)}}
+@media(min-width:900px){.dashboard-overview-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.dashboard-finance-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.dashboard-analytics-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}}
+@media(max-width:650px){.dashboard-page{padding:18px 12px 22px;gap:22px}.dashboard-welcome h1{margin-top:18px;font-size:27px}.dashboard-welcome>p{font-size:13px}.dashboard-period-toolbar{align-items:stretch;flex-direction:column;gap:12px}.dashboard-period-controls{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-period-controls select,.dashboard-period-controls input{width:100%;min-width:0;max-width:none}.dashboard-period-controls .dashboard-range-select{grid-column:1/-1}.dashboard-range-select select{width:100%}.dashboard-to{display:none}.dashboard-apply{width:100%}.dashboard-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.dashboard-overview-card{gap:9px;min-height:96px;padding:11px}.dashboard-overview-icon{width:38px;height:38px}.dashboard-overview-card>div>span{font-size:11px}.dashboard-overview-card strong{font-size:20px}.dashboard-finance-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.dashboard-finance-card{align-items:flex-start;flex-direction:column;gap:10px;min-height:126px;padding:12px}.dashboard-finance-card p{font-size:11px}.dashboard-finance-card strong{font-size:19px}.dashboard-revenue-breakdown{padding:15px 11px}.dashboard-revenue-breakdown h2{font-size:12px}.dashboard-breakdown-values>div{padding:5px 4px}.dashboard-breakdown-values strong{font-size:15px}.dashboard-breakdown-values span{font-size:10px}.dashboard-panel{padding:15px}.dashboard-panel-heading h2{font-size:16px}.dashboard-line-chart{height:225px;grid-template-columns:42px minmax(0,1fr)}.dashboard-y-labels,.dashboard-x-labels{font-size:9px}.dashboard-stock-numbers strong{font-size:23px}.dashboard-pending-row{gap:9px}.dashboard-customer-avatar{width:32px;height:32px}.dashboard-customer-info span{font-size:9px}.dashboard-pending-amount{font-size:11px}.dashboard-footer{align-items:flex-start;font-size:9px}}
+@media(max-width:360px){.dashboard-page{padding-right:9px;padding-left:9px}.dashboard-overview-card{gap:7px;padding:9px}.dashboard-overview-icon{width:32px;height:32px}.dashboard-overview-card strong{font-size:18px}.dashboard-overview-card>div>span{font-size:10px}.dashboard-finance-card{padding:10px}.dashboard-finance-card strong{font-size:17px}.dashboard-breakdown-values strong{font-size:13px}.dashboard-customer-info span{font-size:8px}}
+
+/* ===== Final navy dashboard theme (Bills section is not added) ===== */
+.owner-dashboard {
+  color: #f3f7ff;
+  background: radial-gradient(ellipse at top, #071b34 0%, #020817 58%, #010510 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.dash-topbar {
+  background: rgba(3, 12, 27, .96);
+  border-bottom: 1px solid rgba(62, 157, 226, .18);
+}
+.dash-main { max-width: 1100px; padding: 26px 24px 34px; }
+.dash-welcome p, .dash-period-label { color: #9ecfff; }
+.dash-period-label { font-size: 15px; }
+.dash-date-controls input {
+  min-height: 44px;
+  color: #eaf6ff;
+  background: #071d38;
+  border: 1px solid #145a91;
+  border-radius: 12px;
+}
+.dash-date-controls input:focus { outline: 2px solid rgba(0, 218, 181, .35); outline-offset: 1px; }
+.dash-date-controls input::-webkit-calendar-picker-indicator { filter: invert(1); opacity: .9; }
+.dash-date-controls button { min-height: 44px; background: linear-gradient(135deg, #00d8b0, #00b99f); box-shadow: 0 5px 16px rgba(0, 216, 176, .13); }
+.dash-date-controls button:hover { filter: brightness(1.08); }
+.dash-section { margin-bottom: 30px; }
+.dash-section > h2 { color: #91caff; }
+.dash-stats-grid { gap: 16px; }
+.dash-stat-card {
+  min-height: 116px;
+  padding: 18px;
+  border: 1px solid rgba(32, 145, 224, .58);
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(4, 34, 67, .96), rgba(3, 19, 43, .96));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 10px 26px rgba(0,0,0,.14);
+}
+.dash-stat-card.blue { background: linear-gradient(135deg, #062f5d, #061a38); border-color: #087bc4; }
+.dash-stat-card.purple { background: linear-gradient(135deg, #20164e, #091a3c); border-color: #6549c9; }
+.dash-stat-card.orange { background: linear-gradient(135deg, #48230f, #1e1720); border-color: #b65a20; }
+.dash-stat-card.pink { background: linear-gradient(135deg, #4b1241, #211336); border-color: #a82c83; }
+.dash-stat-card.green { background: linear-gradient(135deg, #03443f, #062b3a); border-color: #009c91; }
+.dash-stat-card.cyan { background: linear-gradient(135deg, #063d66, #081d42); border-color: #078bd1; }
+.dash-stat-icon { background: rgba(0, 181, 225, .17); border-color: rgba(91, 190, 255, .25); }
+.dash-stat-title { color: #b8ddff; font-weight: 600; }
+.dash-stat-content strong { color: #f7fbff; }
+.dash-stat-content small { color: #9fc9ee; }
+.dash-revenue-breakdown {
+  border: 1px solid rgba(24, 134, 205, .5);
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(3, 30, 59, .88), rgba(3, 15, 34, .94));
+}
+.dash-revenue-breakdown h2 { color: #91caff; }
+.dash-revenue-items > div + div { border-left-color: rgba(39, 126, 185, .42); }
+.dash-revenue-items strong { color: #f5fbff; }
+.dash-revenue-items span { color: #9fc9ee; }
+.dash-panel {
+  border: 1px solid rgba(35, 132, 195, .42);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(5, 25, 49, .96), rgba(3, 14, 31, .98));
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+}
+.dash-panel-heading h2 { color: #f3f8ff; }
+.dash-panel-heading p, .dash-chart-ylabels, .dash-month-label { color: #91bde6; }
+.dash-bar-track { background: rgba(22, 65, 105, .5); }
+.dash-bar { background: linear-gradient(180deg, #10d6bd, #087bd1); border-radius: 7px 7px 2px 2px; }
+.dash-bar-value { color: #b9e7ff; }
+.dash-stock-track { background: #102944; }
+.dash-stock-caption, .dash-stock-legend { color: #a9c9e8; }
+.dash-pending-row { border-bottom-color: rgba(65, 133, 181, .2); }
+.dash-customer-avatar { background: linear-gradient(135deg, #075b9b, #123b79); color: #fff; }
+.dash-customer-info span { color: #91bde6; }
+.dash-customer-balance { color: #00dfb5; }
+.dash-empty, .dash-loading, .dash-error { color: #9fc9ee; }
+.dash-footer { border-top-color: rgba(65, 133, 181, .25); }
+
+@media (max-width: 600px) {
+  .dash-main { padding: 20px 14px 28px; }
+  .dash-welcome { margin-bottom: 22px; }
+  .dash-period { margin-bottom: 26px; }
+  .dash-date-controls { gap: 7px; }
+  .dash-date-controls input { min-height: 40px; padding: 9px 5px; font-size: 11px; }
+  .dash-date-controls button { min-height: 40px; padding: 9px 12px; }
+  .dash-stats-grid { gap: 10px; }
+  .dash-stat-card { min-height: 116px; padding: 13px 11px; gap: 9px; border-radius: 14px; }
+  .dash-stat-icon { width: 38px; height: 38px; border-radius: 11px; }
+  .dash-stat-title { font-size: 11px; }
+  .dash-stat-content strong { font-size: 19px; }
+  .dash-stat-content small { font-size: 10px; }
+  .dash-revenue-breakdown { padding: 16px 10px; }
+  .dash-revenue-items { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+
+/* FINAL: match the Commodities page — deep navy, charcoal panels, teal accents */
+:root { color-scheme: dark; }
+html, body { background: #111c28; }
+.dashboard-page,
+.owner-dashboard {
+  color: #eef5ff !important;
+  background: #07111d !important;
+  background-image: none !important;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+.dashboard-page { --bg: #07111d; --muted: #9eb5ce; --blue: #0b2a46; }
+.dashboard-page .dashboard-topbar,
+.owner-dashboard .dash-topbar {
+  background: #080d15 !important;
+  border-bottom: 1px solid #1b2b3c !important;
+  color: #f4f8ff !important;
+}
+.dashboard-page .dashboard-welcome h1,
+.owner-dashboard .dash-welcome h1 { color: #f5f8ff !important; }
+.dashboard-page .dashboard-welcome > p,
+.dashboard-page .dashboard-period-toolbar p,
+.dashboard-page .dashboard-section-heading p,
+.owner-dashboard .dash-welcome p,
+.owner-dashboard .dash-period-label { color: #a8bfd8 !important; }
+.dashboard-page .dashboard-eyebrow { color: #00e3b5 !important; }
+.dashboard-page .dashboard-period-toolbar h2,
+.dashboard-page .dashboard-section-heading h2,
+.owner-dashboard .dash-section > h2 { color: #eaf2ff !important; }
+.dashboard-page .dashboard-period-controls select,
+.dashboard-page .dashboard-period-controls input,
+.owner-dashboard .dash-date-controls input {
+  color: #edf6ff !important;
+  background: #0b1725 !important;
+  border: 1px solid #263a50 !important;
+  border-radius: 10px !important;
+}
+.dashboard-page .dashboard-apply,
+.owner-dashboard .dash-date-controls button {
+  color: #001b19 !important;
+  background: #08d7b0 !important;
+  border: 1px solid #08d7b0 !important;
+  box-shadow: none !important;
+}
+.dashboard-page .dashboard-overview-card,
+.dashboard-page .dashboard-finance-card,
+.dashboard-page .dashboard-panel,
+.owner-dashboard .dash-stat-card,
+.owner-dashboard .dash-revenue-breakdown,
+.owner-dashboard .dash-panel {
+  color: #f2f7ff !important;
+  background: #0b1724 !important;
+  border: 1px solid #26394e !important;
+  border-radius: 15px !important;
+  box-shadow: none !important;
+}
+.dashboard-page .dashboard-overview-card > div > span,
+.dashboard-page .dashboard-finance-card p,
+.owner-dashboard .dash-stat-title { color: #c5d6e9 !important; }
+.dashboard-page .dashboard-overview-card strong,
+.dashboard-page .dashboard-finance-card strong,
+.owner-dashboard .dash-stat-content strong,
+.owner-dashboard .dash-revenue-items strong { color: #f5f8ff !important; }
+.dashboard-page .dashboard-overview-icon,
+.dashboard-page .finance-icon,
+.owner-dashboard .dash-stat-icon {
+  color: #13e3c0 !important;
+  background: #0a3439 !important;
+  border: 1px solid #075f60 !important;
+  border-radius: 11px !important;
+}
+.dashboard-page .dashboard-overview-icon.purple,
+.dashboard-page .dashboard-overview-icon.orange,
+.dashboard-page .dashboard-overview-icon.pink,
+.dashboard-page .finance-icon.blue,
+.dashboard-page .finance-icon.pink,
+.dashboard-page .finance-icon.expense { color: #13e3c0 !important; background: #0a3439 !important; }
+.dashboard-page .dashboard-revenue-breakdown,
+.owner-dashboard .dash-revenue-breakdown {
+  background: #0b1724 !important;
+  border: 1px solid #26394e !important;
+}
+.dashboard-page .dashboard-revenue-breakdown h2,
+.owner-dashboard .dash-revenue-breakdown h2 { color: #d9e8fa !important; }
+.dashboard-page .dashboard-breakdown-values > div + div,
+.owner-dashboard .dash-revenue-items > div + div { border-left-color: #26394e !important; }
+.dashboard-page .dashboard-breakdown-values > div:nth-child(2) strong,
+.dashboard-page .dashboard-breakdown-values > div:nth-child(3) strong,
+.owner-dashboard .dash-revenue-items strong { color: #08dfb6 !important; }
+.dashboard-page .dashboard-breakdown-values span,
+.owner-dashboard .dash-revenue-items span,
+.owner-dashboard .dash-panel-heading p,
+.owner-dashboard .dash-chart-ylabels,
+.owner-dashboard .dash-month-label,
+.owner-dashboard .dash-stock-caption,
+.owner-dashboard .dash-stock-legend,
+.owner-dashboard .dash-customer-info span { color: #9eb5ce !important; }
+.dashboard-page .dashboard-line-plot polyline { stroke: #08dfb6 !important; }
+.dashboard-page .dashboard-line-plot circle { fill: #08dfb6 !important; }
+.dashboard-page .dashboard-chart-gridlines i { border-top-color: #26394e !important; }
+.dashboard-page .dashboard-stock-track,
+.owner-dashboard .dash-stock-track { background: #1a2b3c !important; }
+.dashboard-page .dashboard-stock-track > div,
+.owner-dashboard .dash-bar { background: #08d7b0 !important; }
+.dashboard-page .dashboard-pending-count,
+.owner-dashboard .dash-pending-count { color: #08dfb6 !important; background: #0a3439 !important; border-color: #075f60 !important; }
+.dashboard-page .dashboard-customer-avatar,
+.owner-dashboard .dash-customer-avatar { color: #12e2bd !important; background: #0a3439 !important; }
+.dashboard-page .dashboard-pending-amount,
+.owner-dashboard .dash-customer-balance { color: #08dfb6 !important; }
+.dashboard-page .dashboard-footer,
+.owner-dashboard .dash-footer { border-top-color: #26394e !important; color: #9eb5ce !important; }
+.dashboard-page .dashboard-footer button { color: #08dfb6 !important; }
+.dashboard-page .dashboard-error { background: #24151d !important; border-color: #603044 !important; }
+.dashboard-page .dashboard-loading { background: #07111d !important; color: #08dfb6 !important; }
+@media (max-width: 650px) {
+  .dashboard-page { background: #07111d !important; padding: 18px 12px 22px !important; }
+  .dashboard-page .dashboard-overview-card,
+  .dashboard-page .dashboard-finance-card { background: #0b1724 !important; }
+}
+
+/* Revenue breakdown: match the compact reference card */
+.owner-dashboard .dash-revenue-breakdown,
+.dashboard-page .dashboard-revenue-breakdown {
+  background: #0b1724 !important;
+  border: 2px solid #fa486b !important;
+  border-radius: 12px !important;
+  padding: 12px 10px !important;
+  box-shadow: none !important;
+}
+.owner-dashboard .dash-revenue-breakdown h2,
+.dashboard-page .dashboard-revenue-breakdown h2 {
+  text-align: left !important;
+  margin: 0 0 10px !important;
+  color: #ff9ab1 !important;
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  font-weight: 800 !important;
+}
+.owner-dashboard .dash-revenue-items > div,
+.dashboard-page .dashboard-breakdown-values > div {
+  padding: 5px 4px !important;
+  gap: 5px !important;
+}
+.owner-dashboard .dash-revenue-items > div + div,
+.dashboard-page .dashboard-breakdown-values > div + div {
+  border-left: 1px solid #fa486b !important;
+}
+.owner-dashboard .dash-revenue-items > div:first-child strong,
+.dashboard-page .dashboard-breakdown-values > div:first-child strong {
+  color: #f4f7ff !important;
+}
+.owner-dashboard .dash-revenue-items > div:nth-child(2) strong,
+.dashboard-page .dashboard-breakdown-values > div:nth-child(2) strong {
+  color: #ff7791 !important;
+}
+.owner-dashboard .dash-revenue-items > div:nth-child(3) strong,
+.dashboard-page .dashboard-breakdown-values > div:nth-child(3) strong {
+  color: #3ef3d5 !important;
+}
+.owner-dashboard .dash-revenue-items span,
+.dashboard-page .dashboard-breakdown-values span {
+  color: #e1eaf4 !important;
+  font-size: 10px !important;
+}
+
+/* Revenue chart redesign: clean navy analytics panel */
+.owner-dashboard .dash-panel {
+  background: linear-gradient(145deg, #0b1a2a 0%, #071321 100%) !important;
+  border: 1px solid #24415b !important;
+  border-radius: 18px !important;
+  padding: 18px 16px !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .18) !important;
+}
+.owner-dashboard .dash-panel-heading {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin-bottom: 18px !important;
+}
+.owner-dashboard .dash-panel-heading h2 {
+  text-align: left !important;
+  margin: 0 !important;
+  color: #f1f7ff !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+}
+.owner-dashboard .dash-panel-heading p {
+  text-align: left !important;
+  margin: 5px 0 0 !important;
+  color: #91abc5 !important;
+  font-size: 11px !important;
+}
+.owner-dashboard .dash-panel-heading > svg {
+  flex-shrink: 0;
+  color: #18e0c1 !important;
+}
+.owner-dashboard .dash-chart {
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) !important;
+  gap: 9px !important;
+  min-width: 0 !important;
+  min-height: 225px !important;
+}
+.owner-dashboard .dash-chart-ylabels {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 4px 0 24px !important;
+  color: #8caac6 !important;
+  font-size: 9px !important;
+  text-align: right !important;
+}
+.owner-dashboard .dash-chart-bars {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  align-items: end !important;
+  gap: 5px !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  border-bottom: 1px solid #29445e !important;
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(25% - 1px), rgba(115, 158, 194, .13) 25%) !important;
+}
+.owner-dashboard .dash-chart-column {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+  height: 100% !important;
+}
+.owner-dashboard .dash-bar-value {
+  min-height: 12px !important;
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+  color: #a9c9e8 !important;
+  font-size: 8px !important;
+  text-align: center !important;
+}
+.owner-dashboard .dash-bar-track {
+  display: flex !important;
+  align-items: flex-end !important;
+  width: 100% !important;
+  height: 150px !important;
+  overflow: hidden !important;
+  border-radius: 6px 6px 2px 2px !important;
+  background: #142a40 !important;
+}
+.owner-dashboard .dash-bar {
+  width: 100% !important;
+  min-height: 0 !important;
+  border-radius: 6px 6px 2px 2px !important;
+  background: linear-gradient(180deg, #20f0ce 0%, #00bfa8 100%) !important;
+  box-shadow: 0 0 12px rgba(0, 220, 190, .13) !important;
+  transition: filter .2s ease !important;
+}
+.owner-dashboard .dash-chart-column:hover .dash-bar { filter: brightness(1.18) !important; }
+.owner-dashboard .dash-month-label {
+  padding: 0 0 7px !important;
+  color: #9ab6d2 !important;
+  font-size: 9px !important;
+  text-align: center !important;
+}
+@media (max-width: 600px) {
+  .owner-dashboard .dash-panel { padding: 15px 12px !important; }
+  .owner-dashboard .dash-panel-heading h2 { font-size: 14px !important; }
+  .owner-dashboard .dash-chart { grid-template-columns: 36px minmax(0, 1fr) !important; gap: 7px !important; min-height: 215px !important; }
+  .owner-dashboard .dash-chart-bars { gap: 4px !important; }
+  .owner-dashboard .dash-bar-track { height: 145px !important; }
+  .owner-dashboard .dash-chart-ylabels { font-size: 8px !important; }
+  .owner-dashboard .dash-month-label { font-size: 8px !important; }
+  .owner-dashboard .dash-bar-value { font-size: 7px !important; }
+}
+
+
+
+/* ===== MOBILE DASHBOARD FIX ===== */
+@media (max-width: 620px) {
+  .dashboard-page {
+    width: 100%;
+    min-width: 0;
+    padding: 18px 14px 24px !important;
+    gap: 18px !important;
+  }
+
+  .dashboard-welcome {
+    margin-bottom: 8px !important;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 23px !important;
+    line-height: 1.35 !important;
+    overflow-wrap: normal !important;
+  }
+
+  .dashboard-welcome > p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Date period section */
+  .dashboard-period-toolbar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 14px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .dashboard-period-toolbar h2 {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .dashboard-period-controls {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .dashboard-period-controls input {
+    flex: 1 1 105px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    font-size: 11px !important;
+  }
+
+  .dashboard-period-controls select {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .dashboard-apply {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0 14px !important;
+  }
+
+  /* Overview cards */
+  .dashboard-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .dashboard-overview-card {
+    min-width: 0 !important;
+    min-height: 105px !important;
+    padding: 12px !important;
+    gap: 9px !important;
+    border-radius: 14px !important;
+  }
+
+  .dashboard-overview-card > div {
+    min-width: 0 !important;
+  }
+
+  .dashboard-overview-card > div > span {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    overflow-wrap: break-word;
+  }
+
+  .dashboard-overview-card strong {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .dashboard-overview-icon {
+    width: 36px !important;
+    height: 36px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Period summary heading */
+  .dashboard-section-heading {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+  }
+
+  .dashboard-section-heading h2 {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: break-word;
+  }
+
+  /* Finance cards */
+  .dashboard-finance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .dashboard-finance-card {
+    min-width: 0 !important;
+    min-height: 105px !important;
+    padding: 12px !important;
+    gap: 8px !important;
+  }
+
+  .dashboard-finance-card strong {
+    font-size: 17px !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .dashboard-finance-card p {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Prevent horizontal overflow */
+  .dashboard-page > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+
+
+/* ===== FINAL MOBILE DASHBOARD POLISH ===== */
+@media (max-width: 620px) {
+  /* Reduce extra spacing */
+  .dashboard-page {
+    padding: 16px 12px 20px !important;
+    gap: 15px !important;
+  }
+
+  .dashboard-welcome {
+    margin-bottom: 4px !important;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Period section */
+  .dashboard-period-toolbar {
+    margin-bottom: 4px !important;
+    padding: 12px !important;
+    gap: 10px !important;
+  }
+
+  .dashboard-period-toolbar h2 {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Overview cards */
+  .dashboard-overview-grid {
+    gap: 8px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .dashboard-overview-card {
+    min-height: 96px !important;
+    padding: 11px !important;
+    gap: 8px !important;
+  }
+
+  /* Period summary heading */
+  .dashboard-section-heading {
+    margin-bottom: 0 !important;
+  }
+
+  .dashboard-section-heading h2 {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Finance cards */
+  .dashboard-finance-section {
+    gap: 11px !important;
+  }
+
+  .dashboard-finance-grid {
+    gap: 8px !important;
+  }
+
+  .dashboard-finance-card {
+    min-height: 96px !important;
+    padding: 11px !important;
+    gap: 8px !important;
+  }
+}
+
+/* Prevent header title overlap */
+@media (max-width: 600px) {
+  .topbar {
+    display: grid !important;
+    grid-template-columns: 36px minmax(0, 1fr) auto !important;
+    gap: 6px !important;
+  }
+
+  .topbar-page-title {
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+
+  .topbar-page-title h1 {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+    letter-spacing: 0 !important;
+  }
+
+  .topbar-actions {
+    gap: 5px !important;
+  }
+
+  .topbar-actions .icon-button {
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+
+/* ===== NIGHT MODE / LIGHT MODE FIX ===== */
+
+.dashboard-theme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 1px solid #31516d;
+  border-radius: 10px;
+  background: #0b1724;
+  color: #eaf4ff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.dashboard-page.theme-dark {
+  background: #111c28;
+  color: #eaf4ff;
+}
+
+.dashboard-page.theme-light {
+  background: #f2f6fb !important;
+  color: #182536 !important;
+}
+
+.theme-light .dashboard-welcome,
+.theme-light .dashboard-finance-section {
+  color: #182536;
+}
+
+.theme-light .dashboard-theme-toggle {
+  background: #ffffff;
+  color: #26384c;
+  border-color: #cbd8e6;
+}
+
+.theme-light .dashboard-period-toolbar,
+.theme-light .dashboard-overview-card,
+.theme-light .dashboard-finance-card,
+.theme-light .dashboard-panel,
+.theme-light .dashboard-revenue-breakdown {
+  background: #ffffff !important;
+  color: #182536 !important;
+  border-color: #d8e2ed !important;
+}
+
+.theme-light .dashboard-welcome h1,
+.theme-light .dashboard-section-heading h2,
+.theme-light .dashboard-panel-heading h2 {
+  color: #17283c !important;
+}
+
+.dashboard-header-actions {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+@media (max-width: 620px) {
+  .dashboard-header-actions {
+    display: flex !important;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .dashboard-theme-toggle,
+  .dashboard-header-actions .dashboard-refresh {
+    min-height: 40px;
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
+
+
+
+/* Dashboard Light Mode */
+.app.theme-light .owner-dashboard,
+.app.theme-light .dash-main {
+  background: #f1f5f9 !important;
+  color: #17283c !important;
+}
+
+.app.theme-light .dash-topbar {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border-color: #d8e1eb !important;
+}
+
+.app.theme-light .dash-welcome h1,
+.app.theme-light .dash-section > h2,
+.app.theme-light .dash-period-label {
+  color: #17283c !important;
+}
+
+.app.theme-light .dash-welcome p {
+  color: #64748b !important;
+}
+
+.app.theme-light .dash-stat-card,
+.app.theme-light .dash-stat-card.blue,
+.app.theme-light .dash-stat-card.purple,
+.app.theme-light .dash-stat-card.orange,
+.app.theme-light .dash-stat-card.pink {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #d8e1eb !important;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05) !important;
+}
+
+.app.theme-light .dash-stat-card h3,
+.app.theme-light .dash-stat-card strong,
+.app.theme-light .dash-stat-card span {
+  color: #17283c !important;
+}
+
+.app.theme-light .dash-date-controls input {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border-color: #cbd5e1 !important;
+}
+
+.app.theme-light .dash-date-controls input::-webkit-calendar-picker-indicator {
+  filter: none !important;
+}
+
+
+/* ==========================================
+   DASHBOARD RESPONSIVE LAYOUT FIX
+========================================== */
+
+.app.theme-light .owner-dashboard {
+  background: #f1f5f9;
+  color: #17283c;
+}
+
+.app.theme-light .dash-main {
+  background: #f1f5f9;
+  color: #17283c;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.app.theme-light .dash-stat-card {
+  box-sizing: border-box;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.app.theme-light .dash-section {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.app.theme-light .dash-stat-card h3,
+.app.theme-light .dash-stat-card p,
+.app.theme-light .dash-stat-card strong {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .app.theme-light .dash-main {
+    padding: 16px !important;
+  }
+
+  .app.theme-light .dash-section {
+    margin-bottom: 24px;
+  }
+
+  .app.theme-light .dash-stat-card {
+    padding: 12px !important;
+  }
+}
+
+
+/* Dashboard calendar icon - clearer in light mode */
+
+.app.theme-light .dash-date-controls svg,
+.app.theme-light .dash-date-controls .calendar-icon {
+  color: #2563eb !important;
+  stroke: #2563eb !important;
+  opacity: 1 !important;
+  stroke-width: 2.2px !important;
+}
+
+.app.theme-light .dash-date-controls input[type="date"] {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Make the date picker indicator visible */
+.app.theme-light .dash-date-controls input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1 !important;
+  filter: none !important;
+  cursor: pointer;
+}
+
+
+/* Dashboard cards: icon left, text and value right */
+.owner-dashboard .dash-stat-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  min-width: 0;
+  min-height: 100px;
+  padding: 14px !important;
+  text-align: left !important;
+}
+
+.owner-dashboard .dash-stat-icon {
+  flex: 0 0 39px !important;
+  width: 39px !important;
+  height: 39px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+.owner-dashboard .dash-stat-content {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 5px !important;
+  text-align: left !important;
+}
+
+.owner-dashboard .dash-stat-title {
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+  overflow-wrap: anywhere;
+}
+
+.owner-dashboard .dash-stat-content strong {
+  font-size: clamp(16px, 2.2vw, 23px) !important;
+  line-height: 1.25 !important;
+  overflow-wrap: anywhere;
+}
+
+.owner-dashboard .dash-stat-content small {
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+/* Keep the same layout on mobile */
+@media (max-width: 600px) {
+  .owner-dashboard .dash-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .owner-dashboard .dash-stat-card {
+    flex-direction: row !important;
+    align-items: center !important;
+    min-height: 100px !important;
+    padding: 10px !important;
+    gap: 9px !important;
+  }
+
+  .owner-dashboard .dash-stat-icon {
+    flex-basis: 36px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .owner-dashboard .dash-stat-icon svg {
+    width: 19px !important;
+    height: 19px !important;
+  }
+
+  .owner-dashboard .dash-stat-title {
+    font-size: 11px !important;
+  }
+
+  .owner-dashboard .dash-stat-content strong {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .owner-dashboard .dash-stat-card {
+    padding: 8px !important;
+    gap: 7px !important;
+  }
+
+  .owner-dashboard .dash-stat-icon {
+    flex-basis: 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .owner-dashboard .dash-stat-content strong {
+    font-size: 14px !important;
+  }
+}
