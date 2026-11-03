@@ -17,14 +17,15 @@ import {
 } from "lucide-react";
 import "./Dashboard.css";
 
-const API = {
-  customers: "http://127.0.0.1:8000/api/customers/customers/",
-  equipment: "http://127.0.0.1:8000/api/inventory/equipment/",
-  rentals: "http://127.0.0.1:8000/api/rentals/rentals/",
-  payments: "http://127.0.0.1:8000/api/finance/payments/",
-  expenses: "http://127.0.0.1:8000/api/finance/expenses/",
-};
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
+const API = {
+  customers: `${API_BASE}/api/customers/customers/`,
+  equipment: `${API_BASE}/api/inventory/equipment/`,
+  rentals: `${API_BASE}/api/rentals/rentals/`,
+  payments: `${API_BASE}/api/finance/payments/`,
+  expenses: `${API_BASE}/api/finance/expenses/`,
+};
 const getArray = (data) => {
   if (Array.isArray(data)) return data;
   if (Array.isArray(data?.results)) return data.results;

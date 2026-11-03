@@ -17,7 +17,7 @@ import {
 import "./Expenses.css";
 
 const EXPENSES_API =
-  "http://127.0.0.1:8000/api/finance/expenses/";
+  `${import.meta.env.VITE_API_BASE_URL}/api/finance/expenses/`;
 
 // Get today's date in local timezone.
 const getTodayDate = () => {

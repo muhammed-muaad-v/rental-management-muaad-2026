@@ -49,17 +49,12 @@ import "./App.css";
 // API URLS
 // =====================================================
 
-const CUSTOMERS_API =
-  "http://127.0.0.1:8000/api/customers/customers/";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-const EQUIPMENT_API =
-  "http://127.0.0.1:8000/api/inventory/equipment/";
-
-const RENTALS_API =
-  "http://127.0.0.1:8000/api/rentals/rentals/";
-
-const PAYMENTS_API =
-  "http://127.0.0.1:8000/api/finance/payments/";
+const CUSTOMERS_API = `${API_BASE_URL}/api/customers/customers/`;
+const EQUIPMENT_API = `${API_BASE_URL}/api/inventory/equipment/`;
+const RENTALS_API = `${API_BASE_URL}/api/rentals/rentals/`;
+const PAYMENTS_API = `${API_BASE_URL}/api/finance/payments/`;
 
 
 // =====================================================

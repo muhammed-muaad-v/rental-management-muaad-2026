@@ -9,9 +9,9 @@ import {
 } from "lucide-react";
 import "./ActivityLog.css";
 
-const ACTIVITY_API = "http://127.0.0.1:8000/api/activity-log/";
-const USERS_API = "http://127.0.0.1:8000/api/users/users/";
-const REFRESH_API = "http://127.0.0.1:8000/api/users/token/refresh/";
+const ACTIVITY_API = `${import.meta.env.VITE_API_BASE_URL}/api/activity-log/`;
+const USERS_API = `${import.meta.env.VITE_API_BASE_URL}/api/users/users/`;
+const REFRESH_API = `${import.meta.env.VITE_API_BASE_URL}/api/users/token/refresh/`;
 
 const TYPE_OPTIONS = [
   "Rental",

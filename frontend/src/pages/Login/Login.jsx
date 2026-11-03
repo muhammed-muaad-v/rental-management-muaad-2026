@@ -2,7 +2,8 @@
 import { useState } from "react";
 import "./Login.css";
 
-const LOGIN_API = "http://127.0.0.1:8000/api/users/login/";
+const LOGIN_API =
+  `${import.meta.env.VITE_API_BASE_URL}/api/users/login/`;
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");

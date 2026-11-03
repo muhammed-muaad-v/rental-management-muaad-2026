@@ -15,12 +15,13 @@ import {
   Power,
   X,
 } from "lucide-react";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 const EQUIPMENT_API =
-  "http://127.0.0.1:8000/api/inventory/equipment/";
+  `${API_BASE}/api/inventory/equipment/`;
 
 const CATEGORY_API =
-  "http://127.0.0.1:8000/api/inventory/categories/";
+  `${API_BASE}/api/inventory/categories/`;
 
 const emptyForm = {
   sku: "",

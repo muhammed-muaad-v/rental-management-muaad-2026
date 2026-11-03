@@ -11,7 +11,7 @@ import {
 import "./Categories.css";
 
 const CATEGORY_API =
-  "http://127.0.0.1:8000/api/inventory/categories/";
+  `${import.meta.env.VITE_API_BASE_URL}/api/inventory/categories/`;
 
 const EMPTY_FORM = {
   name: "",

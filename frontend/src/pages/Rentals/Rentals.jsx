@@ -25,13 +25,18 @@ import {
 } from "lucide-react";
 
 import "./Rentals.css";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
-const RENTALS_API = "http://127.0.0.1:8000/api/rentals/rentals/";
-const RENTAL_ITEMS_API = "http://127.0.0.1:8000/api/rentals/rental-items/";
-const RENTAL_RETURNS_API =
-  "http://127.0.0.1:8000/api/rentals/rental-returns/";
-const CUSTOMERS_API = "http://127.0.0.1:8000/api/customers/customers/";
-const EQUIPMENT_API = "http://127.0.0.1:8000/api/inventory/equipment/";
+const RENTALS_API = `${API_BASE}/api/rentals/rentals/`;
+
+const RENTAL_ITEMS_API = `${API_BASE}/api/rentals/rental-items/`;
+
+const RENTAL_RETURNS_API = `${API_BASE}/api/rentals/rental-returns/`;
+
+const CUSTOMERS_API = `${API_BASE}/api/customers/customers/`;
+
+const EQUIPMENT_API = `${API_BASE}/api/inventory/equipment/`;
+
 
 const getList = (data) => {
   if (Array.isArray(data)) return data;

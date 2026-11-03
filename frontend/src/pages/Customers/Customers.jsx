@@ -21,17 +21,19 @@ import {
   X,
 } from "lucide-react";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 const CUSTOMERS_API =
-  "http://127.0.0.1:8000/api/customers/customers/";
+  `${API_BASE}/api/customers/customers/`;
 
 const RENTALS_API =
-  "http://127.0.0.1:8000/api/rentals/rentals/";
+  `${API_BASE}/api/rentals/rentals/`;
 
 const RENTAL_ITEMS_API =
-  "http://127.0.0.1:8000/api/rentals/rental-items/";
+  `${API_BASE}/api/rentals/rental-items/`;
 
 const PAYMENTS_API =
-  "http://127.0.0.1:8000/api/finance/payments/";
+  `${API_BASE}/api/finance/payments/`;
 
 const emptyForm = {
   name: "",
