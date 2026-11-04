@@ -4879,3 +4879,341 @@ body.light-mode .bill-modal-item-info span,
     text-align: left !important;
   }
 }
+
+@media print {
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area *,
+  .bill-details-page.bill-print-area *::before,
+  .bill-details-page.bill-print-area *::after {
+    color: #111827 !important;
+    text-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-card,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-item-row,
+  .bill-details-page.bill-print-area .bill-payment-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+  }
+}
+
+/* =========================================================
+   FINAL THEME OVERRIDES
+   Global Light Mode support for Bills and Bill Details
+   Keeps existing Dark Mode styles unchanged.
+========================================================= */
+
+.app.theme-light .bills-page,
+.app.theme-light .bill-details-page {
+  background: #f1f5f9 !important;
+  color: #17283c !important;
+}
+
+.app.theme-light .bills-title-section h1,
+.app.theme-light .bill-details-title-row h1,
+.app.theme-light .bill-summary-top h2,
+.app.theme-light .bill-summary-row strong,
+.app.theme-light .bill-section-header strong {
+  color: #17283c !important;
+}
+
+.app.theme-light .bills-title-section p,
+.app.theme-light .bill-summary-top span,
+.app.theme-light .bill-summary-row > span,
+.app.theme-light .bill-summary-row div > span,
+.app.theme-light .bill-item-row span,
+.app.theme-light .bill-payment-row span,
+.app.theme-light .bill-payment-row small {
+  color: #64748b !important;
+}
+
+.app.theme-light .bill-details-card,
+.app.theme-light .bill-summary-main,
+.app.theme-light .bill-items-card,
+.app.theme-light .bill-payments-card,
+.app.theme-light .bill-status-card,
+.app.theme-light .bill-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border-color: #dbe3ed !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05) !important;
+}
+
+.app.theme-light .bill-summary-row,
+.app.theme-light .bill-section-header,
+.app.theme-light .bill-item-row,
+.app.theme-light .bill-payment-row {
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-total-row {
+  background: #f8fafc !important;
+  color: #17283c !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .bill-total-row span,
+.app.theme-light .bill-total-row strong {
+  color: #17283c !important;
+}
+
+/* Correct JSX action-button selectors */
+.app.theme-light .bill-details-back {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-details-actions .bill-print-button {
+  color: #334155 !important;
+  background: #f8fafc !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .bill-details-actions .bill-whatsapp-btn,
+.app.theme-light .bill-details-actions .bill-cancel-btn {
+  background: #ffffff !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+
+.app.theme-light .bill-details-actions .bill-collect-payment-button:not(:disabled) {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border-color: #10b981 !important;
+}
+
+.app.theme-light .bill-details-actions .bill-collect-payment-button:disabled {
+  background: #d1fae5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+  opacity: 1 !important;
+}
+
+/* Collect Payment modal - Light Mode */
+.app.theme-light .collect-payment-overlay {
+  background: rgba(15, 23, 42, 0.42) !important;
+}
+
+.app.theme-light .collect-payment-modal {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #dbe3ed !important;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22) !important;
+}
+
+.app.theme-light .collect-payment-header {
+  background: #ffffff !important;
+  border-bottom-color: #e2e8f0 !important;
+}
+
+.app.theme-light .collect-payment-header h2,
+.app.theme-light .collect-payment-field label {
+  color: #17283c !important;
+}
+
+.app.theme-light .collect-payment-header button {
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .collect-payment-bill-summary {
+  background: #f1f5f9 !important;
+  border: 1px solid #dbe3ed !important;
+}
+
+.app.theme-light .collect-payment-bill-summary span,
+.app.theme-light .calculation-row span {
+  color: #64748b !important;
+}
+
+.app.theme-light .collect-payment-bill-summary strong,
+.app.theme-light .calculation-row strong {
+  color: #17283c !important;
+}
+
+.app.theme-light .collect-payment-field input,
+.app.theme-light .collect-payment-field select,
+.app.theme-light .collect-payment-field textarea {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .collect-payment-field input::placeholder,
+.app.theme-light .collect-payment-field textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.app.theme-light .collect-payment-field select option {
+  background: #ffffff !important;
+  color: #17283c !important;
+}
+
+.app.theme-light .collect-payment-field small {
+  color: #64748b !important;
+}
+
+.app.theme-light .collect-payment-calculation {
+  background: #f8fafc !important;
+  border: 1px solid #dbe3ed !important;
+}
+
+.app.theme-light .net-payable-row,
+.app.theme-light .balance-after-row {
+  border-top-color: #dbe3ed !important;
+}
+
+.app.theme-light .collect-payment-actions {
+  background: #ffffff !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+
+.app.theme-light .collect-payment-cancel {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Print is always white A4, independent of selected website theme */
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body,
+  #root,
+  .app,
+  .bill-details-page.bill-print-area {
+    background: #ffffff !important;
+    color: #111827 !important;
+    color-scheme: light !important;
+  }
+
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card,
+  .bill-details-page.bill-print-area .bill-item-row,
+  .bill-details-page.bill-print-area .bill-payment-row,
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    border: 1px solid #d1d5db !important;
+    break-inside: avoid !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+  }
+
+  .bill-details-page.bill-print-area .invoice-print-header {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+}
+
+
+/* FINAL FIX: Force all invoice content to print clearly */
+@media print {
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area * {
+    color: #111827 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+
+  .bill-details-page.bill-print-area {
+    background: #ffffff !important;
+  }
+
+  .bill-details-page.bill-print-area * {
+    background-color: transparent !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-summary-top,
+  .bill-details-page.bill-print-area .bill-summary-row,
+  .bill-details-page.bill-print-area .bill-section-header,
+  .bill-details-page.bill-print-area .bill-item-row,
+  .bill-details-page.bill-print-area .bill-payment-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+  }
+
+  .bill-details-page.bill-print-area .no-print {
+    display: none !important;
+  }
+}
+
+@media print {
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-summary-card *,
+  .bill-details-page.bill-print-area .bill-items-card *,
+  .bill-details-page.bill-print-area .bill-payments-card * {
+    color: #111827 !important;
+  }
+}
