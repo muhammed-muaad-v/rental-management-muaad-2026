@@ -792,6 +792,32 @@ const Bills = () => {
 
     return (
       <section className="bill-details-page bill-print-area">
+
+        {/* PRINT INVOICE HEADER */}
+
+          <div className="invoice-print-header">
+            <div className="invoice-shop-info">
+              <h1>VK Jacky Span</h1>
+              <p>Equipment Rental Services</p>
+            </div>
+
+            <div className="invoice-title">
+              <h2>TAX INVOICE</h2>
+              <span>Original Copy</span>
+            </div>
+
+            <div className="invoice-meta">
+              <div>
+                <span>Invoice No:</span>
+                <strong>#{bill.id}</strong>
+              </div>
+
+              <div>
+                <span>Invoice Date:</span>
+                <strong>{formatDate(bill.rental_date)}</strong>
+              </div>
+            </div>
+          </div>
         {/* BACK BUTTON */}
 
         <button
@@ -997,59 +1023,50 @@ const Bills = () => {
           </div>
         </div>
 
-        {/* PAYMENTS RECEIVED */}
+       {/* PAYMENTS RECEIVED */}
 
-        <div className="bill-details-card bill-payments-card">
-          <div className="bill-section-header">
-            <h2>Payments Received</h2>
-            <strong>
-              {billPayments.length}{" "}
-              {billPayments.length === 1
-                ? "payment"
-                : "payments"}
-            </strong>
-          </div>
-
-          {billPayments.length > 0 ? (
-            billPayments.map((payment) => (
-              <div
-                className="bill-payment-row"
-                key={payment.id}
-              >
-                <div>
-                  <strong>
-                    {formatCurrency(
-                      payment.amount ??
-                        payment.paid_amount ??
-                        payment.payment_amount ??
-                        0
-                    )}
-                  </strong>
-
-                  <span>
-                    {formatDate(payment.payment_date)}
-                  </span>
-                </div>
-
-                <div>
-                  <span>
-                    {payment.payment_method || "Cash"}
-                  </span>
-
-                  {payment.reference_number && (
-                    <small>
-                      Ref: {payment.reference_number}
-                    </small>
-                  )}
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="bill-payments-empty">
-              No payments recorded yet.
+          <div className="bill-details-card bill-payments-card">
+            <div className="bill-section-header">
+              <h2>Payments Received</h2>
+              <strong>
+                {billPayments.length}{" "}
+                {billPayments.length === 1 ? "payment" : "payments"}
+              </strong>
             </div>
-          )}
-        </div>
+
+            {billPayments.length > 0 ? (
+              billPayments.map((payment) => (
+                <div className="bill-payment-row" key={payment.id}>
+                  <div className="bill-payment-info">
+                    <strong className="bill-payment-amount">
+                      {formatCurrency(
+                        payment.amount ??
+                          payment.paid_amount ??
+                          payment.payment_amount ??
+                          0
+                      )}
+                    </strong>
+
+                    <span className="bill-payment-date">
+                      {formatDate(payment.payment_date)}
+                    </span>
+                  </div>
+
+                  <div className="bill-payment-method">
+                    <span>{payment.payment_method || "Cash"}</span>
+
+                    {payment.reference_number && (
+                      <small>Ref: {payment.reference_number}</small>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="bill-payments-empty">
+                No payments recorded yet.
+              </div>
+            )}
+          </div>
 
         {/* =====================================
             COLLECT PAYMENT MODAL
