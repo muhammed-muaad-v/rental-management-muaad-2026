@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Login.css";
 
 const LOGIN_API =
-  `${import.meta.env.VITE_API_BASE_URL}/api/users/login/`;
+  `${import.meta.env.VITE_API_URL}/api/users/login/`;
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
