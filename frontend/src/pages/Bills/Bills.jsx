@@ -793,31 +793,6 @@ const Bills = () => {
     return (
       <section className="bill-details-page bill-print-area">
 
-        {/* PRINT INVOICE HEADER */}
-
-          <div className="invoice-print-header">
-            <div className="invoice-shop-info">
-              <h1>VK Jacky Span</h1>
-              <p>Equipment Rental Services</p>
-            </div>
-
-            <div className="invoice-title">
-              <h2>TAX INVOICE</h2>
-              <span>Original Copy</span>
-            </div>
-
-            <div className="invoice-meta">
-              <div>
-                <span>Invoice No:</span>
-                <strong>#{bill.id}</strong>
-              </div>
-
-              <div>
-                <span>Invoice Date:</span>
-                <strong>{formatDate(bill.rental_date)}</strong>
-              </div>
-            </div>
-          </div>
         {/* BACK BUTTON */}
 
         <button
