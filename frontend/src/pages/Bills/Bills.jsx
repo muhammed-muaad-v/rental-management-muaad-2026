@@ -204,9 +204,26 @@ const Bills = () => {
         0
       );
 
-      const totalAmount = Number(
-        rental.total_amount || 0
-      );
+      const rentalItemsTotal = rentalItems
+        .filter(
+          (item) =>
+            Number(getRelationId(item.rental)) ===
+            Number(rental.id)
+        )
+        .reduce((sum, item) => {
+          const itemAmount =
+            item.amount != null && Number(item.amount) > 0
+              ? Number(item.amount)
+              : Number(item.quantity || 0) *
+                Number(item.daily_rent ?? item.daily_rate ?? 0);
+
+          return sum + itemAmount;
+        }, 0);
+
+        const totalAmount = Math.max(
+          Number(rental.total_amount || 0),
+          rentalItemsTotal
+        );
 
       const outstanding = Math.max(
         totalAmount - paidAmount,
@@ -228,13 +245,14 @@ const Bills = () => {
 
       return {
         ...rental,
+        totalAmount,
         paidAmount,
         outstanding,
         status,
         rentalPayments,
       };
     });
-  }, [rentals, payments]);
+  }, [rentals, payments, rentalItems]);
 
   // =====================================================
   // COUNTS
@@ -264,7 +282,7 @@ const Bills = () => {
 
   const totalBilled = bills.reduce(
     (sum, bill) =>
-      sum + Number(bill.total_amount || 0),
+      sum + Number(bill.totalAmount || 0),
     0
   );
 
@@ -371,13 +389,7 @@ const Bills = () => {
     );
   }, [selectedBill, rentalItems]);
 
-  const grossTotal = Number(
-    selectedBill?.gross_total ??
-      selectedBill?.subtotal ??
-      selectedBill?.total_amount ??
-      0
-  );
-
+  
   // Daily Rate × Quantity
   const dailyRentalTotal = selectedBillItems.reduce(
     (total, item) => {
@@ -392,6 +404,16 @@ const Bills = () => {
       return total + rate * quantity;
     },
     0
+  );
+
+  const grossTotal = Math.max(
+    Number(
+      selectedBill?.gross_total ||
+        selectedBill?.subtotal ||
+        selectedBill?.total_amount ||
+        0
+    ),
+    dailyRentalTotal
   );
 
   let calculatedDiscount = 0;
@@ -768,10 +790,15 @@ const Bills = () => {
         Number(getRelationId(payment.rental)) ===
         Number(bill.id)
     );
+    const billTotal = billItems.reduce((sum, item) => {
+      const itemAmount =
+        item.amount != null && Number(item.amount) > 0
+          ? Number(item.amount)
+          : Number(item.quantity || 0) *
+            Number(item.daily_rent ?? item.daily_rate ?? 0);
 
-    const billTotal = Number(
-      bill.total_amount || 0
-    );
+      return sum + itemAmount;
+    }, 0);
 
     const billPaid = billPayments.reduce(
       (sum, payment) =>
@@ -1576,7 +1603,7 @@ const Bills = () => {
                 <div>
                   <span>Total</span>
                   <strong>
-                    {formatCurrency(bill.total_amount)}
+                    {formatCurrency(bill.totalAmount)}
                   </strong>
                 </div>
 

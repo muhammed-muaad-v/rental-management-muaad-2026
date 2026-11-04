@@ -59,8 +59,13 @@ class PaymentSerializer(serializers.ModelSerializer):
                 }
             )
 
-        rental_total = Decimal(
-            str(rental.total_amount or 0)
+        rental_total = sum(
+            (
+                Decimal(str(item.daily_rent)) *
+                Decimal(str(item.quantity))
+                for item in rental.items.all()
+            ),
+            Decimal("0")
         )
 
         # Existing payments for this rental
