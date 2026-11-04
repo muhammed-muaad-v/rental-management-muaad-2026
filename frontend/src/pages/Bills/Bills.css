@@ -2246,73 +2246,6 @@
 }
 
 /* =========================================
-   PRINT BILL ONLY
-========================================= */
-
-@page {
-  size: A4;
-  margin: 12mm;
-}
-
-@media print {
-  body * {
-    visibility: hidden !important;
-  }
-
-  .bill-print-area,
-  .bill-print-area * {
-    visibility: visible !important;
-  }
-
-  .bill-print-area {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-
-    width: 100% !important;
-    height: auto !important;
-    max-width: none !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    overflow: visible !important;
-
-    background: #ffffff !important;
-    color: #111827 !important;
-
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .no-print,
-  .bill-details-page button,
-  .collect-payment-overlay {
-    display: none !important;
-  }
-
-  .bill-details-page,
-  .bill-details-page * {
-    color: #111827 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  .bill-details-page .bill-details-card {
-    background: #ffffff !important;
-    border-color: #d1d5db !important;
-    break-inside: avoid;
-  }
-
-  .bill-details-page .bill-total-row,
-  .bill-details-page .bill-item-row,
-  .bill-details-page .bill-payment-row {
-    border-color: #d1d5db !important;
-  }
-}
-
-/* =========================================
    COLLECT PAYMENT - LEFT ALIGNMENT
 ========================================= */
 
@@ -4852,4 +4785,608 @@ body.light-mode .bill-modal-item-info span,
 .app.theme-light .bill-summary-top > div:first-child span {
   text-align: left !important;
   margin-left: 0 !important;
+}
+
+
+@media print {
+  .bill-details-page.bill-print-area .invoice-print-header {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    margin-bottom: 18px !important;
+    padding: 12px !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-bottom: 2px solid #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-top: 1px solid #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row span,
+  .bill-details-page.bill-print-area .bill-total-row strong {
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+    font-weight: 700 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-payment-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px !important;
+    border-bottom: 1px solid #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-payment-info,
+  .bill-details-page.bill-print-area .bill-payment-method {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    text-align: left !important;
+  }
+}
+
+@media print {
+  .bill-details-page.bill-print-area .invoice-print-header {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    margin-bottom: 18px !important;
+    padding: 12px !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-bottom: 2px solid #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-top: 1px solid #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row span,
+  .bill-details-page.bill-print-area .bill-total-row strong {
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+    font-weight: 700 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-payment-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px !important;
+    border-bottom: 1px solid #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-payment-info,
+  .bill-details-page.bill-print-area .bill-payment-method {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    text-align: left !important;
+  }
+}
+
+@media print {
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area *,
+  .bill-details-page.bill-print-area *::before,
+  .bill-details-page.bill-print-area *::after {
+    color: #111827 !important;
+    text-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-card,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-item-row,
+  .bill-details-page.bill-print-area .bill-payment-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+  }
+}
+
+/* =========================================================
+   FINAL THEME OVERRIDES
+   Global Light Mode support for Bills and Bill Details
+   Keeps existing Dark Mode styles unchanged.
+========================================================= */
+
+.app.theme-light .bills-page,
+.app.theme-light .bill-details-page {
+  background: #f1f5f9 !important;
+  color: #17283c !important;
+}
+
+.app.theme-light .bills-title-section h1,
+.app.theme-light .bill-details-title-row h1,
+.app.theme-light .bill-summary-top h2,
+.app.theme-light .bill-summary-row strong,
+.app.theme-light .bill-section-header strong {
+  color: #17283c !important;
+}
+
+.app.theme-light .bills-title-section p,
+.app.theme-light .bill-summary-top span,
+.app.theme-light .bill-summary-row > span,
+.app.theme-light .bill-summary-row div > span,
+.app.theme-light .bill-item-row span,
+.app.theme-light .bill-payment-row span,
+.app.theme-light .bill-payment-row small {
+  color: #64748b !important;
+}
+
+.app.theme-light .bill-details-card,
+.app.theme-light .bill-summary-main,
+.app.theme-light .bill-items-card,
+.app.theme-light .bill-payments-card,
+.app.theme-light .bill-status-card,
+.app.theme-light .bill-card {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border-color: #dbe3ed !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05) !important;
+}
+
+.app.theme-light .bill-summary-row,
+.app.theme-light .bill-section-header,
+.app.theme-light .bill-item-row,
+.app.theme-light .bill-payment-row {
+  border-color: #e2e8f0 !important;
+}
+
+.app.theme-light .bill-total-row {
+  background: #f8fafc !important;
+  color: #17283c !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .bill-total-row span,
+.app.theme-light .bill-total-row strong {
+  color: #17283c !important;
+}
+
+/* Correct JSX action-button selectors */
+.app.theme-light .bill-details-back {
+  color: #059669 !important;
+}
+
+.app.theme-light .bill-details-actions .bill-print-button {
+  color: #334155 !important;
+  background: #f8fafc !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .bill-details-actions .bill-whatsapp-btn,
+.app.theme-light .bill-details-actions .bill-cancel-btn {
+  background: #ffffff !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+
+.app.theme-light .bill-details-actions .bill-collect-payment-button:not(:disabled) {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border-color: #10b981 !important;
+}
+
+.app.theme-light .bill-details-actions .bill-collect-payment-button:disabled {
+  background: #d1fae5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+  opacity: 1 !important;
+}
+
+/* Collect Payment modal - Light Mode */
+.app.theme-light .collect-payment-overlay {
+  background: rgba(15, 23, 42, 0.42) !important;
+}
+
+.app.theme-light .collect-payment-modal {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #dbe3ed !important;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22) !important;
+}
+
+.app.theme-light .collect-payment-header {
+  background: #ffffff !important;
+  border-bottom-color: #e2e8f0 !important;
+}
+
+.app.theme-light .collect-payment-header h2,
+.app.theme-light .collect-payment-field label {
+  color: #17283c !important;
+}
+
+.app.theme-light .collect-payment-header button {
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  border-color: #dbe3ed !important;
+}
+
+.app.theme-light .collect-payment-bill-summary {
+  background: #f1f5f9 !important;
+  border: 1px solid #dbe3ed !important;
+}
+
+.app.theme-light .collect-payment-bill-summary span,
+.app.theme-light .calculation-row span {
+  color: #64748b !important;
+}
+
+.app.theme-light .collect-payment-bill-summary strong,
+.app.theme-light .calculation-row strong {
+  color: #17283c !important;
+}
+
+.app.theme-light .collect-payment-field input,
+.app.theme-light .collect-payment-field select,
+.app.theme-light .collect-payment-field textarea {
+  background: #ffffff !important;
+  color: #17283c !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.app.theme-light .collect-payment-field input::placeholder,
+.app.theme-light .collect-payment-field textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.app.theme-light .collect-payment-field select option {
+  background: #ffffff !important;
+  color: #17283c !important;
+}
+
+.app.theme-light .collect-payment-field small {
+  color: #64748b !important;
+}
+
+.app.theme-light .collect-payment-calculation {
+  background: #f8fafc !important;
+  border: 1px solid #dbe3ed !important;
+}
+
+.app.theme-light .net-payable-row,
+.app.theme-light .balance-after-row {
+  border-top-color: #dbe3ed !important;
+}
+
+.app.theme-light .collect-payment-actions {
+  background: #ffffff !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+
+.app.theme-light .collect-payment-cancel {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* Print is always white A4, independent of selected website theme */
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body,
+  #root,
+  .app,
+  .bill-details-page.bill-print-area {
+    background: #ffffff !important;
+    color: #111827 !important;
+    color-scheme: light !important;
+  }
+
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card,
+  .bill-details-page.bill-print-area .bill-item-row,
+  .bill-details-page.bill-print-area .bill-payment-row,
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    border: 1px solid #d1d5db !important;
+    break-inside: avoid !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+  }
+
+  .bill-details-page.bill-print-area .invoice-print-header {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+}
+
+
+/* FINAL FIX: Force all invoice content to print clearly */
+@media print {
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area * {
+    color: #111827 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+
+  .bill-details-page.bill-print-area {
+    background: #ffffff !important;
+  }
+
+  .bill-details-page.bill-print-area * {
+    background-color: transparent !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-summary-top,
+  .bill-details-page.bill-print-area .bill-summary-row,
+  .bill-details-page.bill-print-area .bill-section-header,
+  .bill-details-page.bill-print-area .bill-item-row,
+  .bill-details-page.bill-print-area .bill-payment-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f3f4f6 !important;
+  }
+
+  .bill-details-page.bill-print-area .no-print {
+    display: none !important;
+  }
+}
+
+@media print {
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-summary-card *,
+  .bill-details-page.bill-print-area .bill-items-card *,
+  .bill-details-page.bill-print-area .bill-payments-card * {
+    color: #111827 !important;
+  }
+}
+
+/* =========================================================
+   FINAL BILL PRINT LAYOUT
+   Matches the supplied A4 reference:
+   centered invoice content, soft grey content panel,
+   white invoice header and white cards.
+   Screen Dark/Light themes are not affected.
+========================================================= */
+
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body,
+  #root,
+  .app {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    color-scheme: light !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area * {
+    visibility: visible !important;
+  }
+
+  .bill-details-page.bill-print-area {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 170mm !important;
+    max-width: 170mm !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 4mm 4mm !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    background: #f1f5f9 !important;
+    color: #111827 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+
+  /* Keep the shop / TAX INVOICE heading on a clean white area */
+  .bill-details-page.bill-print-area .invoice-print-header {
+    display: block !important;
+    position: relative !important;
+    width: calc(100% + 8mm) !important;
+    margin: 0 -4mm 0 !important;
+    padding: 8mm 4mm 4mm !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 0 !important;
+    border-bottom: 2px solid #111827 !important;
+    text-align: center !important;
+  }
+
+  .bill-details-page.bill-print-area .invoice-print-header * {
+    color: #111827 !important;
+  }
+
+  /* Center and compact the invoice body */
+  .bill-details-page.bill-print-area .bill-details-card,
+  .bill-details-page.bill-print-area .bill-summary-main,
+  .bill-details-page.bill-print-area .bill-items-card,
+  .bill-details-page.bill-print-area .bill-payments-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 9px !important;
+    box-shadow: none !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-summary-top,
+  .bill-details-page.bill-print-area .bill-summary-row,
+  .bill-details-page.bill-print-area .bill-section-header,
+  .bill-details-page.bill-print-area .bill-item-row,
+  .bill-details-page.bill-print-area .bill-payment-row,
+  .bill-details-page.bill-print-area .bill-total-row {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-section-header {
+    background: #f8fafc !important;
+    padding: 9px 12px !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-total-row.grand-total {
+    background: #f1f5f9 !important;
+    font-weight: 700 !important;
+  }
+
+  .bill-details-page.bill-print-area h1,
+  .bill-details-page.bill-print-area h2,
+  .bill-details-page.bill-print-area h3,
+  .bill-details-page.bill-print-area p,
+  .bill-details-page.bill-print-area span,
+  .bill-details-page.bill-print-area strong,
+  .bill-details-page.bill-print-area label,
+  .bill-details-page.bill-print-area div {
+    color: #111827 !important;
+    text-shadow: none !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-balance-due {
+    color: #dc2626 !important;
+  }
+
+  .bill-details-page.bill-print-area .bill-paid,
+  .bill-details-page.bill-print-area .bill-payment-row strong {
+    color: #059669 !important;
+  }
+
+  .bill-details-page.bill-print-area button,
+  .bill-details-page.bill-print-area .no-print,
+  .collect-payment-overlay {
+    display: none !important;
+  }
+
+  .bill-details-page.bill-print-area table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .bill-details-page.bill-print-area th,
+  .bill-details-page.bill-print-area td {
+    color: #111827 !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 7px !important;
+  }
+
+  .bill-details-page.bill-print-area,
+  .bill-details-page.bill-print-area * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
 }
