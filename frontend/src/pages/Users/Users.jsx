@@ -18,7 +18,8 @@ import {
 } from "lucide-react";
 import "./Users.css";
 
-const USERS_API = "http://localhost:8000/api/users/users/";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+const USERS_API = `${API_BASE}/api/users/users/`;
 
 const emptyForm = {
   name: "",
